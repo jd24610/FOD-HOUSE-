@@ -1957,6 +1957,15 @@ function renderHeroSummary() {
     animateCounter("total-matches-val", totMatches, "");
     animateCounter("clan-winrate-val", clanWinRate, "%");
     animateCounter("total-cs-val", totCS, "");
+
+    // ── Hero section live counters ──────────────────────────────
+    animateCounter("hero-matches", totMatches, "");
+    animateCounter("hero-winrate", clanWinRate, "%");
+    animateCounter("hero-cs", totCS, "");
+
+    // Member count is static (roster length)
+    const membersEl = document.getElementById("hero-members");
+    if (membersEl) membersEl.textContent = state.roster.length;
 }
 
 function animateCounter(elementId, targetValue, suffix = "") {

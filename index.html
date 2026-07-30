@@ -19,7 +19,7 @@
             <div class="intro-door-content">
                 <img src="clan_logo.png" alt="FOD Crest" class="intro-logo">
                 <h1 class="intro-title">WELCOME TO<br>FOD HOUSE</h1>
-                <p class="intro-subtitle">Fear Nothing. Conquer All.</p>
+                <p class="intro-subtitle">Discipline. Excellence. Brotherhood.</p>
             </div>
         </div>
         <!-- Right Door (mirror) -->
@@ -27,7 +27,7 @@
             <div class="intro-door-content intro-door-content-right">
                 <img src="clan_logo.png" alt="FOD Crest" class="intro-logo">
                 <h1 class="intro-title">WELCOME TO<br>FOD HOUSE</h1>
-                <p class="intro-subtitle">Fear Nothing. Conquer All.</p>
+                <p class="intro-subtitle">Discipline. Excellence. Brotherhood.</p>
             </div>
         </div>
     </div>
@@ -92,19 +92,147 @@
         <button id="btn-dismiss-announce" class="announcement-dismiss" aria-label="Dismiss">&times;</button>
     </div>
 
-    <!-- Hero Crest Banner -->
-    <section class="hero-banner">
-        <div class="hero-crest-wrapper">
-            <img src="clan_logo.png" alt="37 Faces of Death FOD Clan Crest" class="hero-crest-img">
-            <div class="crest-glow-ring"></div>
+    <!-- ============================================================
+         FULL VIEWPORT CINEMATIC HERO
+         ============================================================ -->
+    <section class="fod-hero" id="hero">
+        <!-- Floating particles -->
+        <div class="hero-particles" aria-hidden="true">
+            <div class="hp hp1"></div>
+            <div class="hp hp2"></div>
+            <div class="hp hp3"></div>
+            <div class="hp hp4"></div>
+            <div class="hp hp5"></div>
+            <div class="hp hp6"></div>
+            <div class="hp hp7"></div>
+            <div class="hp hp8"></div>
         </div>
-        <div class="hero-title-group">
-            <h1 class="hero-main-title">37 FACES OF DEATH</h1>
-            <div class="hero-badges">
-                <span class="badge-tag tag-purple">EST. 2020 • 2025</span>
-                <span class="badge-tag text-emerald" style="background: rgba(16, 185, 129, 0.15); border: 1px solid #10B981;">18 CLAN MEMBERS</span>
-                <span class="badge-tag text-gold" style="background: rgba(255, 193, 7, 0.15); border: 1px solid #FFC107;">eFOOTBALL ELITE</span>
+        <!-- Subtle grid overlay -->
+        <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+        <div class="hero-content">
+            <div class="hero-eyebrow">⚔️ &nbsp;FACE OF DEATH&nbsp; ⚔️</div>
+
+            <div class="hero-logo-container">
+                <img src="clan_logo.png" alt="F.O.D Clan Crest" class="hero-logo-img">
+                <div class="hero-logo-ring"></div>
             </div>
+
+            <h2 class="hero-fod-title">F.O.D</h2>
+
+            <p class="hero-tagline">Discipline &nbsp;·&nbsp; Excellence &nbsp;·&nbsp; Brotherhood</p>
+
+            <!-- Live clan stats counters -->
+            <div class="hero-counters" role="region" aria-label="Clan Statistics">
+                <div class="hero-counter-card">
+                    <div class="hero-counter-val" id="hero-members">18</div>
+                    <div class="hero-counter-label">👥 Membres</div>
+                </div>
+                <div class="hero-counter-divider"></div>
+                <div class="hero-counter-card">
+                    <div class="hero-counter-val" id="hero-matches">0</div>
+                    <div class="hero-counter-label">🎮 Matches</div>
+                </div>
+                <div class="hero-counter-divider"></div>
+                <div class="hero-counter-card">
+                    <div class="hero-counter-val" id="hero-winrate">0%</div>
+                    <div class="hero-counter-label">🏆 Win Rate</div>
+                </div>
+                <div class="hero-counter-divider"></div>
+                <div class="hero-counter-card">
+                    <div class="hero-counter-val" id="hero-cs">0</div>
+                    <div class="hero-counter-label">🛡️ Clean Sheets</div>
+                </div>
+            </div>
+
+            <a href="#leaderboard-anchor" class="hero-cta-btn">⚡ Voir le Classement</a>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="hero-scroll-indicator" aria-hidden="true">
+            <div class="scroll-dot"></div>
+            <span>DÉFILER</span>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT / MISSION SECTION
+         ============================================================ -->
+    <section class="about-section">
+        <div class="about-inner">
+            <div class="about-grid">
+                <!-- Left: Mission -->
+                <div class="about-card about-mission glass-panel">
+                    <div class="about-section-eyebrow">Notre Mission</div>
+                    <h3 class="about-card-title">Bienvenue chez F.O.D</h3>
+                    <p class="about-body">Byenvini sou sit ofisyèl F.O.D (Face of Death) — yon kominote eFootball ki bati sou disiplin, respè, konpetisyon, ak ekselans. Misyon nou se rasanble pi bon jwè yo, devlope talan yo, epi kreye yon anviwònman kote chak manm ka grandi pandan l ap reprezante koulè F.O.D ak fyète.</p>
+                    <p class="about-body about-accent-line">F.O.D se plis pase yon clan; se yon fanmi. Chak viktwa se rezilta travay ann ekip, detèminasyon, ak yon lespri konpetitif ki pa janm lage.</p>
+                    <div class="about-pillars">
+                        <span class="pillar-chip">🏆 Konpetisyon Entèn</span>
+                        <span class="pillar-chip">⚔️ Defi Entènasyonal</span>
+                        <span class="pillar-chip">📈 Devlopman Talan</span>
+                        <span class="pillar-chip">🤝 Solidarite</span>
+                    </div>
+                </div>
+
+                <!-- Center: Crest -->
+                <div class="about-crest-col">
+                    <div class="about-crest-ring">
+                        <img src="clan_logo.png" alt="F.O.D Crest" class="about-crest-img">
+                    </div>
+                    <div class="about-crest-name">F.O.D</div>
+                    <div class="about-crest-full">Face of Death</div>
+                    <div class="about-est">EST. 2020</div>
+                    <div class="about-ornament">— ⚔️ —</div>
+                    <blockquote class="about-motto">"Only the fearless survive."</blockquote>
+                </div>
+
+                <!-- Right: Values -->
+                <div class="about-card about-values glass-panel">
+                    <div class="about-section-eyebrow">Nos Valeurs</div>
+                    <h3 class="about-card-title">Ce que nous sommes</h3>
+                    <ul class="values-list">
+                        <li class="value-item">
+                            <span class="value-emoji">🏆</span>
+                            <div class="value-text"><strong>Excellence</strong><span>Toujou vize pi wo a</span></div>
+                        </li>
+                        <li class="value-item">
+                            <span class="value-emoji">🤝</span>
+                            <div class="value-text"><strong>Respect</strong><span>Respè pou tout manm</span></div>
+                        </li>
+                        <li class="value-item">
+                            <span class="value-emoji">🔥</span>
+                            <div class="value-text"><strong>Discipline</strong><span>Travay rele siksè</span></div>
+                        </li>
+                        <li class="value-item">
+                            <span class="value-emoji">⚔️</span>
+                            <div class="value-text"><strong>Courage</strong><span>Pa janm pè konpetisyon</span></div>
+                        </li>
+                        <li class="value-item">
+                            <span class="value-emoji">💜</span>
+                            <div class="value-text"><strong>Loyauté</strong><span>F.O.D toujou ansanm</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         WHAT'S ON THE SITE — Features Scroller
+         ============================================================ -->
+    <section class="features-section">
+        <div class="features-heading">Sa w ap jwenn sou sit la</div>
+        <div class="features-scroller">
+            <div class="feature-chip"><span class="fc-icon">📰</span><span class="fc-label">Nouvèl F.O.D</span></div>
+            <div class="feature-chip"><span class="fc-icon">🏅</span><span class="fc-label">Klasman Jwè</span></div>
+            <div class="feature-chip"><span class="fc-icon">👥</span><span class="fc-label">Lis Manm</span></div>
+            <div class="feature-chip"><span class="fc-icon">📊</span><span class="fc-label">Estatistik Sezon</span></div>
+            <div class="feature-chip"><span class="fc-icon">⚽</span><span class="fc-label">Match &amp; Rezilta</span></div>
+            <div class="feature-chip"><span class="fc-icon">🥇</span><span class="fc-label">Palmarès</span></div>
+            <div class="feature-chip"><span class="fc-icon">📋</span><span class="fc-label">Règ Ofisyèl</span></div>
+            <div class="feature-chip"><span class="fc-icon">🎯</span><span class="fc-label">Rekritman</span></div>
+            <div class="feature-chip"><span class="fc-icon">📸</span><span class="fc-label">Galri Foto</span></div>
         </div>
     </section>
 
@@ -245,7 +373,7 @@
         </div>
 
         <!-- Roster and Statistics Table Section -->
-        <section class="roster-section glass-panel" aria-label="Player Roster and Statistics Table">
+        <section id="leaderboard-anchor" class="roster-section glass-panel" aria-label="Player Roster and Statistics Table">
             <div class="roster-header">
                 <div class="roster-titles">
                     <h2>📊 FOD Clan Roster & Match Statistics</h2>
@@ -356,11 +484,42 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p><strong>FACE OF DEATH (FOD)</strong> • Elite eFootball Clan Statistics Platform</p>
-            <p class="footer-sub">Fear Nothing. Conquer All. • Powered by Real-Time eFootball Match Data</p>
+    <!-- ============================================================
+         PREMIUM FOOTER
+         ============================================================ -->
+    <footer class="fod-footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-brand-col">
+                    <img src="clan_logo.png" alt="F.O.D Crest" class="footer-crest">
+                    <div class="footer-brand-title">F.O.D</div>
+                    <div class="footer-brand-sub">Face of Death</div>
+                    <p class="footer-quote">"Only the fearless survive."</p>
+                </div>
+
+                <!-- Navigation -->
+                <div class="footer-links-col">
+                    <h4 class="footer-col-head">Navigation</h4>
+                    <a href="#hero" class="footer-link">🏠 Accueil</a>
+                    <a href="#leaderboard-anchor" class="footer-link">📊 Classement</a>
+                    <a href="#leaderboard-anchor" class="footer-link">👥 Membres</a>
+                    <a href="#leaderboard-anchor" class="footer-link">⚽ Résultats</a>
+                </div>
+
+                <!-- Info -->
+                <div class="footer-info-col">
+                    <h4 class="footer-col-head">F.O.D eSports</h4>
+                    <p class="footer-info-text">Clan eFootball d'élite fondé sur la discipline, le respect et la compétition de haut niveau.</p>
+                    <div class="footer-esports-pill">🎮 eFootball Elite Clan</div>
+                    <p class="footer-copy">© 2026 F.O.D. Tous droits réservés.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>FACE OF DEATH (F.O.D) • Elite eFootball Clan • Season 2026</span>
+                <span class="footer-bottom-right">Fear Nothing. Conquer All.</span>
+            </div>
         </div>
     </footer>
 
