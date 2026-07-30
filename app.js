@@ -1849,7 +1849,8 @@ const state = {
     roster: [],
     currentSort: { column: "points", direction: "desc" },
     currentFilter: { search: "", playstyle: "ALL", timeframe: "ALL" },
-    selectedPlayer: null
+    selectedPlayer: null,
+    editingMatch: null
 };
 
 // --- 3. INITIALIZATION & LOCALSTORAGE SYNC ---
@@ -2129,13 +2130,17 @@ function setupEventListeners() {
     // C. Log Match Modal Open/Close
     const modalLogger = document.getElementById("modal-logger");
     document.getElementById("btn-open-logger").addEventListener("click", () => {
+        state.editingMatch = null;
+        document.getElementById("modal-logger-title").textContent = "Log eFootball Match Result";
+        document.getElementById("input-player").disabled = false;
+        document.getElementById("form-log-match").reset();
         modalLogger.classList.remove("hidden");
     });
     document.getElementById("btn-close-logger").addEventListener("click", () => {
-        modalLogger.classList.add("hidden");
+        closeLoggerModal();
     });
     document.getElementById("btn-cancel-logger").addEventListener("click", () => {
-        modalLogger.classList.add("hidden");
+        closeLoggerModal();
     });
 
 
@@ -2157,33 +2162,30 @@ function setupEventListeners() {
         const player = state.roster.find(p => p.id === playerId);
         if (!player) return;
 
-        // 1. Update All-Time Stats
-        player.allTimeStats.gp += 1;
-        if (result === "W") player.allTimeStats.w += 1;
-        if (result === "D") player.allTimeStats.d += 1;
-        if (result === "L") player.allTimeStats.l += 1;
-        if (cs) player.allTimeStats.cs += 1;
-        player.allTimeStats.gs = (player.allTimeStats.gs || 0) + gs;
-        player.allTimeStats.gc = (player.allTimeStats.gc || 0) + gc;
+        if (state.editingMatch) {
+            // Edit Mode
+            const match = player.history.find(m => m.id === state.editingMatch.matchId);
+            if (match) {
+                match.opponent = opponent.startsWith("vs.") ? opponent : `vs. ${opponent}`;
+                match.gs = gs;
+                match.gc = gc;
+                match.cs = cs;
+                match.result = result;
+            }
+        } else {
+            // Create Mode
+            if (!player.history) player.history = [];
+            player.history.unshift({
+                id: Date.now(),
+                date: new Date().toISOString().slice(0, 10),
+                opponent: opponent.startsWith("vs.") ? opponent : `vs. ${opponent}`,
+                gs, gc, cs, result
+            });
+        }
 
-        // 3. Update Recent Form
-        if (!player.form) player.form = [];
-        player.form.unshift(result);
-        if (player.form.length > 8) player.form.pop();
-
-        // 4. Append to History
-        if (!player.history) player.history = [];
-        player.history.unshift({
-            id: Date.now(),
-            date: "Just now",
-            opponent: opponent.startsWith("vs.") ? opponent : `vs. ${opponent}`,
-            gs, gc, cs, result
-        });
-
+        recalculatePlayerStats(player);
         saveToStorage();
-        modalLogger.classList.add("hidden");
-        document.getElementById("form-log-match").reset();
-
+        closeLoggerModal();
         renderAll();
 
         // Brief visual flash on table
@@ -2377,6 +2379,7 @@ function openPlayerProfileModal(playerId) {
     if (h.length === 0) {
         historyList.innerHTML = `<div class="text-muted" style="padding: 1rem 0;">No detailed match logs recorded for ${player.name} yet. Use '+ Log Match Result' to add game details!</div>`;
     } else {
+        const isAdmin = sessionStorage.getItem("fod_isAdmin") === "true";
         h.forEach(item => {
             const scoreClass = item.result === "W" ? "text-emerald" : (item.result === "D" ? "text-gold" : "text-crimson");
             const badgeText = item.result === "W" ? "🟢 WIN" : (item.result === "D" ? "🟡 DRAW" : "🔴 LOSS");
@@ -2384,6 +2387,17 @@ function openPlayerProfileModal(playerId) {
 
             const div = document.createElement("div");
             div.className = "history-item";
+            
+            let adminActionsHtml = "";
+            if (isAdmin) {
+                adminActionsHtml = `
+                    <div class="h-actions" style="display: flex; gap: 8px; align-items: center; margin-left: 10px;">
+                        <button class="btn btn-secondary btn-edit-match" style="padding: 4px 8px; font-size: 0.75rem; min-height: auto; line-height: 1;">✏️ Edit</button>
+                        <button class="btn btn-danger-outline btn-delete-match" style="padding: 4px 8px; font-size: 0.75rem; min-height: auto; line-height: 1;">🗑️ Delete</button>
+                    </div>
+                `;
+            }
+
             div.innerHTML = `
                 <div class="h-left">
                     <span style="font-size: 1.1rem; font-weight: 800;">${badgeText}</span>
@@ -2392,7 +2406,20 @@ function openPlayerProfileModal(playerId) {
                         <div class="h-date">${item.date} ${csTag}</div>
                     </div>
                 </div>
+                ${adminActionsHtml}
             `;
+
+            if (isAdmin) {
+                div.querySelector(".btn-edit-match").addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    openEditMatchModal(player.id, item.id);
+                });
+                div.querySelector(".btn-delete-match").addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    handleDeleteMatch(player.id, item.id);
+                });
+            }
+
             historyList.appendChild(div);
         });
     }
@@ -2881,4 +2908,76 @@ function renderRecentMatchesFeed() {
         `;
         feedEl.appendChild(pill);
     });
+}
+
+function recalculatePlayerStats(player) {
+    const history = player.history || [];
+    
+    // Reset stats
+    player.allTimeStats = { gp: 0, w: 0, d: 0, l: 0, gs: 0, gc: 0, cs: 0 };
+    player.weeklyStats = { gp: 0, w: 0, d: 0, l: 0, gs: 0, gc: 0, cs: 0 };
+    player.form = [];
+
+    // Reconstruct stats by iterating in reverse (oldest to newest) to match incrementing behavior
+    // history is sorted newest first, so reverse it for stat construction
+    const chronologicallySorted = [...history].reverse();
+
+    chronologicallySorted.forEach(m => {
+        player.allTimeStats.gp++;
+        if (m.result === "W") player.allTimeStats.w++;
+        else if (m.result === "D") player.allTimeStats.d++;
+        else if (m.result === "L") player.allTimeStats.l++;
+        
+        if (m.cs || m.gc === 0) player.allTimeStats.cs++;
+        player.allTimeStats.gs += m.gs || 0;
+        player.allTimeStats.gc += m.gc || 0;
+
+        // Keep form updated to max 8 items
+        player.form.unshift(m.result);
+        if (player.form.length > 8) player.form.pop();
+    });
+
+    player.weeklyStats = { ...player.allTimeStats };
+}
+
+function openEditMatchModal(playerId, matchId) {
+    const player = state.roster.find(p => p.id === playerId);
+    if (!player) return;
+    const match = player.history.find(m => m.id === matchId);
+    if (!match) return;
+
+    state.editingMatch = { playerId, matchId };
+
+    document.getElementById("modal-logger-title").textContent = "Edit eFootball Match Result";
+    document.getElementById("input-player").value = playerId;
+    document.getElementById("input-player").disabled = true;
+    document.getElementById("input-opponent").value = match.opponent.replace(/^vs\.\s+/, "");
+    document.getElementById("input-gs").value = match.gs;
+    document.getElementById("input-gc").value = match.gc;
+
+    document.getElementById("modal-logger").classList.remove("hidden");
+    document.getElementById("modal-profile").classList.add("hidden");
+}
+
+function handleDeleteMatch(playerId, matchId) {
+    const player = state.roster.find(p => p.id === playerId);
+    if (!player) return;
+    
+    if (confirm(`Are you sure you want to delete this match result for ${player.name}?`)) {
+        player.history = (player.history || []).filter(m => m.id !== matchId);
+        recalculatePlayerStats(player);
+        saveToStorage();
+        renderAll();
+        
+        // Refresh the profile modal
+        openPlayerProfileModal(playerId);
+    }
+}
+
+function closeLoggerModal() {
+    document.getElementById("modal-logger").classList.add("hidden");
+    state.editingMatch = null;
+    document.getElementById("modal-logger-title").textContent = "Log eFootball Match Result";
+    document.getElementById("input-player").disabled = false;
+    document.getElementById("form-log-match").reset();
 }
