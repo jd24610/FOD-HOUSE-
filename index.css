@@ -1236,3 +1236,67 @@ body.admin-mode button.admin-only {
     flex: 1;
     max-width: 300px;
 }
+
+/* ==========================================================================
+   INTRO SCREEN
+   ========================================================================== */
+.intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-obsidian);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateY(0);
+}
+
+.intro-screen.slide-up {
+    transform: translateY(-100%);
+}
+
+.intro-content {
+    text-align: center;
+    animation: fadeInScale 1s ease-out forwards;
+}
+
+.intro-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.5));
+}
+
+.intro-title {
+    font-family: var(--font-head);
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    margin-bottom: 0.5rem;
+}
+
+.intro-subtitle {
+    font-size: 1.2rem;
+    color: var(--neon-crimson);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0 0 10px var(--neon-crimson-glow);
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

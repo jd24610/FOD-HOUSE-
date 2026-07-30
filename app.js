@@ -1798,6 +1798,17 @@ const state = {
 const STORAGE_KEY = "fod_efootball_stats_v15_gameid";
 
 function initApp() {
+    // Intro Screen Logic
+    const introScreen = document.getElementById("intro-screen");
+    if (introScreen) {
+        setTimeout(() => {
+            introScreen.classList.add("slide-up");
+            setTimeout(() => {
+                introScreen.style.display = "none";
+            }, 1000); 
+        }, 2000); 
+    }
+
     initAdminState();
     loadFromStorage();
     setupEventListeners();
