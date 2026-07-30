@@ -2283,6 +2283,18 @@ function setupEventListeners() {
         });
     }
 
+    // J. Player Card Modal
+    const modalPlayerCard = document.getElementById("modal-player-card");
+    document.getElementById("btn-show-card-modal").addEventListener("click", () => {
+        openPlayerCardModal();
+    });
+    document.getElementById("btn-close-player-card").addEventListener("click", () => {
+        modalPlayerCard.classList.add("hidden");
+    });
+    modalPlayerCard.addEventListener("click", (e) => {
+        if (e.target === modalPlayerCard) modalPlayerCard.classList.add("hidden");
+    });
+
     // I. Add New Member
     const modalAddMember = document.getElementById("modal-add-member");
     const btnAddMember = document.getElementById("btn-add-member");
@@ -2346,6 +2358,7 @@ function setupEventListeners() {
 function openPlayerProfileModal(playerId) {
     const player = state.roster.find(p => p.id === playerId);
     if (!player) return;
+    state.selectedPlayer = player;
 
     const s = getPlayerComputedStats(player, state.currentFilter.timeframe);
 
@@ -3209,4 +3222,35 @@ function renderCompareResults() {
             </div>
         </div>
     `;
+}
+
+// ==========================================================================
+// FUT PLAYER CARD GENERATOR
+// ==========================================================================
+function openPlayerCardModal() {
+    const player = state.selectedPlayer;
+    if (!player) return;
+
+    const s = getPlayerComputedStats(player);
+    const winRate = s.gp > 0 ? Math.round((s.w / s.gp) * 100) : 0;
+    
+    // eFootball FUT style overall rating calculation:
+    // Formula weighting: Win Rate (60%), Points (30%), Clean Sheets (10%)
+    let rating = Math.round((winRate * 0.6) + (s.points * 0.3) + (s.cs * 1.0));
+    
+    // Bounds limits: Min 60, Max 99
+    if (rating > 99) rating = 99;
+    if (rating < 60) rating = 60;
+    if (s.gp === 0) rating = 60;
+
+    document.getElementById("card-rating").textContent = rating;
+    document.getElementById("card-position").textContent = player.formation || "FOD";
+    document.getElementById("card-avatar").textContent = player.avatar;
+    document.getElementById("card-name").textContent = player.name;
+    document.getElementById("card-stat-gp").textContent = s.gp;
+    document.getElementById("card-stat-wr").textContent = winRate + "%";
+    document.getElementById("card-stat-gs").textContent = s.gs;
+    document.getElementById("card-stat-cs").textContent = s.cs;
+
+    document.getElementById("modal-player-card").classList.remove("hidden");
 }

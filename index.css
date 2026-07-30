@@ -1872,3 +1872,151 @@ body.admin-mode button.admin-only {
         padding: 1rem;
     }
 }
+
+/* ==========================================================================
+   FUT PLAYER CARD DESIGN
+   ========================================================================== */
+.fut-card-wrapper {
+    width: 280px;
+    height: 400px;
+    background: linear-gradient(135deg, #1e1b4b 0%, #311042 50%, #4c0519 100%);
+    border: 3px solid var(--cyber-gold);
+    border-radius: 20px;
+    position: relative;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 193, 7, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fut-card-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 193, 7, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.fut-card-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.fut-card-header-overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.fut-rating {
+    font-family: var(--font-head);
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--cyber-gold);
+    text-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
+    line-height: 1;
+}
+
+.fut-position {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+.fut-logo img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 193, 7, 0.4);
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.2);
+}
+
+.fut-avatar-container {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(244, 37, 73, 0.2));
+    border: 3px solid var(--cyber-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
+    margin: 0.5rem 0;
+}
+
+.fut-avatar {
+    font-family: var(--font-head);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--cyber-gold);
+}
+
+.fut-card-info {
+    width: 100%;
+    text-align: center;
+}
+
+.fut-name {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
+.fut-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-glass), transparent);
+    margin: 0.5rem 0;
+}
+
+.fut-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.fut-stat-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.fut-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    font-size: 0.95rem;
+}
+
+.fut-stat strong {
+    font-family: var(--font-head);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.fut-stat span {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}

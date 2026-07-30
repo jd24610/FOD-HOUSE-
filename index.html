@@ -601,9 +601,52 @@
                 </div>
             </div>
 
-            <div class="modal-actions">
+            <div class="modal-actions" style="display: flex; gap: 0.75rem; justify-content: flex-end;">
+                <button type="button" class="btn btn-secondary" id="btn-show-card-modal">📋 Generate Card</button>
                 <button type="button" class="btn btn-primary" id="btn-close-profile-bottom">Close Profile</button>
             </div>
+        </div>
+    </div>
+
+    <!-- MODAL 9: FUT-Style Player Card Overlay -->
+    <div id="modal-player-card" class="modal-overlay hidden" role="dialog" aria-modal="true">
+        <div class="modal-box glass-panel modal-animate" style="max-width: 380px; padding: 1.5rem; display: flex; flex-direction: column; align-items: center;">
+            <div class="modal-header" style="width: 100%; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="font-family: var(--font-head); margin: 0; font-size: 1.1rem; color: var(--text-primary);">FOD Player Card</h3>
+                <button class="btn-close" id="btn-close-player-card" aria-label="Close" style="background: none; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer;">&times;</button>
+            </div>
+            
+            <!-- FUT Card Design Container -->
+            <div class="fut-card-wrapper">
+                <div class="fut-card-inner">
+                    <div class="fut-card-header-overlay">
+                        <div class="fut-rating" id="card-rating">99</div>
+                        <div class="fut-position" id="card-position">FOD</div>
+                        <div class="fut-logo"><img src="clan_logo.png" alt="FOD"></div>
+                    </div>
+                    <div class="fut-avatar-container">
+                        <div class="fut-avatar" id="card-avatar">TG</div>
+                    </div>
+                    <div class="fut-card-info">
+                        <h2 class="fut-name" id="card-name">PLAYER</h2>
+                        <hr class="fut-divider">
+                        <div class="fut-stats">
+                            <div class="fut-stat-col">
+                                <div class="fut-stat"><strong id="card-stat-gp">00</strong> <span>GP</span></div>
+                                <div class="fut-stat"><strong id="card-stat-wr">00%</strong> <span>WR</span></div>
+                            </div>
+                            <div class="fut-stat-col">
+                                <div class="fut-stat"><strong id="card-stat-gs">00</strong> <span>GS</span></div>
+                                <div class="fut-stat"><strong id="card-stat-cs">00</strong> <span>CS</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-muted" style="font-size: 0.8rem; text-align: center; margin-top: 1.25rem; margin-bottom: 0;">
+                📸 <strong>Tip:</strong> Take a screenshot of this card to share with the clan on WhatsApp!
+            </p>
         </div>
     </div>
 
