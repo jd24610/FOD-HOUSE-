@@ -2704,5 +2704,120 @@ const originalInitApp = initApp;
 initApp = function() {
     originalInitApp();
     initLeagues();
+    initAnnouncement();
+    initPOTW();
 };
 document.addEventListener("DOMContentLoaded", initApp);
+
+// ==========================================================================
+// ANNOUNCEMENT BANNER
+// ==========================================================================
+const ANNOUNCE_KEY = "fod_announcement_v1";
+
+function initAnnouncement() {
+    const saved = localStorage.getItem(ANNOUNCE_KEY);
+    if (saved) showAnnouncementBanner(saved);
+
+    // Admin button
+    const btnAnnounce = document.getElementById("btn-announce");
+    const modalAnnounce = document.getElementById("modal-announce");
+
+    btnAnnounce?.addEventListener("click", () => {
+        const current = localStorage.getItem(ANNOUNCE_KEY) || "";
+        document.getElementById("announce-text").value = current;
+        modalAnnounce.classList.remove("hidden");
+    });
+
+    document.getElementById("btn-close-announce")?.addEventListener("click", () => modalAnnounce.classList.add("hidden"));
+    modalAnnounce?.addEventListener("click", e => { if (e.target === modalAnnounce) modalAnnounce.classList.add("hidden"); });
+
+    document.getElementById("btn-clear-announce")?.addEventListener("click", () => {
+        localStorage.removeItem(ANNOUNCE_KEY);
+        document.getElementById("announcement-banner").classList.add("hidden");
+        modalAnnounce.classList.add("hidden");
+    });
+
+    document.getElementById("form-announce")?.addEventListener("submit", e => {
+        e.preventDefault();
+        const msg = document.getElementById("announce-text").value.trim();
+        if (!msg) return;
+        localStorage.setItem(ANNOUNCE_KEY, msg);
+        showAnnouncementBanner(msg);
+        modalAnnounce.classList.add("hidden");
+    });
+
+    document.getElementById("btn-dismiss-announce")?.addEventListener("click", () => {
+        document.getElementById("announcement-banner").classList.add("hidden");
+    });
+}
+
+function showAnnouncementBanner(msg) {
+    const banner = document.getElementById("announcement-banner");
+    document.getElementById("announcement-text").textContent = msg;
+    banner.classList.remove("hidden");
+}
+
+// ==========================================================================
+// PLAYER OF THE WEEK
+// ==========================================================================
+const POTW_KEY = "fod_potw_v1";
+
+function initPOTW() {
+    const saved = localStorage.getItem(POTW_KEY);
+    if (saved) renderPOTW(saved);
+
+    const btnSetPotw = document.getElementById("btn-set-potw");
+    const modalPotw = document.getElementById("modal-potw");
+
+    btnSetPotw?.addEventListener("click", () => {
+        // Populate dropdown with sorted roster
+        const sel = document.getElementById("potw-player-select");
+        sel.innerHTML = '<option value="">-- Choose a Player --</option>';
+        [...state.roster]
+            .sort((a,b) => a.name.localeCompare(b.name))
+            .forEach(p => {
+                const opt = document.createElement("option");
+                opt.value = p.id;
+                opt.textContent = p.name;
+                sel.appendChild(opt);
+            });
+        const current = localStorage.getItem(POTW_KEY);
+        if (current) sel.value = current;
+        modalPotw.classList.remove("hidden");
+    });
+
+    document.getElementById("btn-close-potw")?.addEventListener("click", () => modalPotw.classList.add("hidden"));
+    modalPotw?.addEventListener("click", e => { if (e.target === modalPotw) modalPotw.classList.add("hidden"); });
+
+    document.getElementById("form-potw")?.addEventListener("submit", e => {
+        e.preventDefault();
+        const pid = document.getElementById("potw-player-select").value;
+        if (!pid) return;
+        localStorage.setItem(POTW_KEY, pid);
+        renderPOTW(pid);
+        modalPotw.classList.add("hidden");
+    });
+
+    document.getElementById("btn-clear-potw")?.addEventListener("click", () => {
+        localStorage.removeItem(POTW_KEY);
+        document.getElementById("potw-section").classList.add("hidden");
+    });
+}
+
+function renderPOTW(playerId) {
+    const player = state.roster.find(p => p.id === playerId);
+    if (!player) return;
+
+    const s = getPlayerComputedStats(player, "ALL");
+    const winRate = s.gp > 0 ? Math.round((s.w / s.gp) * 100) : 0;
+
+    document.getElementById("potw-avatar").textContent = player.avatar;
+    document.getElementById("potw-name").textContent = player.name;
+    document.getElementById("potw-w").textContent = s.w;
+    document.getElementById("potw-d").textContent = s.d;
+    document.getElementById("potw-l").textContent = s.l;
+    document.getElementById("potw-pts").textContent = s.points;
+    document.getElementById("potw-wr").textContent = winRate + "%";
+
+    document.getElementById("potw-section").classList.remove("hidden");
+}

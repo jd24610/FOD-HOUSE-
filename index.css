@@ -1336,3 +1336,161 @@ body.admin-mode button.admin-only {
     0% { opacity: 0; transform: scale(0.92); }
     100% { opacity: 1; transform: scale(1); }
 }
+
+/* ==========================================================================
+   ANNOUNCEMENT BANNER
+   ========================================================================== */
+.announcement-banner {
+    position: sticky;
+    top: 72px;
+    z-index: 90;
+    background: linear-gradient(90deg, rgba(244,37,73,0.15), rgba(255,193,7,0.12), rgba(244,37,73,0.15));
+    border-bottom: 1px solid rgba(244, 37, 73, 0.35);
+    border-top: 1px solid rgba(244, 37, 73, 0.2);
+    padding: 0.7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    animation: slideDownBanner 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes slideDownBanner {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.announcement-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.announcement-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+#announcement-text {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.announcement-dismiss {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--text-muted);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.announcement-dismiss:hover {
+    background: rgba(244,37,73,0.2);
+    color: var(--neon-crimson);
+    border-color: var(--neon-crimson);
+}
+
+/* ==========================================================================
+   PLAYER OF THE WEEK
+   ========================================================================== */
+.potw-section {
+    margin-bottom: 1.5rem;
+}
+
+.potw-card {
+    position: relative;
+    padding: 1.25rem 1.75rem;
+    background: linear-gradient(135deg, rgba(255,193,7,0.08) 0%, rgba(168,85,247,0.08) 50%, rgba(244,37,73,0.08) 100%);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    box-shadow: 0 0 30px rgba(255, 193, 7, 0.08), var(--shadow-glass);
+    overflow: hidden;
+}
+
+.potw-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-crimson), var(--cyber-gold), #a855f7);
+}
+
+.potw-badge {
+    font-family: var(--font-head);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--cyber-gold);
+    text-shadow: 0 0 10px rgba(255,193,7,0.5);
+    margin-bottom: 0.75rem;
+}
+
+.potw-body {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.potw-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,193,7,0.2), rgba(168,85,247,0.2));
+    border: 2px solid var(--cyber-gold);
+    box-shadow: 0 0 20px rgba(255,193,7,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-head);
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--cyber-gold);
+    flex-shrink: 0;
+}
+
+.potw-name {
+    font-family: var(--font-head);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.potw-stats {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.potw-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.potw-stat-val {
+    font-family: var(--font-head);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.potw-stat-lbl {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    font-weight: 600;
+}
