@@ -2747,6 +2747,7 @@ initApp = function() {
     initLeagues();
     initAnnouncement();
     initPOTW();
+    initCompare();
 };
 document.addEventListener("DOMContentLoaded", initApp);
 
@@ -3028,4 +3029,184 @@ function renderMiniAwards() {
             </div>
         `).join("");
     }
+}
+
+// ==========================================================================
+// HEAD-TO-HEAD COMPARISON
+// ==========================================================================
+function initCompare() {
+    const toggleHeader = document.getElementById("compare-toggle-header");
+    const compareBody = document.getElementById("compare-body");
+    const toggleIcon = document.getElementById("compare-toggle-icon");
+
+    toggleHeader?.addEventListener("click", () => {
+        const isHidden = compareBody.classList.toggle("hidden");
+        toggleIcon.style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
+        if (!isHidden) {
+            populateCompareDropdowns();
+        }
+    });
+
+    const p1Select = document.getElementById("compare-p1");
+    const p2Select = document.getElementById("compare-p2");
+
+    p1Select?.addEventListener("change", renderCompareResults);
+    p2Select?.addEventListener("change", renderCompareResults);
+}
+
+function populateCompareDropdowns() {
+    const p1Select = document.getElementById("compare-p1");
+    const p2Select = document.getElementById("compare-p2");
+    if (!p1Select || !p2Select) return;
+
+    const currentP1 = p1Select.value;
+    const currentP2 = p2Select.value;
+
+    const optHtml = '<option value="">-- Select Player --</option>' + 
+        [...state.roster]
+            .sort((a,b) => a.name.localeCompare(b.name))
+            .map(p => `<option value="${p.id}">${p.name}</option>`)
+            .join("");
+
+    p1Select.innerHTML = optHtml;
+    p2Select.innerHTML = optHtml;
+
+    p1Select.value = currentP1;
+    p2Select.value = currentP2;
+}
+
+// Re-expose populateCompareDropdowns to make sure it runs on roster changes
+const originalRenderAll = renderAll;
+renderAll = function() {
+    originalRenderAll();
+    const compareBody = document.getElementById("compare-body");
+    if (compareBody && !compareBody.classList.contains("hidden")) {
+        populateCompareDropdowns();
+        renderCompareResults();
+    }
+};
+
+function renderCompareResults() {
+    const p1Select = document.getElementById("compare-p1");
+    const p2Select = document.getElementById("compare-p2");
+    const resultsEl = document.getElementById("compare-results");
+    if (!p1Select || !p2Select || !resultsEl) return;
+
+    const p1Id = p1Select.value;
+    const p2Id = p2Select.value;
+
+    if (!p1Id || !p2Id) {
+        resultsEl.classList.add("hidden");
+        return;
+    }
+
+    const p1 = state.roster.find(p => p.id === p1Id);
+    const p2 = state.roster.find(p => p.id === p2Id);
+    if (!p1 || !p2) return;
+
+    const s1 = getPlayerComputedStats(p1);
+    const s2 = getPlayerComputedStats(p2);
+
+    resultsEl.classList.remove("hidden");
+
+    // Helper to add winning class to higher stats
+    const highlight = (v1, v2) => {
+        if (v1 > v2) return ['stat-winner', ''];
+        if (v2 > v1) return ['', 'stat-winner'];
+        return ['', ''];
+    };
+
+    const wr1 = parseFloat(s1.winRate);
+    const wr2 = parseFloat(s2.winRate);
+
+    const [wClassGP1, wClassGP2] = highlight(s1.gp, s2.gp);
+    const [wClassW1, wClassW2] = highlight(s1.w, s2.w);
+    const [wClassD1, wClassD2] = highlight(s1.d, s2.d);
+    const [wClassL1, wClassL2] = highlight(s2.l, s1.l); // Lower loss count wins!
+    const [wClassGS1, wClassGS2] = highlight(s1.gs, s2.gs);
+    const [wClassGC1, wClassGC2] = highlight(s2.gc, s1.gc); // Lower conceded count wins!
+    const [wClassCS1, wClassCS2] = highlight(s1.cs, s2.cs);
+    const [wClassPTS1, wClassPTS2] = highlight(s1.points, s2.points);
+    const [wClassWR1, wClassWR2] = highlight(wr1, wr2);
+    const [wClassStr1, wClassStr2] = highlight(s1.streak, s2.streak);
+
+    resultsEl.innerHTML = `
+        <div class="compare-grid">
+            <!-- Header Row -->
+            <div class="compare-header-row">
+                <div class="compare-header-player">
+                    <div class="compare-avatar-large">${p1.avatar}</div>
+                    <span class="award-player-name" style="font-size: 1.1rem;">${p1.name}</span>
+                    <span class="badge-tag text-muted" style="font-size:0.75rem;">${p1.playstyle}</span>
+                </div>
+                <div></div>
+                <div class="compare-header-player">
+                    <div class="compare-avatar-large">${p2.avatar}</div>
+                    <span class="award-player-name" style="font-size: 1.1rem;">${p2.name}</span>
+                    <span class="badge-tag text-muted" style="font-size:0.75rem;">${p2.playstyle}</span>
+                </div>
+            </div>
+
+            <!-- Stats Rows -->
+            <div class="compare-stat-row">
+                <span class="compare-stat-value compare-p1-val ${wClassGP1}">${s1.gp}</span>
+                <span class="compare-stat-label">Matches Played</span>
+                <span class="compare-stat-value compare-p2-val ${wClassGP2}">${s2.gp}</span>
+            </div>
+
+            <div class="compare-stat-row">
+                <span class="compare-stat-value compare-p1-val ${wClassW1} text-emerald">${s1.w}</span>
+                <span class="compare-stat-label">Wins</span>
+                <span class="compare-stat-value compare-p2-val ${wClassW2} text-emerald">${s2.w}</span>
+            </div>
+
+            <div class="compare-stat-row">
+                <span class="compare-stat-value compare-p1-val ${wClassD1} text-gold">${s1.d}</span>
+                <span class="compare-stat-label">Draws</span>
+                <span class="compare-stat-value compare-p2-val ${wClassD2} text-gold">${s2.d}</span>
+            </div>
+
+            <div class="compare-stat-row">
+                <span class="compare-stat-value compare-p1-val ${wClassL1} text-crimson">${s1.l}</span>
+                <span class="compare-stat-label">Losses</span>
+                <span class="compare-stat-value compare-p2-val ${wClassL2} text-crimson">${s2.l}</span>
+            </div>
+
+            <div class="compare-stat-row">
+                <span class="compare-stat-value compare-p1-val ${wClassGS1} text-emerald">${s1.gs}</span>
+                <span class="compare-stat-label">Goals Scored</span>
+                <span class="compare-stat-value compare-p2-val ${wClassGS2} text-emerald">${s2.gs}</span>
+            </div>
+
+            <div class="compare-stat-row">
+                <span class="compare-stat-value compare-p1-val ${wClassGC1} text-crimson">${s1.gc}</span>
+                <span class="compare-stat-label">Goals Conceded</span>
+                <span class="compare-stat-value compare-p2-val ${wClassGC2} text-crimson">${s2.gc}</span>
+            </div>
+
+            <div class="compare-stat-row">
+                <span class="compare-stat-value compare-p1-val ${wClassCS1} text-cyan">${s1.cs}</span>
+                <span class="compare-stat-label">Clean Sheets</span>
+                <span class="compare-stat-value compare-p2-val ${wClassCS2} text-cyan">${s2.cs}</span>
+            </div>
+
+            <div class="compare-stat-row">
+                <span class="compare-stat-value compare-p1-val ${wClassWR1}">${s1.winRate}%</span>
+                <span class="compare-stat-label">Win Percentage</span>
+                <span class="compare-stat-value compare-p2-val ${wClassWR2}">${s2.winRate}%</span>
+            </div>
+
+            <div class="compare-stat-row">
+                <span class="compare-stat-value compare-p1-val ${wClassStr1} text-emerald">${s1.streak} 🔥</span>
+                <span class="compare-stat-label">Win Streak</span>
+                <span class="compare-stat-value compare-p2-val ${wClassStr2} text-emerald">${s2.streak} 🔥</span>
+            </div>
+
+            <div class="compare-stat-row" style="border-bottom: none;">
+                <span class="compare-stat-value compare-p1-val ${wClassPTS1} text-gold" style="font-size: 1.5rem;">${s1.points}</span>
+                <span class="compare-stat-label" style="font-size: 1rem; color: var(--text-primary);">Total Points</span>
+                <span class="compare-stat-value compare-p2-val ${wClassPTS2} text-gold" style="font-size: 1.5rem;">${s2.points}</span>
+            </div>
+        </div>
+    `;
 }

@@ -208,6 +208,36 @@
             </div>
         </div>
 
+        <!-- Player vs Player Compare Section -->
+        <div class="compare-section glass-panel">
+            <div class="compare-header" id="compare-toggle-header" style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem;">
+                <h3 class="compare-title" style="font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin: 0;">⚔️ Head-to-Head Comparison</h3>
+                <span id="compare-toggle-icon" style="transition: transform 0.3s; font-size: 1.2rem; color: var(--text-muted);">▼</span>
+            </div>
+            
+            <div id="compare-body" class="compare-body hidden" style="padding: 0 1.5rem 1.5rem 1.5rem; border-top: 1px solid var(--border-glass); margin-top: 0.25rem;">
+                <div class="compare-selectors" style="display: flex; align-items: flex-end; gap: 1.5rem; margin: 1.5rem 0; flex-wrap: wrap;">
+                    <div class="compare-select-wrapper" style="flex: 1; min-width: 200px;">
+                        <label for="compare-p1" class="form-label" style="margin-bottom: 0.5rem; font-weight: 600;">Player 1</label>
+                        <select id="compare-p1" class="form-control">
+                            <option value="">-- Select Player 1 --</option>
+                        </select>
+                    </div>
+                    <div class="compare-vs" style="font-family: var(--font-head); font-size: 1.5rem; font-weight: 900; color: var(--neon-crimson); padding-bottom: 0.5rem; text-shadow: 0 0 10px var(--neon-crimson-glow);">VS</div>
+                    <div class="compare-select-wrapper" style="flex: 1; min-width: 200px;">
+                        <label for="compare-p2" class="form-label" style="margin-bottom: 0.5rem; font-weight: 600;">Player 2</label>
+                        <select id="compare-p2" class="form-control">
+                            <option value="">-- Select Player 2 --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="compare-results" class="compare-results hidden">
+                    <!-- Dynamic split comparison table/UI -->
+                </div>
+            </div>
+        </div>
+
         <!-- View Tabs -->
         <div class="view-tabs">
             <button class="tab-btn active" id="tab-leaderboard">Global Leaderboard</button>
