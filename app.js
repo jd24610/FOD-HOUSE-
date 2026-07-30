@@ -1963,9 +1963,9 @@ function renderHeroSummary() {
     animateCounter("hero-winrate", clanWinRate, "%");
     animateCounter("hero-cs", totCS, "");
 
-    // Member count is static (roster length)
+    // Member count reflects full FOD WhatsApp clan (53 total members)
     const membersEl = document.getElementById("hero-members");
-    if (membersEl) membersEl.textContent = state.roster.length;
+    if (membersEl) membersEl.textContent = 53;
 }
 
 function animateCounter(elementId, targetValue, suffix = "") {
