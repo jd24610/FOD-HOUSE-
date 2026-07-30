@@ -1238,7 +1238,7 @@ body.admin-mode button.admin-only {
 }
 
 /* ==========================================================================
-   INTRO SCREEN
+   INTRO SCREEN — DOOR OPENING EFFECT
    ========================================================================== */
 .intro-screen {
     position: fixed;
@@ -1248,80 +1248,83 @@ body.admin-mode button.admin-only {
     height: 100vh;
     z-index: 9999;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: all; /* Block clicks while doors are closed */
+    pointer-events: all;
 }
 
-/* The left and right doors */
-.intro-screen::before,
-.intro-screen::after {
-    content: '';
-    position: absolute;
-    top: 0;
+/* Each door takes half the screen */
+.intro-door {
     width: 50%;
     height: 100%;
     background: var(--bg-obsidian);
-    z-index: -1;
-    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
-    pointer-events: all; /* Block clicks while doors are closed */
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 1.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.intro-screen::before {
-    left: 0;
-    border-right: 2px solid var(--border-glass);
+.intro-door-left {
+    justify-content: flex-end;
+    border-right: 1px solid rgba(244, 37, 73, 0.4);
 }
 
-.intro-screen::after {
-    right: 0;
-    border-left: 2px solid var(--border-glass);
+.intro-door-right {
+    justify-content: flex-start;
+    border-left: 1px solid rgba(244, 37, 73, 0.4);
 }
 
-/* When the doors open */
-.intro-screen.slide-up {
-    pointer-events: none; /* Don't block page once open */
+/* Content inside each door — positioned so together they look centered */
+.intro-door-content {
+    width: 200%;          /* twice the door width = full viewport */
+    text-align: center;
+    padding: 2rem;
+    animation: fadeInScale 1s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.intro-screen.slide-up::before {
+/* Right door content is mirrored so both doors show identical center content */
+.intro-door-content-right {
+    transform: translateX(-50%); /* shift left by 50% of its own width */
+}
+
+/* When doors open — slide each door outward */
+.intro-screen.slide-up .intro-door-left {
     transform: translateX(-100%);
 }
 
-.intro-screen.slide-up::after {
+.intro-screen.slide-up .intro-door-right {
     transform: translateX(100%);
 }
 
-.intro-content {
-    text-align: center;
-    animation: fadeInScale 1s ease-out forwards;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    z-index: 10;
-}
-
-.intro-screen.slide-up .intro-content {
-    opacity: 0;
-    transform: scale(0.9);
+/* Once fully open, let clicks pass through */
+.intro-screen.slide-up {
+    pointer-events: none;
 }
 
 .intro-logo {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 2rem;
-    filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.5));
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.6));
+    border: 2px solid rgba(168, 85, 247, 0.5);
 }
 
 .intro-title {
     font-family: var(--font-head);
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 900;
     letter-spacing: 2px;
     color: var(--text-primary);
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     margin-bottom: 0.5rem;
+    line-height: 1.15;
 }
 
 .intro-subtitle {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
     color: var(--neon-crimson);
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -1330,12 +1333,6 @@ body.admin-mode button.admin-only {
 }
 
 @keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+    0% { opacity: 0; transform: scale(0.92); }
+    100% { opacity: 1; transform: scale(1); }
 }
