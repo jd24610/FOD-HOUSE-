@@ -10,1779 +10,1837 @@
 // --- 1. DEFAULT ROSTER (18 REAL FOD CLAN MEMBERS from WhatsApp group screenshot) ---
 const DEFAULT_FOD_ROSTER = [
     {
-        id: "p1",
-        name: "ADAMMSF",
-        role: "Champion",
-        playstyle: "Quick Counter",
-        formation: "4-2-1-3",
-        avatar: "AD",
-        allTimeStats: {
-            gp: 7,
-            w: 4,
-            d: 2,
-            l: 1,
-            gs: 14,
-            gc: 7,
-            cs: 3
+        "id": "p1",
+        "name": "ADAMMSF",
+        "role": "Champion",
+        "playstyle": "Quick Counter",
+        "formation": "4-2-1-3",
+        "avatar": "AD",
+        "allTimeStats": {
+            "gp": 7,
+            "w": 4,
+            "d": 2,
+            "l": 1,
+            "gs": 14,
+            "gc": 7,
+            "cs": 3
         },
-        weeklyStats: {
-            gp: 7,
-            w: 4,
-            d: 2,
-            l: 1,
-            gs: 14,
-            gc: 7,
-            cs: 3
+        "weeklyStats": {
+            "gp": 7,
+            "w": 4,
+            "d": 2,
+            "l": 1,
+            "gs": 14,
+            "gc": 7,
+            "cs": 3
         },
-        form: [
+        "form": [
             "L",
             "W",
             "W",
             "D",
             "D"
         ],
-        history: [
+        "history": [
             {
-                id: 98,
-                date: "2026-07-30",
-                opponent: "vs. LUFFY",
-                gs: 1,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 98,
+                "date": "2026-07-30",
+                "opponent": "vs. LUFFY",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 95,
-                date: "2026-07-30",
-                opponent: "vs. JERRY",
-                gs: 3,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 95,
+                "date": "2026-07-30",
+                "opponent": "vs. JERRY",
+                "gs": 3,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 79,
-                date: "2026-07-30",
-                opponent: "vs. RADUAN",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 79,
+                "date": "2026-07-30",
+                "opponent": "vs. RADUAN",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 37,
-                date: "2026-07-30",
-                opponent: "vs. KENO",
-                gs: 2,
-                gc: 2,
-                cs: false,
-                result: "D"
+                "id": 37,
+                "date": "2026-07-30",
+                "opponent": "vs. KENO",
+                "gs": 2,
+                "gc": 2,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 26,
-                date: "2026-07-30",
-                opponent: "vs. REMY",
-                gs: 1,
-                gc: 1,
-                cs: false,
-                result: "D"
+                "id": 26,
+                "date": "2026-07-30",
+                "opponent": "vs. REMY",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 19,
-                date: "2026-07-30",
-                opponent: "vs. LIL G",
-                gs: 2,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 19,
+                "date": "2026-07-30",
+                "opponent": "vs. LIL G",
+                "gs": 2,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 12,
-                date: "2026-07-30",
-                opponent: "vs. NOËL (SW)",
-                gs: 4,
-                gc: 2,
-                cs: false,
-                result: "W"
+                "id": 12,
+                "date": "2026-07-30",
+                "opponent": "vs. NOËL (SW)",
+                "gs": 4,
+                "gc": 2,
+                "cs": false,
+                "result": "W"
             }
         ],
-        gameId: "ASAA-026-981-191"
+        "gameId": "ASAA-026-981-191"
     },
     {
-        id: "p2",
-        name: "ICONIC",
-        role: "Elite",
-        playstyle: "Possession Game",
-        formation: "4-3-3",
-        avatar: "IC",
-        allTimeStats: {
-            gp: 20,
-            w: 13,
-            d: 3,
-            l: 4,
-            gs: 38,
-            gc: 19,
-            cs: 9
+        "id": "p2",
+        "name": "ICONIC",
+        "role": "Elite",
+        "playstyle": "Possession Game",
+        "formation": "4-3-3",
+        "avatar": "IC",
+        "allTimeStats": {
+            "gp": 20,
+            "w": 13,
+            "d": 3,
+            "l": 4,
+            "gs": 38,
+            "gc": 19,
+            "cs": 9
         },
-        weeklyStats: {
-            gp: 20,
-            w: 13,
-            d: 3,
-            l: 4,
-            gs: 38,
-            gc: 19,
-            cs: 9
+        "weeklyStats": {
+            "gp": 20,
+            "w": 13,
+            "d": 3,
+            "l": 4,
+            "gs": 38,
+            "gc": 19,
+            "cs": 9
         },
-        form: [
+        "form": [
             "W",
             "W",
             "W",
             "W",
             "L"
         ],
-        history: [
+        "history": [
             {
-                id: 124,
-                date: "2026-07-30",
-                opponent: "vs. Manual Entry (Win)",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 124,
+                "date": "2026-07-30",
+                "opponent": "vs. Manual Entry (Win)",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 123,
-                date: "2026-07-30",
-                opponent: "vs. Manual Entry (Win)",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 123,
+                "date": "2026-07-30",
+                "opponent": "vs. Manual Entry (Win)",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 122,
-                date: "2026-07-30",
-                opponent: "vs. Manual Entry (Win)",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 122,
+                "date": "2026-07-30",
+                "opponent": "vs. Manual Entry (Win)",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 116,
-                date: "2026-07-30",
-                opponent: "vs. NATURAL BOY",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 116,
+                "date": "2026-07-30",
+                "opponent": "vs. NATURAL BOY",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 108,
-                date: "2026-07-30",
-                opponent: "vs. K12",
-                gs: 1,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 108,
+                "date": "2026-07-30",
+                "opponent": "vs. K12",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 101,
-                date: "2026-07-30",
-                opponent: "vs. FABIANO",
-                gs: 5,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 101,
+                "date": "2026-07-30",
+                "opponent": "vs. FABIANO",
+                "gs": 5,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 93,
-                date: "2026-07-30",
-                opponent: "vs. GUSTAVE",
-                gs: 3,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 93,
+                "date": "2026-07-30",
+                "opponent": "vs. GUSTAVE",
+                "gs": 3,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 86,
-                date: "2026-07-30",
-                opponent: "vs. FRESCO",
-                gs: 1,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 86,
+                "date": "2026-07-30",
+                "opponent": "vs. FRESCO",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 83,
-                date: "2026-07-30",
-                opponent: "vs. JAMESLY",
-                gs: 0,
-                gc: 0,
-                cs: true,
-                result: "D"
+                "id": 83,
+                "date": "2026-07-30",
+                "opponent": "vs. JAMESLY",
+                "gs": 0,
+                "gc": 0,
+                "cs": true,
+                "result": "D"
             },
             {
-                id: 78,
-                date: "2026-07-30",
-                opponent: "vs. KENO",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 78,
+                "date": "2026-07-30",
+                "opponent": "vs. KENO",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 66,
-                date: "2026-07-30",
-                opponent: "vs. KYRO",
-                gs: 2,
-                gc: 2,
-                cs: false,
-                result: "D"
+                "id": 66,
+                "date": "2026-07-30",
+                "opponent": "vs. KYRO",
+                "gs": 2,
+                "gc": 2,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 60,
-                date: "2026-07-30",
-                opponent: "vs. MASTER CeD",
-                gs: 1,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 60,
+                "date": "2026-07-30",
+                "opponent": "vs. MASTER CeD",
+                "gs": 1,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 54,
-                date: "2026-07-30",
-                opponent: "vs. PLUGLOULOU",
-                gs: 1,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 54,
+                "date": "2026-07-30",
+                "opponent": "vs. PLUGLOULOU",
+                "gs": 1,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 48,
-                date: "2026-07-30",
-                opponent: "vs. CARLOS",
-                gs: 4,
-                gc: 2,
-                cs: false,
-                result: "W"
+                "id": 48,
+                "date": "2026-07-30",
+                "opponent": "vs. CARLOS",
+                "gs": 4,
+                "gc": 2,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 42,
-                date: "2026-07-30",
-                opponent: "vs. JXY",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 42,
+                "date": "2026-07-30",
+                "opponent": "vs. JXY",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 33,
-                date: "2026-07-30",
-                opponent: "vs. GREGZ",
-                gs: 4,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 33,
+                "date": "2026-07-30",
+                "opponent": "vs. GREGZ",
+                "gs": 4,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 23,
-                date: "2026-07-30",
-                opponent: "vs. MILENSLY",
-                gs: 1,
-                gc: 1,
-                cs: false,
-                result: "D"
+                "id": 23,
+                "date": "2026-07-30",
+                "opponent": "vs. MILENSLY",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 18,
-                date: "2026-07-30",
-                opponent: "vs. NALDO",
-                gs: 2,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 18,
+                "date": "2026-07-30",
+                "opponent": "vs. NALDO",
+                "gs": 2,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 9,
-                date: "2026-07-30",
-                opponent: "vs. WINSTON (SW)",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 9,
+                "date": "2026-07-30",
+                "opponent": "vs. WINSTON (SW)",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 1,
-                date: "2026-07-30",
-                opponent: "vs. FLEX",
-                gs: 3,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 1,
+                "date": "2026-07-30",
+                "opponent": "vs. FLEX",
+                "gs": 3,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             }
         ],
-        gameId: "559-256-733"
+        "gameId": "559-256-733"
     },
     {
-        id: "p3",
-        name: "CRIPPY",
-        role: "Striker Specialist",
-        playstyle: "Long Ball Counter",
-        formation: "4-2-2-2",
-        avatar: "CR",
-        allTimeStats: {
-            gp: 10,
-            w: 7,
-            d: 1,
-            l: 2,
-            gs: 17,
-            gc: 9,
-            cs: 5
+        "id": "p3",
+        "name": "CRIPPY",
+        "role": "Striker Specialist",
+        "playstyle": "Long Ball Counter",
+        "formation": "4-2-2-2",
+        "avatar": "CR",
+        "allTimeStats": {
+            "gp": 10,
+            "w": 7,
+            "d": 1,
+            "l": 2,
+            "gs": 17,
+            "gc": 9,
+            "cs": 5
         },
-        weeklyStats: {
-            gp: 10,
-            w: 7,
-            d: 1,
-            l: 2,
-            gs: 17,
-            gc: 9,
-            cs: 5
+        "weeklyStats": {
+            "gp": 10,
+            "w": 7,
+            "d": 1,
+            "l": 2,
+            "gs": 17,
+            "gc": 9,
+            "cs": 5
         },
-        form: [
+        "form": [
             "W",
             "L",
             "W",
             "W",
             "W"
         ],
-        history: [
+        "history": [
             {
-                id: 113,
-                date: "2026-07-30",
-                opponent: "vs. FABIANO",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 113,
+                "date": "2026-07-30",
+                "opponent": "vs. FABIANO",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 109,
-                date: "2026-07-30",
-                opponent: "vs. KAKASHI",
-                gs: 2,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 109,
+                "date": "2026-07-30",
+                "opponent": "vs. KAKASHI",
+                "gs": 2,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 99,
-                date: "2026-07-30",
-                opponent: "vs. ALY",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 99,
+                "date": "2026-07-30",
+                "opponent": "vs. ALY",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 94,
-                date: "2026-07-30",
-                opponent: "vs. EL PISTOLERO",
-                gs: 2,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 94,
+                "date": "2026-07-30",
+                "opponent": "vs. EL PISTOLERO",
+                "gs": 2,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 80,
-                date: "2026-07-30",
-                opponent: "vs. GDOPE",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 80,
+                "date": "2026-07-30",
+                "opponent": "vs. GDOPE",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 70,
-                date: "2026-07-30",
-                opponent: "vs. TISMEY",
-                gs: 2,
-                gc: 2,
-                cs: false,
-                result: "D"
+                "id": 70,
+                "date": "2026-07-30",
+                "opponent": "vs. TISMEY",
+                "gs": 2,
+                "gc": 2,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 68,
-                date: "2026-07-30",
-                opponent: "vs. PLAYBOY",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 68,
+                "date": "2026-07-30",
+                "opponent": "vs. PLAYBOY",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 31,
-                date: "2026-07-30",
-                opponent: "vs. VALENTINO",
-                gs: 2,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 31,
+                "date": "2026-07-30",
+                "opponent": "vs. VALENTINO",
+                "gs": 2,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 13,
-                date: "2026-07-30",
-                opponent: "vs. LED THE KING (SW)",
-                gs: 1,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 13,
+                "date": "2026-07-30",
+                "opponent": "vs. LED THE KING (SW)",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 6,
-                date: "2026-07-30",
-                opponent: "vs. PLEK",
-                gs: 3,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 6,
+                "date": "2026-07-30",
+                "opponent": "vs. PLEK",
+                "gs": 3,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             }
         ],
-        gameId: "622-070-923"
+        "gameId": "622-070-923"
     },
     {
-        id: "p4",
-        name: "MENDJI",
-        role: "Defensive Anchor",
-        playstyle: "Out Wide",
-        formation: "5-3-2",
-        avatar: "ME",
-        allTimeStats: {
-            gp: 7,
-            w: 4,
-            d: 2,
-            l: 1,
-            gs: 13,
-            gc: 6,
-            cs: 2
+        "id": "p4",
+        "name": "MENDJI",
+        "role": "Defensive Anchor",
+        "playstyle": "Out Wide",
+        "formation": "5-3-2",
+        "avatar": "ME",
+        "allTimeStats": {
+            "gp": 7,
+            "w": 4,
+            "d": 2,
+            "l": 1,
+            "gs": 13,
+            "gc": 6,
+            "cs": 2
         },
-        weeklyStats: {
-            gp: 7,
-            w: 4,
-            d: 2,
-            l: 1,
-            gs: 13,
-            gc: 6,
-            cs: 2
+        "weeklyStats": {
+            "gp": 7,
+            "w": 4,
+            "d": 2,
+            "l": 1,
+            "gs": 13,
+            "gc": 6,
+            "cs": 2
         },
-        form: [
+        "form": [
             "D",
             "D",
             "W",
             "W",
             "L"
         ],
-        history: [
+        "history": [
             {
-                id: 102,
-                date: "2026-07-30",
-                opponent: "vs. KHEVIN",
-                gs: 1,
-                gc: 1,
-                cs: false,
-                result: "D"
+                "id": 102,
+                "date": "2026-07-30",
+                "opponent": "vs. KHEVIN",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 77,
-                date: "2026-07-30",
-                opponent: "vs. RICKY",
-                gs: 2,
-                gc: 2,
-                cs: false,
-                result: "D"
+                "id": 77,
+                "date": "2026-07-30",
+                "opponent": "vs. RICKY",
+                "gs": 2,
+                "gc": 2,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 56,
-                date: "2026-07-30",
-                opponent: "vs. DUMGAS",
-                gs: 3,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 56,
+                "date": "2026-07-30",
+                "opponent": "vs. DUMGAS",
+                "gs": 3,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 43,
-                date: "2026-07-30",
-                opponent: "vs. CHARMER",
-                gs: 2,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 43,
+                "date": "2026-07-30",
+                "opponent": "vs. CHARMER",
+                "gs": 2,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 25,
-                date: "2026-07-30",
-                opponent: "vs. TEDGY",
-                gs: 0,
-                gc: 1,
-                cs: false,
-                result: "L"
+                "id": 25,
+                "date": "2026-07-30",
+                "opponent": "vs. TEDGY",
+                "gs": 0,
+                "gc": 1,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 16,
-                date: "2026-07-30",
-                opponent: "vs. MACK_BOY",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 16,
+                "date": "2026-07-30",
+                "opponent": "vs. MACK_BOY",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 4,
-                date: "2026-07-30",
-                opponent: "vs. LEGEND",
-                gs: 3,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 4,
+                "date": "2026-07-30",
+                "opponent": "vs. LEGEND",
+                "gs": 3,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             }
         ],
-        gameId: "ASKH-546-714-927"
+        "gameId": "ASKH-546-714-927"
     },
     {
-        id: "p5",
-        name: "REVX",
-        role: "Veteran",
-        playstyle: "Quick Counter",
-        formation: "4-1-2-3",
-        avatar: "RE",
-        allTimeStats: {
-            gp: 7,
-            w: 4,
-            d: 1,
-            l: 2,
-            gs: 10,
-            gc: 10,
-            cs: 2
+        "id": "p5",
+        "name": "REVX",
+        "role": "Veteran",
+        "playstyle": "Quick Counter",
+        "formation": "4-1-2-3",
+        "avatar": "RE",
+        "allTimeStats": {
+            "gp": 7,
+            "w": 4,
+            "d": 1,
+            "l": 2,
+            "gs": 10,
+            "gc": 10,
+            "cs": 2
         },
-        weeklyStats: {
-            gp: 7,
-            w: 4,
-            d: 1,
-            l: 2,
-            gs: 10,
-            gc: 10,
-            cs: 2
+        "weeklyStats": {
+            "gp": 7,
+            "w": 4,
+            "d": 1,
+            "l": 2,
+            "gs": 10,
+            "gc": 10,
+            "cs": 2
         },
-        form: [
+        "form": [
             "D",
             "W",
             "W",
             "L",
             "L"
         ],
-        history: [
+        "history": [
             {
-                id: 110,
-                date: "2026-07-30",
-                opponent: "vs. KHEVIN",
-                gs: 1,
-                gc: 1,
-                cs: false,
-                result: "D"
+                "id": 110,
+                "date": "2026-07-30",
+                "opponent": "vs. KHEVIN",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 49,
-                date: "2026-07-30",
-                opponent: "vs. TITINHO",
-                gs: 3,
-                gc: 2,
-                cs: false,
-                result: "W"
+                "id": 49,
+                "date": "2026-07-30",
+                "opponent": "vs. TITINHO",
+                "gs": 3,
+                "gc": 2,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 35,
-                date: "2026-07-30",
-                opponent: "vs. DIEGO A",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 35,
+                "date": "2026-07-30",
+                "opponent": "vs. DIEGO A",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 32,
-                date: "2026-07-30",
-                opponent: "vs. SPARTACUS",
-                gs: 0,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 32,
+                "date": "2026-07-30",
+                "opponent": "vs. SPARTACUS",
+                "gs": 0,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 20,
-                date: "2026-07-30",
-                opponent: "vs. REYOBERD",
-                gs: 0,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 20,
+                "date": "2026-07-30",
+                "opponent": "vs. REYOBERD",
+                "gs": 0,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 15,
-                date: "2026-07-30",
-                opponent: "vs. CALM",
-                gs: 2,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 15,
+                "date": "2026-07-30",
+                "opponent": "vs. CALM",
+                "gs": 2,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 10,
-                date: "2026-07-30",
-                opponent: "vs. JIC (SW)",
-                gs: 2,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 10,
+                "date": "2026-07-30",
+                "opponent": "vs. JIC (SW)",
+                "gs": 2,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             }
         ],
-        gameId: "024-860-259"
+        "gameId": "024-860-259"
     },
     {
-        id: "p6",
-        name: "DOUNDNY",
-        role: "Midfield General",
-        playstyle: "Possession Game",
-        formation: "3-5-2",
-        avatar: "DO",
-        allTimeStats: {
-            gp: 5,
-            w: 3,
-            d: 0,
-            l: 2,
-            gs: 13,
-            gc: 10,
-            cs: 1
+        "id": "p6",
+        "name": "DOUNDNY",
+        "role": "Midfield General",
+        "playstyle": "Possession Game",
+        "formation": "3-5-2",
+        "avatar": "DO",
+        "allTimeStats": {
+            "gp": 5,
+            "w": 3,
+            "d": 0,
+            "l": 2,
+            "gs": 13,
+            "gc": 10,
+            "cs": 1
         },
-        weeklyStats: {
-            gp: 5,
-            w: 3,
-            d: 0,
-            l: 2,
-            gs: 13,
-            gc: 10,
-            cs: 1
+        "weeklyStats": {
+            "gp": 5,
+            "w": 3,
+            "d": 0,
+            "l": 2,
+            "gs": 13,
+            "gc": 10,
+            "cs": 1
         },
-        form: [
+        "form": [
             "L",
             "W",
             "W",
             "L",
             "W"
         ],
-        history: [
+        "history": [
             {
-                id: 115,
-                date: "2026-07-30",
-                opponent: "vs. BORUTO",
-                gs: 0,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 115,
+                "date": "2026-07-30",
+                "opponent": "vs. BORUTO",
+                "gs": 0,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 67,
-                date: "2026-07-30",
-                opponent: "vs. 909 MTF",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 67,
+                "date": "2026-07-30",
+                "opponent": "vs. 909 MTF",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 57,
-                date: "2026-07-30",
-                opponent: "vs. SHIVOU",
-                gs: 5,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 57,
+                "date": "2026-07-30",
+                "opponent": "vs. SHIVOU",
+                "gs": 5,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 51,
-                date: "2026-07-30",
-                opponent: "vs. MARVENS",
-                gs: 2,
-                gc: 5,
-                cs: false,
-                result: "L"
+                "id": 51,
+                "date": "2026-07-30",
+                "opponent": "vs. MARVENS",
+                "gs": 2,
+                "gc": 5,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 44,
-                date: "2026-07-30",
-                opponent: "vs. CAPOIS",
-                gs: 5,
-                gc: 2,
-                cs: false,
-                result: "W"
+                "id": 44,
+                "date": "2026-07-30",
+                "opponent": "vs. CAPOIS",
+                "gs": 5,
+                "gc": 2,
+                "cs": false,
+                "result": "W"
             }
         ],
-        gameId: "741-416-305"
+        "gameId": "741-416-305"
     },
     {
-        id: "p7",
-        name: "JHONATHAN",
-        role: "Tactician",
-        playstyle: "Long Ball Counter",
-        formation: "4-4-2",
-        avatar: "JH",
-        allTimeStats: {
-            gp: 5,
-            w: 3,
-            d: 0,
-            l: 2,
-            gs: 7,
-            gc: 6,
-            cs: 2
+        "id": "p7",
+        "name": "JHONATHAN",
+        "role": "Tactician",
+        "playstyle": "Long Ball Counter",
+        "formation": "4-4-2",
+        "avatar": "JH",
+        "allTimeStats": {
+            "gp": 5,
+            "w": 3,
+            "d": 0,
+            "l": 2,
+            "gs": 7,
+            "gc": 6,
+            "cs": 2
         },
-        weeklyStats: {
-            gp: 5,
-            w: 3,
-            d: 0,
-            l: 2,
-            gs: 7,
-            gc: 6,
-            cs: 2
+        "weeklyStats": {
+            "gp": 5,
+            "w": 3,
+            "d": 0,
+            "l": 2,
+            "gs": 7,
+            "gc": 6,
+            "cs": 2
         },
-        form: [
+        "form": [
             "W",
             "L",
             "L",
             "W",
             "W"
         ],
-        history: [
+        "history": [
             {
-                id: 104,
-                date: "2026-07-30",
-                opponent: "vs. BORUTO",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 104,
+                "date": "2026-07-30",
+                "opponent": "vs. BORUTO",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 53,
-                date: "2026-07-30",
-                opponent: "vs. CARL10",
-                gs: 0,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 53,
+                "date": "2026-07-30",
+                "opponent": "vs. CARL10",
+                "gs": 0,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 39,
-                date: "2026-07-30",
-                opponent: "vs. ALEXANDRE",
-                gs: 0,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 39,
+                "date": "2026-07-30",
+                "opponent": "vs. ALEXANDRE",
+                "gs": 0,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 28,
-                date: "2026-07-30",
-                opponent: "vs. MOHA",
-                gs: 3,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 28,
+                "date": "2026-07-30",
+                "opponent": "vs. MOHA",
+                "gs": 3,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 27,
-                date: "2026-07-30",
-                opponent: "vs. SAVAGE",
-                gs: 3,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 27,
+                "date": "2026-07-30",
+                "opponent": "vs. SAVAGE",
+                "gs": 3,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             }
         ],
-        gameId: "573-256-551"
+        "gameId": "573-256-551"
     },
     {
-        id: "p8",
-        name: "DOGLY",
-        role: "Wing Wizard",
-        playstyle: "Quick Counter",
-        formation: "4-3-3",
-        avatar: "DG",
-        allTimeStats: {
-            gp: 3,
-            w: 2,
-            d: 0,
-            l: 1,
-            gs: 2,
-            gc: 1,
-            cs: 2
+        "id": "p8",
+        "name": "DOGLY",
+        "role": "Wing Wizard",
+        "playstyle": "Quick Counter",
+        "formation": "4-3-3",
+        "avatar": "DG",
+        "allTimeStats": {
+            "gp": 3,
+            "w": 2,
+            "d": 0,
+            "l": 1,
+            "gs": 2,
+            "gc": 1,
+            "cs": 2
         },
-        weeklyStats: {
-            gp: 3,
-            w: 2,
-            d: 0,
-            l: 1,
-            gs: 2,
-            gc: 1,
-            cs: 2
+        "weeklyStats": {
+            "gp": 3,
+            "w": 2,
+            "d": 0,
+            "l": 1,
+            "gs": 2,
+            "gc": 1,
+            "cs": 2
         },
-        form: [
+        "form": [
             "W",
             "L",
             "W"
         ],
-        history: [
+        "history": [
             {
-                id: 81,
-                date: "2026-07-30",
-                opponent: "vs. LUKAS PIT",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 81,
+                "date": "2026-07-30",
+                "opponent": "vs. LUKAS PIT",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 74,
-                date: "2026-07-30",
-                opponent: "vs. MATADOR",
-                gs: 0,
-                gc: 1,
-                cs: false,
-                result: "L"
+                "id": 74,
+                "date": "2026-07-30",
+                "opponent": "vs. MATADOR",
+                "gs": 0,
+                "gc": 1,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 64,
-                date: "2026-07-30",
-                opponent: "vs. T.POLTES",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 64,
+                "date": "2026-07-30",
+                "opponent": "vs. T.POLTES",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             }
         ],
-        gameId: "ASLT-075-560-294"
+        "gameId": "ASLT-075-560-294"
     },
     {
-        id: "p9",
-        name: "TELO",
-        role: "Elite",
-        playstyle: "Out Wide",
-        formation: "4-2-3-1",
-        avatar: "TE",
-        allTimeStats: {
-            gp: 6,
-            w: 4,
-            d: 0,
-            l: 2,
-            gs: 9,
-            gc: 6,
-            cs: 3
+        "id": "p9",
+        "name": "TELO",
+        "role": "Elite",
+        "playstyle": "Out Wide",
+        "formation": "4-2-3-1",
+        "avatar": "TE",
+        "allTimeStats": {
+            "gp": 6,
+            "w": 4,
+            "d": 0,
+            "l": 2,
+            "gs": 9,
+            "gc": 6,
+            "cs": 3
         },
-        weeklyStats: {
-            gp: 6,
-            w: 4,
-            d: 0,
-            l: 2,
-            gs: 9,
-            gc: 6,
-            cs: 3
+        "weeklyStats": {
+            "gp": 6,
+            "w": 4,
+            "d": 0,
+            "l": 2,
+            "gs": 9,
+            "gc": 6,
+            "cs": 3
         },
-        form: [
+        "form": [
             "W",
             "W",
             "L",
             "W",
             "L"
         ],
-        history: [
+        "history": [
             {
-                id: 107,
-                date: "2026-07-30",
-                opponent: "vs. NATURAL",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 107,
+                "date": "2026-07-30",
+                "opponent": "vs. NATURAL",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 73,
-                date: "2026-07-30",
-                opponent: "vs. MADARA",
-                gs: 2,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 73,
+                "date": "2026-07-30",
+                "opponent": "vs. MADARA",
+                "gs": 2,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 62,
-                date: "2026-07-30",
-                opponent: "vs. THE KING",
-                gs: 0,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 62,
+                "date": "2026-07-30",
+                "opponent": "vs. THE KING",
+                "gs": 0,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 47,
-                date: "2026-07-30",
-                opponent: "vs. SGM",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 47,
+                "date": "2026-07-30",
+                "opponent": "vs. SGM",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 41,
-                date: "2026-07-30",
-                opponent: "vs. TISMEY",
-                gs: 2,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 41,
+                "date": "2026-07-30",
+                "opponent": "vs. TISMEY",
+                "gs": 2,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 14,
-                date: "2026-07-30",
-                opponent: "vs. POGBA (SW)",
-                gs: 2,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 14,
+                "date": "2026-07-30",
+                "opponent": "vs. POGBA (SW)",
+                "gs": 2,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             }
         ],
-        gameId: "962-257-259"
+        "gameId": "962-257-259"
     },
     {
-        id: "p10",
-        name: "LUCIFER",
-        role: "Speedster",
-        playstyle: "Quick Counter",
-        formation: "4-3-3",
-        avatar: "LU",
-        allTimeStats: {
-            gp: 7,
-            w: 2,
-            d: 1,
-            l: 4,
-            gs: 9,
-            gc: 14,
-            cs: 2
+        "id": "p10",
+        "name": "LUCIFER",
+        "role": "Speedster",
+        "playstyle": "Quick Counter",
+        "formation": "4-3-3",
+        "avatar": "LU",
+        "allTimeStats": {
+            "gp": 7,
+            "w": 2,
+            "d": 1,
+            "l": 4,
+            "gs": 9,
+            "gc": 14,
+            "cs": 2
         },
-        weeklyStats: {
-            gp: 7,
-            w: 2,
-            d: 1,
-            l: 4,
-            gs: 9,
-            gc: 14,
-            cs: 2
+        "weeklyStats": {
+            "gp": 7,
+            "w": 2,
+            "d": 1,
+            "l": 4,
+            "gs": 9,
+            "gc": 14,
+            "cs": 2
         },
-        form: [
+        "form": [
             "D",
             "L",
             "L",
             "W",
             "L"
         ],
-        history: [
+        "history": [
             {
-                id: 111,
-                date: "2026-07-30",
-                opponent: "vs. BIGY",
-                gs: 1,
-                gc: 1,
-                cs: false,
-                result: "D"
+                "id": 111,
+                "date": "2026-07-30",
+                "opponent": "vs. BIGY",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 97,
-                date: "2026-07-30",
-                opponent: "vs. POPBENS",
-                gs: 2,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 97,
+                "date": "2026-07-30",
+                "opponent": "vs. POPBENS",
+                "gs": 2,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 87,
-                date: "2026-07-30",
-                opponent: "vs. FLEX",
-                gs: 0,
-                gc: 5,
-                cs: false,
-                result: "L"
+                "id": 87,
+                "date": "2026-07-30",
+                "opponent": "vs. FLEX",
+                "gs": 0,
+                "gc": 5,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 55,
-                date: "2026-07-30",
-                opponent: "vs. ASTA",
-                gs: 2,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 55,
+                "date": "2026-07-30",
+                "opponent": "vs. ASTA",
+                "gs": 2,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 30,
-                date: "2026-07-30",
-                opponent: "vs. SPARTACUS",
-                gs: 2,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 30,
+                "date": "2026-07-30",
+                "opponent": "vs. SPARTACUS",
+                "gs": 2,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 22,
-                date: "2026-07-30",
-                opponent: "vs. ANTOINE",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 22,
+                "date": "2026-07-30",
+                "opponent": "vs. ANTOINE",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 2,
-                date: "2026-07-30",
-                opponent: "vs. NICK",
-                gs: 1,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 2,
+                "date": "2026-07-30",
+                "opponent": "vs. NICK",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             }
         ],
-        gameId: "Unknown"
+        "gameId": "Unknown"
     },
     {
-        id: "p11",
-        name: "PAPA GAMING",
-        role: "Veteran",
-        playstyle: "Possession Game",
-        formation: "4-2-1-3",
-        avatar: "PG",
-        allTimeStats: {
-            gp: 14,
-            w: 4,
-            d: 4,
-            l: 6,
-            gs: 21,
-            gc: 22,
-            cs: 3
+        "id": "p11",
+        "name": "PAPA GAMING",
+        "role": "Veteran",
+        "playstyle": "Possession Game",
+        "formation": "4-2-1-3",
+        "avatar": "PG",
+        "allTimeStats": {
+            "gp": 14,
+            "w": 4,
+            "d": 4,
+            "l": 6,
+            "gs": 21,
+            "gc": 22,
+            "cs": 3
         },
-        weeklyStats: {
-            gp: 14,
-            w: 4,
-            d: 4,
-            l: 6,
-            gs: 21,
-            gc: 22,
-            cs: 3
+        "weeklyStats": {
+            "gp": 14,
+            "w": 4,
+            "d": 4,
+            "l": 6,
+            "gs": 21,
+            "gc": 22,
+            "cs": 3
         },
-        form: [
+        "form": [
             "L",
             "W",
             "L",
             "D",
             "L"
         ],
-        history: [
+        "history": [
             {
-                id: 114,
-                date: "2026-07-30",
-                opponent: "vs. GUICHARD",
-                gs: 1,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 114,
+                "date": "2026-07-30",
+                "opponent": "vs. GUICHARD",
+                "gs": 1,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 106,
-                date: "2026-07-30",
-                opponent: "vs. BIGY",
-                gs: 3,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 106,
+                "date": "2026-07-30",
+                "opponent": "vs. BIGY",
+                "gs": 3,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 96,
-                date: "2026-07-30",
-                opponent: "vs. KAYOUM",
-                gs: 2,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 96,
+                "date": "2026-07-30",
+                "opponent": "vs. KAYOUM",
+                "gs": 2,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 91,
-                date: "2026-07-30",
-                opponent: "vs. JEPHTE",
-                gs: 2,
-                gc: 2,
-                cs: false,
-                result: "D"
+                "id": 91,
+                "date": "2026-07-30",
+                "opponent": "vs. JEPHTE",
+                "gs": 2,
+                "gc": 2,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 72,
-                date: "2026-07-30",
-                opponent: "vs. TERROR",
-                gs: 0,
-                gc: 4,
-                cs: false,
-                result: "L"
+                "id": 72,
+                "date": "2026-07-30",
+                "opponent": "vs. TERROR",
+                "gs": 0,
+                "gc": 4,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 65,
-                date: "2026-07-30",
-                opponent: "vs. SNAKE",
-                gs: 4,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 65,
+                "date": "2026-07-30",
+                "opponent": "vs. SNAKE",
+                "gs": 4,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 58,
-                date: "2026-07-30",
-                opponent: "vs. PAPA.G",
-                gs: 0,
-                gc: 0,
-                cs: true,
-                result: "D"
+                "id": 58,
+                "date": "2026-07-30",
+                "opponent": "vs. PAPA.G",
+                "gs": 0,
+                "gc": 0,
+                "cs": true,
+                "result": "D"
             },
             {
-                id: 52,
-                date: "2026-07-30",
-                opponent: "vs. ELIS",
-                gs: 1,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 52,
+                "date": "2026-07-30",
+                "opponent": "vs. ELIS",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 45,
-                date: "2026-07-30",
-                opponent: "vs. TÈT SAUCE",
-                gs: 0,
-                gc: 0,
-                cs: true,
-                result: "D"
+                "id": 45,
+                "date": "2026-07-30",
+                "opponent": "vs. TÈT SAUCE",
+                "gs": 0,
+                "gc": 0,
+                "cs": true,
+                "result": "D"
             },
             {
-                id: 38,
-                date: "2026-07-30",
-                opponent: "vs. BAMA",
-                gs: 2,
-                gc: 2,
-                cs: false,
-                result: "D"
+                "id": 38,
+                "date": "2026-07-30",
+                "opponent": "vs. BAMA",
+                "gs": 2,
+                "gc": 2,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 34,
-                date: "2026-07-30",
-                opponent: "vs. SPARTACUS",
-                gs: 0,
-                gc: 1,
-                cs: false,
-                result: "L"
+                "id": 34,
+                "date": "2026-07-30",
+                "opponent": "vs. SPARTACUS",
+                "gs": 0,
+                "gc": 1,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 17,
-                date: "2026-07-30",
-                opponent: "vs. JIC",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 17,
+                "date": "2026-07-30",
+                "opponent": "vs. JIC",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 8,
-                date: "2026-07-30",
-                opponent: "vs. BOSS KEKE (SW)",
-                gs: 1,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 8,
+                "date": "2026-07-30",
+                "opponent": "vs. BOSS KEKE (SW)",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 3,
-                date: "2026-07-30",
-                opponent: "vs. KINGPLUG",
-                gs: 3,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 3,
+                "date": "2026-07-30",
+                "opponent": "vs. KINGPLUG",
+                "gs": 3,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             }
         ],
-        gameId: "683-623-414"
+        "gameId": "683-623-414"
     },
     {
-        id: "p12",
-        name: "WADE",
-        role: "Center-Back Wall",
-        playstyle: "Long Ball Counter",
-        formation: "4-4-2",
-        avatar: "WA",
-        allTimeStats: {
-            gp: 8,
-            w: 3,
-            d: 0,
-            l: 5,
-            gs: 7,
-            gc: 15,
-            cs: 0
+        "id": "p12",
+        "name": "WADE",
+        "role": "Center-Back Wall",
+        "playstyle": "Long Ball Counter",
+        "formation": "4-4-2",
+        "avatar": "WA",
+        "allTimeStats": {
+            "gp": 8,
+            "w": 3,
+            "d": 0,
+            "l": 5,
+            "gs": 7,
+            "gc": 15,
+            "cs": 0
         },
-        weeklyStats: {
-            gp: 8,
-            w: 3,
-            d: 0,
-            l: 5,
-            gs: 7,
-            gc: 15,
-            cs: 0
+        "weeklyStats": {
+            "gp": 8,
+            "w": 3,
+            "d": 0,
+            "l": 5,
+            "gs": 7,
+            "gc": 15,
+            "cs": 0
         },
-        form: [
+        "form": [
             "W",
             "L",
             "L",
             "W",
             "W"
         ],
-        history: [
+        "history": [
             {
-                id: 117,
-                date: "2026-07-30",
-                opponent: "vs. THE KING",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 117,
+                "date": "2026-07-30",
+                "opponent": "vs. THE KING",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 105,
-                date: "2026-07-30",
-                opponent: "vs. KAYOUM",
-                gs: 0,
-                gc: 4,
-                cs: false,
-                result: "L"
+                "id": 105,
+                "date": "2026-07-30",
+                "opponent": "vs. KAYOUM",
+                "gs": 0,
+                "gc": 4,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 90,
-                date: "2026-07-30",
-                opponent: "vs. RIO",
-                gs: 1,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 90,
+                "date": "2026-07-30",
+                "opponent": "vs. RIO",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 76,
-                date: "2026-07-30",
-                opponent: "vs. ZACHARIE",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 76,
+                "date": "2026-07-30",
+                "opponent": "vs. ZACHARIE",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 63,
-                date: "2026-07-30",
-                opponent: "vs. GUICHARD",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 63,
+                "date": "2026-07-30",
+                "opponent": "vs. GUICHARD",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             },
             {
-                id: 36,
-                date: "2026-07-30",
-                opponent: "vs. KYNO",
-                gs: 0,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 36,
+                "date": "2026-07-30",
+                "opponent": "vs. KYNO",
+                "gs": 0,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 21,
-                date: "2026-07-30",
-                opponent: "vs. LUILPOUL",
-                gs: 0,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 21,
+                "date": "2026-07-30",
+                "opponent": "vs. LUILPOUL",
+                "gs": 0,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 7,
-                date: "2026-07-30",
-                opponent: "vs. JAMES",
-                gs: 0,
-                gc: 1,
-                cs: false,
-                result: "L"
+                "id": 7,
+                "date": "2026-07-30",
+                "opponent": "vs. JAMES",
+                "gs": 0,
+                "gc": 1,
+                "cs": false,
+                "result": "L"
             }
         ],
-        gameId: "ASBB-980-739-493"
+        "gameId": "ASBB-980-739-493"
     },
     {
-        id: "p13",
-        name: "KWESI",
-        role: "Rising Star",
-        playstyle: "Quick Counter",
-        formation: "4-3-3",
-        avatar: "KW",
-        allTimeStats: {
-            gp: 6,
-            w: 4,
-            d: 0,
-            l: 2,
-            gs: 7,
-            gc: 8,
-            cs: 4
+        "id": "p13",
+        "name": "KWESI",
+        "role": "Rising Star",
+        "playstyle": "Quick Counter",
+        "formation": "4-3-3",
+        "avatar": "KW",
+        "allTimeStats": {
+            "gp": 6,
+            "w": 4,
+            "d": 0,
+            "l": 2,
+            "gs": 7,
+            "gc": 8,
+            "cs": 4
         },
-        weeklyStats: {
-            gp: 6,
-            w: 4,
-            d: 0,
-            l: 2,
-            gs: 7,
-            gc: 8,
-            cs: 4
+        "weeklyStats": {
+            "gp": 6,
+            "w": 4,
+            "d": 0,
+            "l": 2,
+            "gs": 7,
+            "gc": 8,
+            "cs": 4
         },
-        form: [
+        "form": [
             "W",
             "W",
             "W",
             "L",
             "L"
         ],
-        history: [
+        "history": [
             {
-                id: 121,
-                date: "2026-07-30",
-                opponent: "vs. Manual Entry (Win)",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 121,
+                "date": "2026-07-30",
+                "opponent": "vs. Manual Entry (Win)",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 120,
-                date: "2026-07-30",
-                opponent: "vs. Manual Entry (Win)",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 120,
+                "date": "2026-07-30",
+                "opponent": "vs. Manual Entry (Win)",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 119,
-                date: "2026-07-30",
-                opponent: "vs. Manual Entry (Win)",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 119,
+                "date": "2026-07-30",
+                "opponent": "vs. Manual Entry (Win)",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 92,
-                date: "2026-07-30",
-                opponent: "vs. KENSLEY",
-                gs: 1,
-                gc: 4,
-                cs: false,
-                result: "L"
+                "id": 92,
+                "date": "2026-07-30",
+                "opponent": "vs. KENSLEY",
+                "gs": 1,
+                "gc": 4,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 88,
-                date: "2026-07-30",
-                opponent: "vs. PLEK",
-                gs: 2,
-                gc: 4,
-                cs: false,
-                result: "L"
+                "id": 88,
+                "date": "2026-07-30",
+                "opponent": "vs. PLEK",
+                "gs": 2,
+                "gc": 4,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 75,
-                date: "2026-07-30",
-                opponent: "vs. WENDAHEL",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 75,
+                "date": "2026-07-30",
+                "opponent": "vs. WENDAHEL",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             }
         ],
-        gameId: "839-282-121"
+        "gameId": "839-282-121"
     },
     {
-        id: "p14",
-        name: "JIMBO",
-        role: "Specialist",
-        playstyle: "Possession Game",
-        formation: "4-3-3",
-        avatar: "JI",
-        allTimeStats: {
-            gp: 13,
-            w: 3,
-            d: 2,
-            l: 8,
-            gs: 9,
-            gc: 23,
-            cs: 3
+        "id": "p14",
+        "name": "JIMBO",
+        "role": "Specialist",
+        "playstyle": "Possession Game",
+        "formation": "4-3-3",
+        "avatar": "JI",
+        "allTimeStats": {
+            "gp": 13,
+            "w": 3,
+            "d": 2,
+            "l": 8,
+            "gs": 9,
+            "gc": 23,
+            "cs": 3
         },
-        weeklyStats: {
-            gp: 13,
-            w: 3,
-            d: 2,
-            l: 8,
-            gs: 9,
-            gc: 23,
-            cs: 3
+        "weeklyStats": {
+            "gp": 13,
+            "w": 3,
+            "d": 2,
+            "l": 8,
+            "gs": 9,
+            "gc": 23,
+            "cs": 3
         },
-        form: [
+        "form": [
             "L",
             "L",
             "L",
             "L",
             "L"
         ],
-        history: [
+        "history": [
             {
-                id: 112,
-                date: "2026-07-30",
-                opponent: "vs. MIKO",
-                gs: 0,
-                gc: 1,
-                cs: false,
-                result: "L"
+                "id": 112,
+                "date": "2026-07-30",
+                "opponent": "vs. MIKO",
+                "gs": 0,
+                "gc": 1,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 103,
-                date: "2026-07-30",
-                opponent: "vs. ELNOBY",
-                gs: 1,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 103,
+                "date": "2026-07-30",
+                "opponent": "vs. ELNOBY",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 100,
-                date: "2026-07-30",
-                opponent: "vs. EL PANTHERA",
-                gs: 0,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 100,
+                "date": "2026-07-30",
+                "opponent": "vs. EL PANTHERA",
+                "gs": 0,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 85,
-                date: "2026-07-30",
-                opponent: "vs. NICK",
-                gs: 0,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 85,
+                "date": "2026-07-30",
+                "opponent": "vs. NICK",
+                "gs": 0,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 84,
-                date: "2026-07-30",
-                opponent: "vs. CHRISTIAN",
-                gs: 1,
-                gc: 4,
-                cs: false,
-                result: "L"
+                "id": 84,
+                "date": "2026-07-30",
+                "opponent": "vs. CHRISTIAN",
+                "gs": 1,
+                "gc": 4,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 69,
-                date: "2026-07-30",
-                opponent: "vs. JXY",
-                gs: 0,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 69,
+                "date": "2026-07-30",
+                "opponent": "vs. JXY",
+                "gs": 0,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 61,
-                date: "2026-07-30",
-                opponent: "vs. EL PANTHERA",
-                gs: 1,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 61,
+                "date": "2026-07-30",
+                "opponent": "vs. EL PANTHERA",
+                "gs": 1,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 50,
-                date: "2026-07-30",
-                opponent: "vs. IDEAL",
-                gs: 0,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 50,
+                "date": "2026-07-30",
+                "opponent": "vs. IDEAL",
+                "gs": 0,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 40,
-                date: "2026-07-30",
-                opponent: "vs. LUIZ NUB",
-                gs: 0,
-                gc: 4,
-                cs: false,
-                result: "L"
+                "id": 40,
+                "date": "2026-07-30",
+                "opponent": "vs. LUIZ NUB",
+                "gs": 0,
+                "gc": 4,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 29,
-                date: "2026-07-30",
-                opponent: "vs. WENDHY",
-                gs: 3,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 29,
+                "date": "2026-07-30",
+                "opponent": "vs. WENDHY",
+                "gs": 3,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             },
             {
-                id: 24,
-                date: "2026-07-30",
-                opponent: "vs. ODVERLY",
-                gs: 0,
-                gc: 0,
-                cs: true,
-                result: "D"
+                "id": 24,
+                "date": "2026-07-30",
+                "opponent": "vs. ODVERLY",
+                "gs": 0,
+                "gc": 0,
+                "cs": true,
+                "result": "D"
             },
             {
-                id: 11,
-                date: "2026-07-30",
-                opponent: "vs. MILO (SW)",
-                gs: 1,
-                gc: 1,
-                cs: false,
-                result: "D"
+                "id": 11,
+                "date": "2026-07-30",
+                "opponent": "vs. MILO (SW)",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             },
             {
-                id: 5,
-                date: "2026-07-30",
-                opponent: "vs. MACALISTER",
-                gs: 2,
-                gc: 1,
-                cs: false,
-                result: "W"
+                "id": 5,
+                "date": "2026-07-30",
+                "opponent": "vs. MACALISTER",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
             }
         ],
-        gameId: "124-136-395"
+        "gameId": "124-136-395"
     },
     {
-        id: "p15",
-        name: "PAU",
-        role: "Prospect",
-        playstyle: "Out Wide",
-        formation: "4-2-3-1",
-        avatar: "PA",
-        allTimeStats: {
-            gp: 0,
-            w: 0,
-            d: 0,
-            l: 0,
-            gs: 0,
-            gc: 0,
-            cs: 0
+        "id": "p15",
+        "name": "PAU",
+        "role": "Prospect",
+        "playstyle": "Out Wide",
+        "formation": "4-2-3-1",
+        "avatar": "PA",
+        "allTimeStats": {
+            "gp": 0,
+            "w": 0,
+            "d": 0,
+            "l": 0,
+            "gs": 0,
+            "gc": 0,
+            "cs": 0
         },
-        weeklyStats: {
-            gp: 0,
-            w: 0,
-            d: 0,
-            l: 0,
-            gs: 0,
-            gc: 0,
-            cs: 0
+        "weeklyStats": {
+            "gp": 0,
+            "w": 0,
+            "d": 0,
+            "l": 0,
+            "gs": 0,
+            "gc": 0,
+            "cs": 0
         },
-        form: [],
-        history: [],
-        gameId: "Unknown"
+        "form": [],
+        "history": [],
+        "gameId": "Unknown"
     },
     {
-        id: "p16",
-        name: "ANDER",
-        role: "Prospect",
-        playstyle: "Long Ball Counter",
-        formation: "4-3-3",
-        avatar: "AN",
-        allTimeStats: {
-            gp: 2,
-            w: 1,
-            d: 0,
-            l: 1,
-            gs: 3,
-            gc: 2,
-            cs: 1
+        "id": "p16",
+        "name": "ANDER",
+        "role": "Prospect",
+        "playstyle": "Long Ball Counter",
+        "formation": "4-3-3",
+        "avatar": "AN",
+        "allTimeStats": {
+            "gp": 2,
+            "w": 1,
+            "d": 0,
+            "l": 1,
+            "gs": 3,
+            "gc": 2,
+            "cs": 1
         },
-        weeklyStats: {
-            gp: 2,
-            w: 1,
-            d: 0,
-            l: 1,
-            gs: 3,
-            gc: 2,
-            cs: 1
+        "weeklyStats": {
+            "gp": 2,
+            "w": 1,
+            "d": 0,
+            "l": 1,
+            "gs": 3,
+            "gc": 2,
+            "cs": 1
         },
-        form: [
+        "form": [
             "L",
             "W"
         ],
-        history: [
+        "history": [
             {
-                id: 71,
-                date: "2026-07-30",
-                opponent: "vs. KERVENS",
-                gs: 1,
-                gc: 2,
-                cs: false,
-                result: "L"
+                "id": 71,
+                "date": "2026-07-30",
+                "opponent": "vs. KERVENS",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 59,
-                date: "2026-07-30",
-                opponent: "vs. BIGY",
-                gs: 2,
-                gc: 0,
-                cs: true,
-                result: "W"
+                "id": 59,
+                "date": "2026-07-30",
+                "opponent": "vs. BIGY",
+                "gs": 2,
+                "gc": 0,
+                "cs": true,
+                "result": "W"
             }
         ],
-        gameId: "Unknown"
+        "gameId": "Unknown"
     },
     {
-        id: "p17",
-        name: "CHERUBIN",
-        role: "Member",
-        playstyle: "Quick Counter",
-        formation: "4-2-1-3",
-        avatar: "CH",
-        allTimeStats: {
-            gp: 3,
-            w: 0,
-            d: 0,
-            l: 3,
-            gs: 2,
-            gc: 8,
-            cs: 0
+        "id": "p17",
+        "name": "CHERUBIN",
+        "role": "Member",
+        "playstyle": "Quick Counter",
+        "formation": "4-2-1-3",
+        "avatar": "CH",
+        "allTimeStats": {
+            "gp": 3,
+            "w": 0,
+            "d": 0,
+            "l": 3,
+            "gs": 2,
+            "gc": 8,
+            "cs": 0
         },
-        weeklyStats: {
-            gp: 3,
-            w: 0,
-            d: 0,
-            l: 3,
-            gs: 2,
-            gc: 8,
-            cs: 0
+        "weeklyStats": {
+            "gp": 3,
+            "w": 0,
+            "d": 0,
+            "l": 3,
+            "gs": 2,
+            "gc": 8,
+            "cs": 0
         },
-        form: [
+        "form": [
             "L",
             "L",
             "L"
         ],
-        history: [
+        "history": [
             {
-                id: 89,
-                date: "2026-07-30",
-                opponent: "vs. JAMES",
-                gs: 2,
-                gc: 4,
-                cs: false,
-                result: "L"
+                "id": 89,
+                "date": "2026-07-30",
+                "opponent": "vs. JAMES",
+                "gs": 2,
+                "gc": 4,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 82,
-                date: "2026-07-30",
-                opponent: "vs. BRACK",
-                gs: 0,
-                gc: 1,
-                cs: false,
-                result: "L"
+                "id": 82,
+                "date": "2026-07-30",
+                "opponent": "vs. BRACK",
+                "gs": 0,
+                "gc": 1,
+                "cs": false,
+                "result": "L"
             },
             {
-                id: 46,
-                date: "2026-07-30",
-                opponent: "vs. LOUIS",
-                gs: 0,
-                gc: 3,
-                cs: false,
-                result: "L"
+                "id": 46,
+                "date": "2026-07-30",
+                "opponent": "vs. LOUIS",
+                "gs": 0,
+                "gc": 3,
+                "cs": false,
+                "result": "L"
             }
         ],
-        gameId: "ASKJ-014-195-018"
+        "gameId": "ASKJ-014-195-018"
     },
     {
-        id: "p18",
-        name: "ANDJOUZM",
-        role: "New Member",
-        playstyle: "Possession Game",
-        formation: "4-3-3",
-        avatar: "AJ",
-        allTimeStats: {
-            gp: 0,
-            w: 0,
-            d: 0,
-            l: 0,
-            gs: 0,
-            gc: 0,
-            cs: 0
+        "id": "p18",
+        "name": "ANDJOUZM",
+        "role": "New Member",
+        "playstyle": "Possession Game",
+        "formation": "4-3-3",
+        "avatar": "AJ",
+        "allTimeStats": {
+            "gp": 0,
+            "w": 0,
+            "d": 0,
+            "l": 0,
+            "gs": 0,
+            "gc": 0,
+            "cs": 0
         },
-        weeklyStats: {
-            gp: 0,
-            w: 0,
-            d: 0,
-            l: 0,
-            gs: 0,
-            gc: 0,
-            cs: 0
+        "weeklyStats": {
+            "gp": 0,
+            "w": 0,
+            "d": 0,
+            "l": 0,
+            "gs": 0,
+            "gc": 0,
+            "cs": 0
         },
-        form: [],
-        history: [],
-        gameId: "Unknown"
+        "form": [],
+        "history": [],
+        "gameId": "Unknown"
     },
     {
-        id: "p19",
-        name: "GOKU",
-        role: "Player",
-        playstyle: "Unknown",
-        formation: "4-3-3",
-        avatar: "GK",
-        allTimeStats: {
-            gp: 1,
-            w: 0,
-            d: 1,
-            l: 0,
-            gs: 1,
-            gc: 1,
-            cs: 0
+        "id": "p19",
+        "name": "GOKU",
+        "role": "Player",
+        "playstyle": "Unknown",
+        "formation": "4-3-3",
+        "avatar": "GK",
+        "allTimeStats": {
+            "gp": 1,
+            "w": 0,
+            "d": 1,
+            "l": 0,
+            "gs": 1,
+            "gc": 1,
+            "cs": 0
         },
-        weeklyStats: {
-            gp: 1,
-            w: 0,
-            d: 1,
-            l: 0,
-            gs: 1,
-            gc: 1,
-            cs: 0
+        "weeklyStats": {
+            "gp": 1,
+            "w": 0,
+            "d": 1,
+            "l": 0,
+            "gs": 1,
+            "gc": 1,
+            "cs": 0
         },
-        form: [
+        "form": [
             "D"
         ],
-        history: [
+        "history": [
             {
-                id: 118,
-                date: "2026-07-30",
-                opponent: "vs. CALM (SW)",
-                gs: 1,
-                gc: 1,
-                cs: false,
-                result: "D"
+                "id": 118,
+                "date": "2026-07-30",
+                "opponent": "vs. CALM (SW)",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             }
         ],
-        gameId: "ASMC-054-355-938"
+        "gameId": "ASMC-054-355-938"
+    },
+    {
+        "id": "p1785437191180",
+        "name": "HACKER1840",
+        "role": "Clan Member",
+        "playstyle": "Balanced",
+        "formation": "4-4-2",
+        "avatar": "HA",
+        "gameId": "Unknown",
+        "allTimeStats": {
+            "gp": 0,
+            "w": 0,
+            "d": 0,
+            "l": 0,
+            "gs": 0,
+            "gc": 0,
+            "cs": 0
+        },
+        "weeklyStats": {
+            "gp": 0,
+            "w": 0,
+            "d": 0,
+            "l": 0,
+            "gs": 0,
+            "gc": 0,
+            "cs": 0
+        },
+        "form": [],
+        "history": []
+    },
+    {
+        "id": "p1785437191181",
+        "name": "KENLEY",
+        "role": "Clan Member",
+        "playstyle": "Balanced",
+        "formation": "4-4-2",
+        "avatar": "KN",
+        "gameId": "885-55-335",
+        "allTimeStats": {
+            "gp": 0,
+            "w": 0,
+            "d": 0,
+            "l": 0,
+            "gs": 0,
+            "gc": 0,
+            "cs": 0
+        },
+        "weeklyStats": {
+            "gp": 0,
+            "w": 0,
+            "d": 0,
+            "l": 0,
+            "gs": 0,
+            "gc": 0,
+            "cs": 0
+        },
+        "form": [],
+        "history": []
     }
 ];
 
@@ -1795,7 +1853,7 @@ const state = {
 };
 
 // --- 3. INITIALIZATION & LOCALSTORAGE SYNC ---
-const STORAGE_KEY = "fod_efootball_stats_v15_gameid";
+const STORAGE_KEY = "fod_efootball_stats_v16_newmembers";
 
 function initApp() {
     // Intro Screen Logic
