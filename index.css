@@ -1250,7 +1250,7 @@ body.admin-mode button.admin-only {
     display: flex;
     justify-content: center;
     align-items: center;
-    pointer-events: none; /* Let clicks pass through when open */
+    pointer-events: all; /* Block clicks while doors are closed */
 }
 
 /* The left and right doors */
@@ -1279,6 +1279,10 @@ body.admin-mode button.admin-only {
 }
 
 /* When the doors open */
+.intro-screen.slide-up {
+    pointer-events: none; /* Don't block page once open */
+}
+
 .intro-screen.slide-up::before {
     transform: translateX(-100%);
 }

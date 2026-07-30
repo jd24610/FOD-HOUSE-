@@ -1803,10 +1803,11 @@ function initApp() {
     if (introScreen) {
         setTimeout(() => {
             introScreen.classList.add("slide-up");
+            // After animation completes, remove it from DOM entirely
             setTimeout(() => {
-                introScreen.style.display = "none";
-            }, 1000); 
-        }, 2000); 
+                introScreen.remove();
+            }, 1300); // matches the 1.2s transition
+        }, 2200); // Hold for 2.2 seconds
     }
 
     initAdminState();
@@ -2357,8 +2358,7 @@ function renderLeaguesView() {
     if (internalLeagues.length === 0) {
         document.getElementById("no-league-msg").classList.remove("hidden");
         document.getElementById("league-stats-table").classList.add("hidden");
-        document.getElementById("btn-log-league-match").classList.add("hidden");
-        document.getElementById("league-matches-list").innerHTML = "";
+        document.getElementById("league-matches-list").innerHTML = '<p class="text-muted" style="padding: 8px 0;">No leagues created yet. Admin can create one with the button above.</p>';
         return;
     }
     
