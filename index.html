@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face of Death (FOD) | eFootball Clan Statistics</title>
+    <meta name="description" content="Official eFootball player statistics, match logger, and weekly leaderboards for the Face of Death (FOD) clan. Fear Nothing. Conquer All.">
+    <!-- Google Fonts: Outfit (Headings/Gaming feel) & Inter (UI Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Background Ambient Cyber-Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <div class="brand-logo">
+                    <img src="clan_logo.png" alt="FOD Crest" class="nav-crest-img">
+                </div>
+                <div class="brand-text">
+                    <h1>FACE OF DEATH <span class="badge-tag">eFOOTBALL</span></h1>
+                    <p class="slogan">Fear Nothing. Conquer All. • Season 2026</p>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button id="btn-admin-login" class="btn btn-secondary">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span id="admin-login-text">Admin Login</span>
+                </button>
+                <button id="btn-open-logger" class="btn btn-primary pulse-btn admin-only">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                    Log Match Result
+                </button>
+                <div class="dropdown-actions admin-only">
+                    <button id="btn-export-json" class="btn btn-secondary" title="Backup Stats as JSON">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        Export
+                    </button>
+                    <button id="btn-reset-data" class="btn btn-danger-outline" title="Reset to default FOD roster">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Crest Banner -->
+    <section class="hero-banner">
+        <div class="hero-crest-wrapper">
+            <img src="clan_logo.png" alt="37 Faces of Death FOD Clan Crest" class="hero-crest-img">
+            <div class="crest-glow-ring"></div>
+        </div>
+        <div class="hero-title-group">
+            <h1 class="hero-main-title">37 FACES OF DEATH</h1>
+            <div class="hero-badges">
+                <span class="badge-tag tag-purple">EST. 2020 • 2025</span>
+                <span class="badge-tag text-emerald" style="background: rgba(16, 185, 129, 0.15); border: 1px solid #10B981;">18 CLAN MEMBERS</span>
+                <span class="badge-tag text-gold" style="background: rgba(255, 193, 7, 0.15); border: 1px solid #FFC107;">eFOOTBALL ELITE</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="main-container">
+        <!-- Hero Summary Cards -->
+        <section class="summary-grid" aria-label="Clan Overview Statistics">
+            <div class="stat-card glass-panel">
+                <div class="stat-icon icon-crimson">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-label">Total Matches Played</span>
+                    <h2 id="total-matches-val" class="stat-value">0</h2>
+                </div>
+                <div class="stat-sub">Across all FOD players</div>
+            </div>
+
+            <div class="stat-card glass-panel">
+                <div class="stat-icon icon-emerald">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-label">Clan Win Rate</span>
+                    <h2 id="clan-winrate-val" class="stat-value">0%</h2>
+                </div>
+                <div class="stat-sub">Dominating the pitch</div>
+            </div>
+
+
+
+            <div class="stat-card glass-panel">
+                <div class="stat-icon icon-cyan">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-label">Clean Sheets (CS)</span>
+                    <h2 id="total-cs-val" class="stat-value">0</h2>
+                </div>
+                <div class="stat-sub">Impenetrable defense</div>
+            </div>
+        </section>
+
+
+        <!-- View Tabs -->
+        <div class="view-tabs">
+            <button class="tab-btn active" id="tab-leaderboard">Global Leaderboard</button>
+            <button class="tab-btn" id="tab-internal-leagues">Internal Leagues</button>
+        </div>
+
+        <!-- Roster and Statistics Table Section -->
+        <section class="roster-section glass-panel" aria-label="Player Roster and Statistics Table">
+            <div class="roster-header">
+                <div class="roster-titles">
+                    <h2>📊 FOD Clan Roster & Match Statistics</h2>
+                    <p>Click any column header to sort • Click a player row for in-depth stats & match logs</p>
+                </div>
+                
+                <!-- Filters & Search -->
+                <div class="roster-controls">
+                    <div class="search-box">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <input type="text" id="search-input" placeholder="Search FOD player...">
+                    </div>
+                    
+
+
+                </div>
+            </div>
+
+            <!-- Responsive Table Container -->
+            <div class="table-container">
+                <table class="stats-table" id="stats-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="rank" class="sortable active-sort"># <span class="sort-icon">▲</span></th>
+                            <th data-sort="name" class="sortable text-left">Player <span class="sort-icon"></span></th>
+                            <th data-sort="gp" class="sortable text-center" title="Games Played">GP <span class="sort-icon"></span></th>
+                            <th data-sort="w" class="sortable text-center" title="Wins (3 Pts)">W <span class="sort-icon"></span></th>
+                            <th data-sort="d" class="sortable text-center" title="Draws (1 Pt)">D <span class="sort-icon"></span></th>
+                            <th data-sort="l" class="sortable text-center" title="Losses (0 Pts)">L <span class="sort-icon"></span></th>
+                            <th data-sort="gs" class="sortable text-center" title="Goals Scored">GS <span class="sort-icon"></span></th>
+                            <th data-sort="gc" class="sortable text-center" title="Goals Conceded">GC <span class="sort-icon"></span></th>
+                            <th data-sort="cs" class="sortable text-center" title="Clean Sheets">CS <span class="sort-icon"></span></th>
+                            <th data-sort="winRate" class="sortable text-center" title="Win Percentage">Win % <span class="sort-icon"></span></th>
+                            <th data-sort="points" class="sortable text-center highlight-th" title="League Points (3 for W, 1 for D)">PTS <span class="sort-icon"></span></th>
+                            <th class="text-center">Form</th>
+                            <th class="text-right">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="roster-tbody">
+                        <!-- Populated via JavaScript -->
+                    </tbody>
+                </table>
+                <div id="no-results-msg" class="no-results hidden">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#64748B" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <p>No FOD players matched your search or filter criteria.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internal Leagues Section -->
+        <section id="internal-leagues-section" class="roster-section glass-panel hidden" aria-label="Internal Leagues">
+            <div class="roster-header">
+                <div class="roster-titles">
+                    <h2>🏆 FOD Internal Leagues</h2>
+                    <p>Clan-only competitions and championships</p>
+                </div>
+                <div class="roster-controls">
+                    <button id="btn-create-league" class="btn btn-primary pulse-btn admin-only">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        Create League
+                    </button>
+                </div>
+            </div>
+
+            <div class="league-selector-container" id="league-selector-container">
+                <label for="league-select">Select League:</label>
+                <select id="league-select" class="form-control">
+                    <!-- Options populated by JS -->
+                </select>
+                <button id="btn-log-league-match" class="btn btn-secondary admin-only" style="margin-left: 10px;">
+                    Log League Match
+                </button>
+            </div>
+
+            <!-- Standings Table Container -->
+            <div class="table-container mt-4" id="league-standings-container">
+                <table class="stats-table" id="league-stats-table">
+                    <thead>
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th class="text-left">Player</th>
+                            <th class="text-center" title="Points (3 for W, 1 for D)">PTS</th>
+                            <th class="text-center" title="Games Played">GP</th>
+                            <th class="text-center" title="Wins">W</th>
+                            <th class="text-center" title="Draws">D</th>
+                            <th class="text-center" title="Losses">L</th>
+                            <th class="text-center" title="Goals For">GF</th>
+                            <th class="text-center" title="Goals Against">GA</th>
+                            <th class="text-center" title="Goal Difference">GD</th>
+                        </tr>
+                    </thead>
+                    <tbody id="league-tbody">
+                        <!-- Populated via JavaScript -->
+                    </tbody>
+                </table>
+                <div id="no-league-msg" class="no-results hidden">
+                    <p>No leagues created yet.</p>
+                </div>
+            </div>
+            
+            <div id="league-recent-matches" class="mt-4">
+                <h3 class="mb-2" style="color: var(--text-primary); font-family: var(--font-heading); font-size: 1.2rem;">Recent League Matches</h3>
+                <div id="league-matches-list" style="display: flex; flex-direction: column; gap: 8px;">
+                    <!-- Matches populated by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>FACE OF DEATH (FOD)</strong> • Elite eFootball Clan Statistics Platform</p>
+            <p class="footer-sub">Fear Nothing. Conquer All. • Powered by Real-Time eFootball Match Data</p>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: Log Match Result -->
+    <div id="modal-logger" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-logger-title">
+        <div class="modal-box glass-panel modal-animate">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon">⚽</span>
+                    <h3 id="modal-logger-title">Log eFootball Match Result</h3>
+                </div>
+                <button class="btn-close" id="btn-close-logger" aria-label="Close modal">&times;</button>
+            </div>
+            
+            <form id="form-log-match" class="modal-form">
+                <div class="form-grid">
+                    <div class="form-group col-span-2">
+                        <label for="input-player">Select FOD Clan Player <span class="req">*</span></label>
+                        <select id="input-player" required class="form-control">
+                            <option value="">-- Choose Player --</option>
+                            <!-- Dynamically injected from roster -->
+                        </select>
+                    </div>
+
+                    <div class="form-group col-span-2">
+                        <label for="input-opponent">Opponent Name / Clan <span class="req">*</span></label>
+                        <input type="text" id="input-opponent" required placeholder="e.g. vs. Galactic eSports / User_X" class="form-control">
+                    </div>
+
+                    <div class="form-group col-span-2">
+                        <label>Match Score <span class="req">*</span></label>
+                        <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+                            <div style="flex: 1;">
+                                <label for="input-gs" style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 0.25rem; display: block;">FOD Goals Scored</label>
+                                <input type="number" id="input-gs" required min="0" placeholder="0" class="form-control" style="font-size: 1.2rem; text-align: center;">
+                            </div>
+                            <div style="flex: 1;">
+                                <label for="input-gc" style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 0.25rem; display: block;">Opponent Goals</label>
+                                <input type="number" id="input-gc" required min="0" placeholder="0" class="form-control" style="font-size: 1.2rem; text-align: center;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="btn-cancel-logger">Cancel</button>
+                    <button type="submit" class="btn btn-primary pulse-btn">Save Match & Update Stats</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 4: Create League -->
+    <div id="modal-create-league" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-create-league-title">
+        <div class="modal-box glass-panel modal-animate">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon">🏆</span>
+                    <h3 id="modal-create-league-title">Create Internal League</h3>
+                </div>
+                <button class="btn-close" id="btn-close-create-league" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-create-league">
+                    <div class="form-group">
+                        <label for="league-name" class="form-label">League/Championship Name</label>
+                        <input type="text" id="league-name" class="form-control" required placeholder="e.g. Player Improvement S1">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Select Participants (FOD Roster)</label>
+                        <div id="league-participants-checkboxes" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-height: 200px; overflow-y: auto; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px solid var(--glass-border);">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                    <div class="form-actions mt-4">
+                        <button type="submit" class="btn btn-primary w-100">Create League</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 5: Log League Match -->
+    <div id="modal-league-logger" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-league-logger-title">
+        <div class="modal-box glass-panel modal-animate">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon">⚔️</span>
+                    <h3 id="modal-league-logger-title">Log League Match</h3>
+                </div>
+                <button class="btn-close" id="btn-close-league-logger" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-league-logger">
+                    <div class="form-group row-group">
+                        <div class="col-half">
+                            <label for="league-player1" class="form-label">Player 1</label>
+                            <select id="league-player1" class="form-control" required>
+                                <option value="">Select P1</option>
+                            </select>
+                        </div>
+                        <div class="col-half">
+                            <label for="league-p1-score" class="form-label">P1 Score</label>
+                            <input type="number" id="league-p1-score" class="form-control" min="0" required>
+                        </div>
+                    </div>
+                    
+                    <div class="vs-divider">VS</div>
+
+                    <div class="form-group row-group">
+                        <div class="col-half">
+                            <label for="league-player2" class="form-label">Player 2</label>
+                            <select id="league-player2" class="form-control" required>
+                                <option value="">Select P2</option>
+                            </select>
+                        </div>
+                        <div class="col-half">
+                            <label for="league-p2-score" class="form-label">P2 Score</label>
+                            <input type="number" id="league-p2-score" class="form-control" min="0" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions mt-4">
+                        <button type="submit" class="btn btn-primary w-100">Submit Match Result</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: Player Profile -->
+    <div id="modal-profile" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-profile-name">
+        <div class="modal-box modal-lg glass-panel modal-animate">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon">👤</span>
+                    <h3 id="modal-profile-name">Player Profile</h3>
+                </div>
+                <button class="btn-close" id="btn-close-profile" aria-label="Close modal">&times;</button>
+            </div>
+            
+            <div class="profile-content">
+                <!-- Top Profile Header Card -->
+                <div class="profile-card">
+                    <div class="profile-avatar-large" id="profile-avatar">FV</div>
+                    <div class="profile-main-info">
+                        <div class="profile-title-row">
+                            <h2 id="profile-name-text">FOD_Viper</h2>
+                            <span id="profile-div-badge" class="badge-tag div1-badge">Champion</span>
+                        </div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">
+                            ID: <span id="profile-game-id" style="color: var(--text-secondary); font-family: monospace;">N/A</span>
+                        </div>
+                    </div>
+                    <div class="profile-quick-stats">
+                        <div class="quick-stat">
+                            <span class="q-label">Win Rate</span>
+                            <span class="q-val text-emerald" id="profile-winrate">0%</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="q-label">Total Points</span>
+                            <span class="q-val text-gold" id="profile-points">0 PTS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Breakdown Bars -->
+                <div class="profile-metrics-grid">
+                    <div class="metric-box">
+                        <span class="m-label">Games Record (W - D - L)</span>
+                        <div class="m-val-row" id="profile-record-text">15W - 3D - 2L</div>
+                        <div class="progress-bar-container">
+                            <div id="bar-wins" class="bar-segment bar-win" style="width: 75%"></div>
+                            <div id="bar-draws" class="bar-segment bar-draw" style="width: 15%"></div>
+                            <div id="bar-losses" class="bar-segment bar-loss" style="width: 10%"></div>
+                        </div>
+                    </div>
+
+                    <div class="metric-box">
+                        <span class="m-label">Defensive Record</span>
+                        <div class="m-val-row">
+                            <span class="text-cyan" style="font-size: 1.5rem;">🛡️ <strong id="profile-cs">0</strong> Clean Sheets</span>
+                        </div>
+                        <div class="stats-sub-info" style="margin-top: 0.5rem;">
+                            <span>Total Matches Played: <strong id="profile-gp-modal">0</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Match Logs for this Player -->
+                <div class="profile-history-section">
+                    <h4>Recent Match History</h4>
+                    <div class="history-list" id="profile-history-list">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="btn btn-primary" id="btn-close-profile-bottom">Close Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: Admin Login -->
+    <div id="modal-admin" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-admin-title">
+        <div class="modal-box glass-panel modal-animate" style="max-width: 400px;">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon">🔒</span>
+                    <h3 id="modal-admin-title">Admin Access</h3>
+                </div>
+                <button class="btn-close" id="btn-close-admin" aria-label="Close modal">&times;</button>
+            </div>
+            
+            <form id="form-admin-login" class="modal-form">
+                <div class="form-group">
+                    <label for="input-admin-pass">Passcode</label>
+                    <input type="password" id="input-admin-pass" required placeholder="Enter passcode..." class="form-control">
+                    <p id="admin-error-msg" class="text-crimson hidden" style="font-size: 0.85rem; margin-top: 0.5rem;">Incorrect passcode.</p>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="btn-cancel-admin">Cancel</button>
+                    <button type="submit" class="btn btn-primary pulse-btn">Unlock</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Application -->
+    <script src="app.js"></script>
+</body>
+</html>
