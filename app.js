@@ -1937,6 +1937,7 @@ function renderAll() {
     renderRosterTable();
     populateLoggerPlayerSelect();
     renderRecentMatchesFeed();
+    renderMiniAwards();
 }
 
 function renderHeroSummary() {
@@ -2980,4 +2981,51 @@ function closeLoggerModal() {
     document.getElementById("modal-logger-title").textContent = "Log eFootball Match Result";
     document.getElementById("input-player").disabled = false;
     document.getElementById("form-log-match").reset();
+}
+
+// ==========================================================================
+// MINI AWARDS LEADERBOARDS
+// ==========================================================================
+function renderMiniAwards() {
+    // 1. Top Scorers (Golden Boot)
+    const scorers = [...state.roster]
+        .map(p => ({ name: p.name, val: getPlayerComputedStats(p).gs }))
+        .sort((a, b) => b.val - a.val)
+        .slice(0, 3);
+
+    // 2. Top Clean Sheets (Golden Glove)
+    const keepers = [...state.roster]
+        .map(p => ({ name: p.name, val: getPlayerComputedStats(p).cs }))
+        .sort((a, b) => b.val - a.val)
+        .slice(0, 3);
+
+    const rankClasses = ["rank-gold", "rank-silver", "rank-bronze"];
+
+    // Render scorers
+    const scorersList = document.getElementById("top-scorers-list");
+    if (scorersList) {
+        scorersList.innerHTML = scorers.map((s, idx) => `
+            <div class="award-row">
+                <div class="award-row-left">
+                    <span class="award-rank-badge ${rankClasses[idx]}">${idx + 1}</span>
+                    <span class="award-player-name">${s.name}</span>
+                </div>
+                <span class="award-stat-val text-emerald">${s.val} Goals</span>
+            </div>
+        `).join("");
+    }
+
+    // Render keepers
+    const keepersList = document.getElementById("top-cs-list");
+    if (keepersList) {
+        keepersList.innerHTML = keepers.map((k, idx) => `
+            <div class="award-row">
+                <div class="award-row-left">
+                    <span class="award-rank-badge ${rankClasses[idx]}">${idx + 1}</span>
+                    <span class="award-player-name">${k.name}</span>
+                </div>
+                <span class="award-stat-val text-cyan">${k.val} CS</span>
+            </div>
+        `).join("");
+    }
 }
