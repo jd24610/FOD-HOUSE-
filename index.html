@@ -51,6 +51,10 @@
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
                         Export
                     </button>
+                    <button id="btn-add-member" class="btn btn-secondary admin-only" title="Add new clan member">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+                        Add Member
+                    </button>
                     <button id="btn-reset-data" class="btn btn-danger-outline" title="Reset to default FOD roster">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
                         Reset
@@ -288,6 +292,48 @@
                     <button type="submit" class="btn btn-primary pulse-btn">Save Match & Update Stats</button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- MODAL 6: Add New Clan Member -->
+    <div id="modal-add-member" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-add-member-title">
+        <div class="modal-box glass-panel modal-animate">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon">👤</span>
+                    <h3 id="modal-add-member-title">Add New Clan Member</h3>
+                </div>
+                <button class="btn-close" id="btn-close-add-member" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="form-add-member">
+                    <div class="form-group">
+                        <label for="new-member-name" class="form-label">Player Name <span class="req">*</span></label>
+                        <input type="text" id="new-member-name" class="form-control" required placeholder="e.g. TIGER" style="text-transform: uppercase;">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-member-gameid" class="form-label">eFootball ID <span class="req">*</span></label>
+                        <input type="text" id="new-member-gameid" class="form-control" required placeholder="e.g. ASXX-123-456-789">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-member-avatar" class="form-label">Avatar Initials <span class="req">*</span></label>
+                        <input type="text" id="new-member-avatar" class="form-control" required placeholder="e.g. TG" maxlength="3">
+                        <small style="color: var(--text-muted); font-size: 0.8rem;">2-3 letters shown in the player icon circle</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-member-formation" class="form-label">Formation</label>
+                        <input type="text" id="new-member-formation" class="form-control" placeholder="e.g. 4-3-3">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-member-playstyle" class="form-label">Playstyle</label>
+                        <input type="text" id="new-member-playstyle" class="form-control" placeholder="e.g. Counter Attack">
+                    </div>
+                    <div id="add-member-error" class="hidden" style="color: var(--neon-crimson); font-size: 0.9rem; margin-bottom: 0.5rem;"></div>
+                    <div class="form-actions mt-4">
+                        <button type="submit" class="btn btn-primary w-100">Add to Clan Roster</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 

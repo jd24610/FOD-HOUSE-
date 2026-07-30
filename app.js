@@ -2208,6 +2208,64 @@ function setupEventListeners() {
             }
         });
     }
+
+    // I. Add New Member
+    const modalAddMember = document.getElementById("modal-add-member");
+    const btnAddMember = document.getElementById("btn-add-member");
+    if (btnAddMember) {
+        btnAddMember.addEventListener("click", () => {
+            document.getElementById("form-add-member").reset();
+            document.getElementById("add-member-error").classList.add("hidden");
+            modalAddMember.classList.remove("hidden");
+        });
+    }
+    document.getElementById("btn-close-add-member")?.addEventListener("click", () => modalAddMember.classList.add("hidden"));
+    
+    // Close on backdrop click
+    modalAddMember?.addEventListener("click", (e) => {
+        if (e.target === modalAddMember) modalAddMember.classList.add("hidden");
+    });
+
+    document.getElementById("form-add-member")?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("new-member-name").value.trim().toUpperCase();
+        const gameId = document.getElementById("new-member-gameid").value.trim();
+        const avatar = document.getElementById("new-member-avatar").value.trim().toUpperCase();
+        const formation = document.getElementById("new-member-formation").value.trim() || "4-4-2";
+        const playstyle = document.getElementById("new-member-playstyle").value.trim() || "Balanced";
+        const errEl = document.getElementById("add-member-error");
+
+        // Check for duplicate name
+        if (state.roster.find(p => p.name.toUpperCase() === name)) {
+            errEl.textContent = `❌ A player named "${name}" already exists in the roster.`;
+            errEl.classList.remove("hidden");
+            return;
+        }
+
+        // Generate a unique ID
+        const newId = "p" + Date.now();
+
+        const newPlayer = {
+            id: newId,
+            name,
+            role: "Clan Member",
+            playstyle: playstyle,
+            formation: formation,
+            avatar: avatar,
+            gameId: gameId,
+            allTimeStats: { gp: 0, w: 0, d: 0, l: 0, gs: 0, gc: 0, cs: 0 },
+            weeklyStats: { gp: 0, w: 0, d: 0, l: 0, gs: 0, gc: 0, cs: 0 },
+            form: [],
+            history: []
+        };
+
+        state.roster.push(newPlayer);
+        saveToStorage();
+        renderAll();
+
+        modalAddMember.classList.add("hidden");
+        alert(`✅ ${name} has been added to the FOD clan roster with ID: ${gameId}`);
+    });
 }
 
 // --- 8. PLAYER PROFILE MODAL RENDERER ---
