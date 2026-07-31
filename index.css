@@ -3547,14 +3547,6 @@ input[type="number"]::-webkit-outer-spin-button { opacity: 0.4; }
 /* ── Required asterisk ────────────────────────────────────────────────────── */
 .req { color: var(--neon-crimson); font-weight: 700; }
 
-/* ── Smooth page appearance after intro ───────────────────────────────────── */
-body > *:not(#intro-screen) {
-    animation: pageReveal 0.3s ease 0.4s both;
-}
-@keyframes pageReveal {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
 
 /* Disable page animation for elements that shouldn't animate */
 .modal-overlay, .ambient-glow { animation: none !important; }
