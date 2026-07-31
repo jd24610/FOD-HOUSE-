@@ -43,6 +43,7 @@
     <!-- Navigation Header -->
     <header class="navbar">
         <div class="nav-container">
+            <!-- Brand -->
             <div class="brand">
                 <div class="brand-logo">
                     <img src="clan_logo.png" alt="FOD Crest" class="nav-crest-img">
@@ -52,37 +53,43 @@
                     <p class="slogan">Fear Nothing. Conquer All. • Season 2026</p>
                 </div>
             </div>
+
+            <!-- Primary nav: only Admin Login button (always visible) -->
             <div class="nav-actions">
                 <button id="btn-admin-login" class="btn btn-secondary">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     <span id="admin-login-text">Admin Login</span>
                 </button>
-                <button id="btn-announce" class="btn btn-secondary admin-only" title="Post Announcement">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                        Announce
-                    </button>
-                    <button id="btn-set-potw" class="btn btn-secondary admin-only" title="Set Player of the Week">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        POTW
-                    </button>
-                    <button id="btn-open-logger" class="btn btn-primary pulse-btn admin-only">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-                    Log Match Result
+            </div>
+        </div>
+
+        <!-- Admin toolbar: drops to second row on mobile when admin mode active -->
+        <div class="admin-toolbar admin-only">
+            <div class="admin-toolbar-inner">
+                <button id="btn-announce" class="btn btn-secondary" title="Post Announcement">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <span>Announce</span>
                 </button>
-                <div class="dropdown-actions admin-only">
-                    <button id="btn-export-json" class="btn btn-secondary" title="Backup Stats as JSON">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                        Export
-                    </button>
-                    <button id="btn-add-member" class="btn btn-secondary admin-only" title="Add new clan member">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
-                        Add Member
-                    </button>
-                    <button id="btn-reset-data" class="btn btn-danger-outline" title="Reset to default FOD roster">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
-                        Reset
-                    </button>
-                </div>
+                <button id="btn-set-potw" class="btn btn-secondary" title="Set Player of the Week">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <span>POTW</span>
+                </button>
+                <button id="btn-open-logger" class="btn btn-primary pulse-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                    <span>Log Match</span>
+                </button>
+                <button id="btn-export-json" class="btn btn-secondary" title="Backup Stats as JSON">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    <span>Export</span>
+                </button>
+                <button id="btn-add-member" class="btn btn-secondary" title="Add new clan member">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+                    <span>Add Member</span>
+                </button>
+                <button id="btn-reset-data" class="btn btn-danger-outline" title="Reset to default FOD roster">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                    <span>Reset</span>
+                </button>
             </div>
         </div>
     </header>

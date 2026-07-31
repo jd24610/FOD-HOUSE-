@@ -1229,6 +1229,54 @@ body.admin-mode button.admin-only {
     display: inline-flex !important;
 }
 
+/* Admin toolbar — sits below the main nav row in admin mode */
+.admin-toolbar {
+    border-top: 1px solid rgba(244, 37, 73, 0.15);
+    background: rgba(244, 37, 73, 0.04);
+    padding: 0.45rem 2rem;
+}
+
+.admin-toolbar-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Desktop: compact small buttons */
+.admin-toolbar .btn {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.85rem;
+    gap: 0.35rem;
+}
+
+/* Mobile: full-width scrollable toolbar */
+@media (max-width: 640px) {
+    .admin-toolbar {
+        padding: 0.5rem 0.75rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .admin-toolbar-inner {
+        flex-wrap: nowrap;
+        gap: 0.4rem;
+        width: max-content;
+        min-width: 100%;
+    }
+    .admin-toolbar .btn {
+        font-size: 0.72rem;
+        padding: 0.45rem 0.65rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    /* Show text labels on toolbar since it scrolls */
+    .admin-toolbar .btn span {
+        display: inline !important;
+    }
+}
+
 /* ==========================================================================
    INTERNAL LEAGUES STYLES
    ========================================================================== */
@@ -2719,28 +2767,17 @@ html {
         letter-spacing: 0.5px;
     }
     .brand-text .slogan {
-        font-size: 0.68rem;
-        display: none; /* hide on mobile to save space */
+        display: none;
     }
     .nav-actions {
         gap: 0.4rem;
         flex-wrap: nowrap;
+        flex-shrink: 0;
     }
     .btn {
         padding: 0.5rem 0.75rem;
         font-size: 0.78rem;
         gap: 0.3rem;
-    }
-    /* Hide text labels in admin buttons on small nav */
-    .dropdown-actions .btn span,
-    .btn-secondary span:not(#admin-login-text) {
-        display: none;
-    }
-    .dropdown-actions {
-        gap: 0.35rem;
-    }
-    .dropdown-actions .btn {
-        padding: 0.5rem 0.6rem;
     }
 }
 
