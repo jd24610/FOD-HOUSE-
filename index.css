@@ -1273,7 +1273,7 @@ body.admin-mode button.admin-only {
     display: flex;
     align-items: center;
     overflow: hidden;
-    transition: transform 1.3s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .intro-door-left {
@@ -3549,7 +3549,7 @@ input[type="number"]::-webkit-outer-spin-button { opacity: 0.4; }
 
 /* ── Smooth page appearance after intro ───────────────────────────────────── */
 body > *:not(#intro-screen) {
-    animation: pageReveal 0.5s ease 2.5s both;
+    animation: pageReveal 0.3s ease 0.4s both;
 }
 @keyframes pageReveal {
     from { opacity: 0; }

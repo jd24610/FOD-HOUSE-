@@ -1865,8 +1865,8 @@ function initApp() {
             // After animation completes, remove it from DOM entirely
             setTimeout(() => {
                 introScreen.remove();
-            }, 1300); // matches the 1.2s transition
-        }, 2200); // Hold for 2.2 seconds
+            }, 700); // matches the 0.7s transition
+        }, 400); // Hold for 0.4 seconds
     }
 
     initAdminState();
