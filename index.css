@@ -6,44 +6,50 @@
 :root {
     /* Color Palette */
     --bg-obsidian: #080A0E;
-    --bg-surface: #0E131C;
-    --bg-panel: rgba(18, 24, 35, 0.75);
+    --bg-primary:  #080A0E;           /* alias for hero gradient */
+    --bg-surface:  #0E131C;
+    --bg-panel:       rgba(18, 24, 35, 0.75);
     --bg-panel-hover: rgba(26, 35, 50, 0.85);
-    
-    --neon-crimson: #F42549;
+
+    --neon-crimson:     #F42549;
     --neon-crimson-glow: rgba(244, 37, 73, 0.4);
-    --neon-crimson-dim: rgba(244, 37, 73, 0.12);
-    
-    --cyber-gold: #FFC107;
+    --neon-crimson-dim:  rgba(244, 37, 73, 0.12);
+
+    --cyber-gold:     #FFC107;
     --cyber-gold-glow: rgba(255, 193, 7, 0.4);
-    --cyber-gold-dim: rgba(255, 193, 7, 0.12);
-    
-    --pitch-emerald: #10B981;
+    --cyber-gold-dim:  rgba(255, 193, 7, 0.12);
+
+    --pitch-emerald:     #10B981;
     --pitch-emerald-glow: rgba(16, 185, 129, 0.4);
-    --pitch-emerald-dim: rgba(16, 185, 129, 0.12);
-    
-    --electric-cyan: #06B6D4;
+    --pitch-emerald-dim:  rgba(16, 185, 129, 0.12);
+
+    --electric-cyan:    #06B6D4;
     --electric-cyan-dim: rgba(6, 182, 212, 0.12);
-    
-    --text-primary: #F8FAFC;
+
+    /* Purple / Mauve — brand color */
+    --neon-violet:     #a855f7;
+    --neon-violet-glow: rgba(168, 85, 247, 0.4);
+    --neon-violet-dim:  rgba(168, 85, 247, 0.12);
+
+    --text-primary:   #F8FAFC;
     --text-secondary: #94A3B8;
-    --text-muted: #64748B;
-    
-    --border-glass: rgba(255, 255, 255, 0.08);
+    --text-muted:     #64748B;
+
+    --border-glass:  rgba(255, 255, 255, 0.08);
     --border-active: rgba(244, 37, 73, 0.6);
-    
+
     /* Typography */
     --font-head: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    
+
     /* Layout & Shadows */
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;
     --radius-xl: 28px;
     --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-    --shadow-neon: 0 0 20px rgba(244, 37, 73, 0.25);
-    --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    --shadow-neon:  0 0 20px rgba(244, 37, 73, 0.25);
+    --transition:   all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Reset & Base */
@@ -3090,3 +3096,451 @@ html {
 @media (min-width: 769px) {
     .table-container::before { display: none; }
 }
+
+/* ==========================================================================
+   FINAL POLISH PASS — Professional Quality Finishes
+   ========================================================================== */
+
+/* ── Intro screen fine-tuning ─────────────────────────────────────────────── */
+.intro-subtitle {
+    letter-spacing: 0.18em;
+    font-size: 0.85rem;
+}
+
+/* ── Navbar refinement ────────────────────────────────────────────────────── */
+.navbar {
+    box-shadow: 0 1px 0 rgba(255,255,255,0.04), 0 4px 20px rgba(0,0,0,0.4);
+}
+.brand-text h1 { line-height: 1.2; }
+
+/* ── Glass panel polish ───────────────────────────────────────────────────── */
+.glass-panel {
+    position: relative;
+    /* subtle inner top highlight */
+}
+.glass-panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 20px; right: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    pointer-events: none;
+}
+
+/* ── Stat cards polish ────────────────────────────────────────────────────── */
+.stat-card {
+    background: linear-gradient(145deg, rgba(18,24,35,0.85) 0%, rgba(14,19,28,0.9) 100%);
+}
+.stat-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.stat-card:hover::after { opacity: 1; }
+/* Color accent lines per icon color */
+.stat-card:has(.icon-crimson)::after  { background: var(--neon-crimson); }
+.stat-card:has(.icon-emerald)::after  { background: var(--pitch-emerald); }
+.stat-card:has(.icon-cyan)::after     { background: var(--electric-cyan); }
+.stat-card:has(.icon-gold)::after     { background: var(--cyber-gold); }
+
+/* ── Table row rank badges ────────────────────────────────────────────────── */
+.rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    border-radius: 6px;
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 0.78rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--text-muted);
+}
+.rank-badge.rank-1 {
+    background: linear-gradient(135deg, rgba(255,193,7,0.25), rgba(255,150,0,0.15));
+    border-color: rgba(255,193,7,0.45);
+    color: var(--cyber-gold);
+    box-shadow: 0 0 10px rgba(255,193,7,0.2);
+}
+.rank-badge.rank-2 {
+    background: rgba(148,163,184,0.12);
+    border-color: rgba(148,163,184,0.3);
+    color: #CBD5E1;
+}
+.rank-badge.rank-3 {
+    background: rgba(180,100,60,0.15);
+    border-color: rgba(205,127,50,0.35);
+    color: #CD7F32;
+}
+
+/* ── Form controls ────────────────────────────────────────────────────────── */
+.form-control, .custom-select {
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.form-control:hover { border-color: rgba(255,255,255,0.15); }
+.form-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 0.45rem;
+    letter-spacing: 0.02em;
+}
+
+/* Datalist autocomplete styling fix */
+input[list]::-webkit-calendar-picker-indicator { display: none !important; }
+
+/* ── Button pulse glow color ──────────────────────────────────────────────── */
+@keyframes btnPulse {
+    0%   { box-shadow: 0 0 0 0   rgba(244, 37, 73, 0.55); }
+    70%  { box-shadow: 0 0 0 12px rgba(244, 37, 73, 0);   }
+    100% { box-shadow: 0 0 0 0   rgba(244, 37, 73, 0);    }
+}
+
+/* ── Recent match feed polish ─────────────────────────────────────────────── */
+.recent-matches-section {
+    margin-bottom: 1.75rem;
+    overflow: hidden;
+}
+.recent-matches-header {
+    padding: 1.25rem 1.5rem 1rem;
+    border-bottom: 1px solid var(--border-glass);
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.recent-matches-title { font-size: 1rem; font-weight: 800; font-family: var(--font-head); }
+.recent-matches-sub   { font-size: 0.78rem; color: var(--text-muted); }
+.recent-matches-feed  { padding: 0.75rem 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+
+/* ── Awards section polish ────────────────────────────────────────────────── */
+.award-list-item {
+    padding: 0.6rem 0.5rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.award-list-item:hover { background: rgba(255,255,255,0.03); }
+
+/* ── View tabs polish ─────────────────────────────────────────────────────── */
+.view-tabs {
+    margin-bottom: 1.25rem;
+}
+.tab-btn {
+    border-radius: 6px 6px 0 0;
+    letter-spacing: 0.02em;
+}
+
+/* ── Compare section ──────────────────────────────────────────────────────── */
+.compare-section {
+    margin-bottom: 1.75rem;
+    overflow: hidden;
+}
+
+/* ── Profile modal polish ─────────────────────────────────────────────────── */
+.profile-content {
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.profile-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+.profile-quick-stats {
+    display: flex;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+.quick-stat {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.q-label { font-size: 0.7rem; color: var(--text-muted); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+.q-val   { font-family: var(--font-head); font-size: 1.15rem; font-weight: 800; }
+
+/* ── FUT card polish ──────────────────────────────────────────────────────── */
+.fut-card-wrapper {
+    transition: transform 0.3s ease;
+}
+.fut-card-wrapper:hover { transform: scale(1.03) rotateY(-2deg); }
+
+/* ── Scroll bar on table ──────────────────────────────────────────────────── */
+.table-container::-webkit-scrollbar { height: 5px; }
+.table-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); }
+.table-container::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+.table-container::-webkit-scrollbar-thumb:hover { background: var(--neon-violet); }
+
+/* ── No results message ───────────────────────────────────────────────────── */
+.no-results {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* ── Announcement banner polish ───────────────────────────────────────────── */
+.announcement-banner {
+    position: sticky;
+    top: 64px; /* below navbar */
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 1.5rem;
+    background: linear-gradient(135deg, rgba(244,37,73,0.15), rgba(160,32,240,0.1));
+    border-bottom: 1px solid rgba(244,37,73,0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    animation: slideDown 0.4s ease;
+}
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+}
+.announcement-content {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    flex: 1;
+}
+.announcement-icon { font-size: 1.1rem; flex-shrink: 0; }
+.announcement-dismiss {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.2rem;
+    border-radius: 4px;
+    transition: color 0.2s;
+    flex-shrink: 0;
+}
+.announcement-dismiss:hover { color: var(--text-primary); }
+
+/* ── POTW card polish ─────────────────────────────────────────────────────── */
+.potw-card {
+    padding: 1.25rem 1.5rem;
+}
+.potw-badge {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+    color: var(--cyber-gold);
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255,193,7,0.08);
+    border: 1px solid rgba(255,193,7,0.2);
+    border-radius: 50px;
+}
+.potw-body {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+.potw-avatar {
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-head); font-size: 1.3rem; font-weight: 800;
+    background: linear-gradient(135deg, rgba(255,193,7,0.2), rgba(244,37,73,0.2));
+    border: 2px solid rgba(255,193,7,0.4);
+    color: var(--cyber-gold);
+    flex-shrink: 0;
+}
+.potw-info { flex: 1; }
+.potw-name {
+    font-family: var(--font-head); font-size: 1.25rem; font-weight: 800;
+    color: var(--text-primary); margin: 0 0 0.5rem;
+}
+.potw-stats {
+    display: flex; gap: 0.85rem; flex-wrap: wrap;
+}
+.potw-stat {
+    display: flex; align-items: baseline; gap: 0.25rem;
+}
+.potw-stat-val { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; }
+.potw-stat-lbl { font-size: 0.7rem; color: var(--text-muted); font-weight: 600; }
+
+/* ── Modal overlay backdrop ───────────────────────────────────────────────── */
+.modal-overlay {
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* ── Modal box polish ─────────────────────────────────────────────────────── */
+.modal-box {
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.6),
+        0 0 0 1px rgba(255,255,255,0.06),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.modal-header {
+    padding: 1.5rem 1.5rem 1rem;
+    border-bottom: 1px solid var(--border-glass);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal-title-group {
+    display: flex; align-items: center; gap: 0.65rem;
+}
+.modal-icon { font-size: 1.3rem; }
+.modal-header h3 {
+    font-family: var(--font-head); font-size: 1.1rem; font-weight: 800;
+    color: var(--text-primary); margin: 0;
+}
+.btn-close {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border-glass);
+    border-radius: 6px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+.btn-close:hover {
+    background: rgba(244,37,73,0.12);
+    border-color: rgba(244,37,73,0.3);
+    color: var(--neon-crimson);
+}
+.modal-body, .modal-form {
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+.modal-actions {
+    display: flex; gap: 0.75rem; justify-content: flex-end;
+    padding: 1rem 1.5rem 1.5rem;
+    border-top: 1px solid var(--border-glass);
+    margin-top: 0.5rem;
+}
+
+/* ── Admin login modal inputs ─────────────────────────────────────────────── */
+input[type="password"].form-control { letter-spacing: 0.12em; }
+
+/* ── League section polish ────────────────────────────────────────────────── */
+.league-selector-container {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+.league-selector-container label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+/* ── Internal leagues recent matches ──────────────────────────────────────── */
+#league-recent-matches h3 {
+    font-family: var(--font-head);
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-glass);
+}
+
+/* ── Form validation states ───────────────────────────────────────────────── */
+.form-control:invalid:not(:placeholder-shown) {
+    border-color: rgba(244,37,73,0.4);
+}
+.form-control:valid:not(:placeholder-shown) {
+    border-color: rgba(16,185,129,0.3);
+}
+
+/* ── Number input polish ──────────────────────────────────────────────────── */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { opacity: 0.4; }
+
+/* ── Score VS divider ─────────────────────────────────────────────────────── */
+.vs-divider {
+    text-align: center;
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--neon-crimson);
+    text-shadow: 0 0 10px var(--neon-crimson-glow);
+    padding: 0.25rem 0;
+    letter-spacing: 0.1em;
+}
+
+/* ── Progress bars ────────────────────────────────────────────────────────── */
+.progress-bar-container {
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.06);
+    display: flex;
+    overflow: hidden;
+    margin-top: 0.6rem;
+}
+.bar-segment {
+    height: 100%;
+    transition: width 0.6s cubic-bezier(0.16,1,0.3,1);
+    min-width: 2px;
+}
+.bar-win  { background: linear-gradient(90deg, var(--pitch-emerald), #0d9367); }
+.bar-draw { background: linear-gradient(90deg, var(--cyber-gold),    #e6a800); }
+.bar-loss { background: linear-gradient(90deg, var(--neon-crimson),  #c0102a); }
+
+/* ── Form grid ────────────────────────────────────────────────────────────── */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.col-span-2 { grid-column: span 2; }
+.form-group { display: flex; flex-direction: column; }
+
+/* ── Form actions row ─────────────────────────────────────────────────────── */
+.form-actions {
+    display: flex; gap: 0.75rem; align-items: center;
+    margin-top: 1rem;
+}
+.w-100 { width: 100%; }
+.mt-4  { margin-top: 1rem; }
+.mb-2  { margin-bottom: 0.5rem; }
+
+/* ── Required asterisk ────────────────────────────────────────────────────── */
+.req { color: var(--neon-crimson); font-weight: 700; }
+
+/* ── Smooth page appearance after intro ───────────────────────────────────── */
+body > *:not(#intro-screen) {
+    animation: pageReveal 0.5s ease 2.5s both;
+}
+@keyframes pageReveal {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Disable page animation for elements that shouldn't animate */
+.modal-overlay, .ambient-glow { animation: none !important; }

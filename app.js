@@ -1975,10 +1975,14 @@ function animateCounter(elementId, targetValue, suffix = "") {
     const duration = 600;
     const startTime = performance.now();
 
+    // Easing function for smoother animation
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
     function step(currentTime) {
-        const elapsed = currentTime - startTime;
+        const elapsed  = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        const currentVal = Math.floor(startVal + (targetValue - startVal) * progress);
+        const eased    = easeOutCubic(progress);
+        const currentVal = Math.floor(startVal + (targetValue - startVal) * eased);
         el.textContent = currentVal + suffix;
         if (progress < 1) {
             requestAnimationFrame(step);
@@ -2054,8 +2058,9 @@ function renderRosterTable() {
         }).join("") || `<span class="text-muted">-</span>`;
 
         const tr = document.createElement("tr");
+        const rankBadgeClass = rank <= 3 ? `rank-badge rank-${rank}` : 'rank-badge';
         tr.innerHTML = `
-            <td class="text-center font-bold">${rank}</td>
+            <td class="text-center"><span class="${rankBadgeClass}">${rank <= 3 ? ['🥇','🥈','🥉'][rank-1] : rank}</span></td>
             <td>
                 <div class="player-cell">
                     <div class="player-avatar-small">${player.avatar}</div>
