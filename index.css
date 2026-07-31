@@ -59,12 +59,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--bg-obsidian);
     color: var(--text-primary);
     font-family: var(--font-body);
     min-height: 100vh;
-    overflow-x: hidden;
     position: relative;
     line-height: 1.5;
     selection-background-color: var(--neon-crimson);
