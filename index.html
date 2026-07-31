@@ -320,6 +320,46 @@
             </div>
         </section>
 
+        <!-- ── Quick Navigation ─────────────────────────────────────────── -->
+        <nav class="quick-nav" aria-label="Jump to Section">
+            <button class="qnav-card" onclick="document.getElementById('leaderboard-anchor').scrollIntoView({behavior:'smooth',block:'start'})">
+                <span class="qnav-icon">🏅</span>
+                <span class="qnav-label">Classement</span>
+                <span class="qnav-sub">Voir tous les joueurs</span>
+                <span class="qnav-arrow">→</span>
+            </button>
+            <button class="qnav-card" onclick="document.getElementById('recent-matches-section').scrollIntoView({behavior:'smooth',block:'start'})">
+                <span class="qnav-icon">⚡</span>
+                <span class="qnav-label">Résultats Récents</span>
+                <span class="qnav-sub">Derniers matchs joués</span>
+                <span class="qnav-arrow">→</span>
+            </button>
+            <button class="qnav-card" onclick="document.getElementById('awards-anchor').scrollIntoView({behavior:'smooth',block:'start'})">
+                <span class="qnav-icon">🏆</span>
+                <span class="qnav-label">Palmarès</span>
+                <span class="qnav-sub">Top buteurs & gardiens</span>
+                <span class="qnav-arrow">→</span>
+            </button>
+            <button class="qnav-card" onclick="document.getElementById('compare-anchor').scrollIntoView({behavior:'smooth',block:'start'})">
+                <span class="qnav-icon">⚔️</span>
+                <span class="qnav-label">Face-à-Face</span>
+                <span class="qnav-sub">Comparer deux joueurs</span>
+                <span class="qnav-arrow">→</span>
+            </button>
+            <button class="qnav-card" onclick="(function(){var t=document.getElementById('tab-internal-leagues');if(t){t.click();}document.getElementById('leaderboard-anchor').scrollIntoView({behavior:'smooth',block:'start'});})()">
+                <span class="qnav-icon">🎯</span>
+                <span class="qnav-label">Chofe Jaret</span>
+                <span class="qnav-sub">Ligues internes FOD</span>
+                <span class="qnav-arrow">→</span>
+            </button>
+            <button class="qnav-card" onclick="document.getElementById('potw-section').scrollIntoView({behavior:'smooth',block:'start'})">
+                <span class="qnav-icon">⭐</span>
+                <span class="qnav-label">Joueur de la Semaine</span>
+                <span class="qnav-sub">Meilleure performance</span>
+                <span class="qnav-arrow">→</span>
+            </button>
+        </nav>
+
         <!-- Recent Clan Matches Feed -->
         <div id="recent-matches-section" class="recent-matches-section glass-panel">
             <div class="recent-matches-header">
@@ -332,7 +372,7 @@
         </div>
 
         <!-- Mini Awards Leaderboards -->
-        <div class="awards-grid-section">
+        <div id="awards-anchor" class="awards-grid-section">
             <div class="award-card glass-panel">
                 <div class="award-card-header">
                     <span class="award-icon">🏆</span>
@@ -361,7 +401,7 @@
         </div>
 
         <!-- Player vs Player Compare Section -->
-        <div class="compare-section glass-panel">
+        <div id="compare-anchor" class="compare-section glass-panel">
             <div class="compare-header" id="compare-toggle-header" style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem;">
                 <h3 class="compare-title" style="font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin: 0;">⚔️ Head-to-Head Comparison</h3>
                 <span id="compare-toggle-icon" style="transition: transform 0.3s; font-size: 1.2rem; color: var(--text-muted);">▼</span>
