@@ -1941,30 +1941,71 @@ function renderAll() {
 }
 
 function renderHeroSummary() {
-    let totMatches = 0;
-    let totWins = 0;
-    let totDraws = 0;
-    let totLosses = 0;
-    let totCS = 0;
-    let totGS = 0;
-    let totGC = 0;
-
+    // 1. Gather all logged history matches across all players
+    const allMatches = [];
     state.roster.forEach(player => {
-        const s = getPlayerComputedStats(player);
-        totMatches += s.gp;
-        totWins += s.w;
-        totDraws += s.d;
-        totLosses += s.l;
-        totCS += s.cs;
-        totGS += s.gs;
-        totGC += s.gc;
+        const history = player.history || [];
+        history.forEach(m => {
+            allMatches.push({
+                date: m.date || new Date().toISOString().slice(0, 10),
+                // Normalize opponent name (e.g. remove "vs. " prefix, trim, uppercase)
+                opponent: (m.opponent || "").replace(/^vs\.\s+/i, "").trim().toUpperCase(),
+                result: m.result,
+                gs: m.gs || 0,
+                gc: m.gc || 0,
+                cs: m.cs || false
+            });
+        });
     });
 
-    const clanWinRate = totMatches > 0 ? Math.round((totWins / totMatches) * 100) : 0;
+    // 2. Group matches by unique date & normalized opponent name (each group is a "versus/confrontation")
+    const groups = {};
+    allMatches.forEach(m => {
+        const key = `${m.date}_${m.opponent}`;
+        if (!groups[key]) groups[key] = [];
+        groups[key].push(m);
+    });
+
+    let totMatches = 0; // count of actual individual matches played
+    let totCS = 0;      // clean sheets kept by players
+    let totGS = 0;      // goals scored by clan
+    let totGC = 0;      // goals conceded by clan
+
+    let vsWins = 0;
+    let vsDraws = 0;
+    let vsLosses = 0;
+    let totalVersus = 0;
+
+    Object.values(groups).forEach(groupMatches => {
+        let fWins = 0;
+        let fLosses = 0;
+
+        groupMatches.forEach(m => {
+            totGS += m.gs;
+            totGC += m.gc;
+            if (m.cs) totCS++;
+            totMatches++;
+
+            if (m.result === "W") fWins++;
+            else if (m.result === "L") fLosses++;
+        });
+
+        // Determine versus outcome
+        if (fWins > fLosses) {
+            vsWins++;
+        } else if (fWins < fLosses) {
+            vsLosses++;
+        } else {
+            vsDraws++;
+        }
+        totalVersus++;
+    });
+
+    const clanWinRate = totalVersus > 0 ? Math.round((vsWins / totalVersus) * 100) : 0;
     const csRatio = totMatches > 0 ? Math.round((totCS / totMatches) * 100) : 0;
     const gd = totGS - totGC;
     
-    // Tier classification based on win rate
+    // Tier classification based on versus win rate
     let clanTier = "Challenger Tier ⚔️";
     if (clanWinRate >= 65) clanTier = "Legendary Elite Tier 🏆";
     else if (clanWinRate >= 50) clanTier = "Pro eSports Tier ⭐";
@@ -1972,7 +2013,7 @@ function renderHeroSummary() {
     // Set records and texts
     const recordEl = document.getElementById("clan-record-val");
     if (recordEl) {
-        recordEl.textContent = `${totWins}W - ${totDraws}D - ${totLosses}L`;
+        recordEl.textContent = `${vsWins}W - ${vsDraws}D - ${vsLosses}L`;
     }
     
     const goalsEl = document.getElementById("clan-goals-val");
@@ -1995,12 +2036,12 @@ function renderHeroSummary() {
         csRatioEl.textContent = `${csRatio}% Clean Sheet Ratio`;
     }
 
-    animateCounter("total-matches-val", totMatches, "");
+    animateCounter("total-matches-val", totalVersus, "");
     animateCounter("clan-winrate-val", clanWinRate, "%");
     animateCounter("total-cs-val", totCS, "");
 
     // ── Hero section live counters ──────────────────────────────
-    animateCounter("hero-matches", totMatches, "");
+    animateCounter("hero-matches", totalVersus, "");
     animateCounter("hero-winrate", clanWinRate, "%");
     animateCounter("hero-cs", totCS, "");
 
