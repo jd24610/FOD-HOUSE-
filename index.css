@@ -2788,13 +2788,14 @@ html {
 
 @media (max-width: 480px) {
     .navbar { padding: 0.5rem 0; }
-    .nav-container { padding: 0 0.65rem; }
-    .brand-logo { width: 34px; height: 34px; }
-    .brand-text h1 { font-size: 0.92rem; }
+    .nav-container { padding: 0 0.5rem; gap: 0.35rem; }
+    .brand-logo { width: 28px; height: 28px; }
+    .brand-text h1 { font-size: 0.85rem; }
     .brand-text h1 .badge-tag { display: none; }
-    .nav-actions .btn { padding: 0.4rem 0.65rem; font-size: 0.72rem; }
+    .nav-actions .btn { padding: 0.35rem 0.55rem; font-size: 0.7rem; }
+    #btn-admin-login svg { display: none !important; }
     #btn-open-logger { font-size: 0; padding: 0.5rem; }
-    #btn-open-logger svg { margin: 0; }
+    #btn-open-logger svg { display: block !important; margin: 0; }
 }
 
 /* ── Main container ───────────────────────────────────────────────────────── */
