@@ -70,10 +70,6 @@
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                     <span>Announce</span>
                 </button>
-                <button id="btn-set-potw" class="btn btn-secondary" title="Set Player of the Week">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <span>POTW</span>
-                </button>
                 <button id="btn-open-logger" class="btn btn-primary pulse-btn">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
                     <span>Log Match</span>
@@ -168,26 +164,6 @@
 
     <!-- Main Content Container -->
     <main class="main-container">
-        <!-- Player of the Week -->
-        <div id="potw-section" class="potw-section hidden">
-            <div class="potw-card glass-panel">
-                <div class="potw-badge">⭐ PLAYER OF THE WEEK</div>
-                <div class="potw-body">
-                    <div class="potw-avatar" id="potw-avatar">--</div>
-                    <div class="potw-info">
-                        <h2 class="potw-name" id="potw-name">--</h2>
-                        <div class="potw-stats">
-                            <span class="potw-stat"><span class="potw-stat-val text-emerald" id="potw-w">0</span><span class="potw-stat-lbl">W</span></span>
-                            <span class="potw-stat"><span class="potw-stat-val text-gold" id="potw-d">0</span><span class="potw-stat-lbl">D</span></span>
-                            <span class="potw-stat"><span class="potw-stat-val text-crimson" id="potw-l">0</span><span class="potw-stat-lbl">L</span></span>
-                            <span class="potw-stat"><span class="potw-stat-val text-gold" id="potw-pts">0</span><span class="potw-stat-lbl">PTS</span></span>
-                            <span class="potw-stat"><span class="potw-stat-val text-cyan" id="potw-wr">0%</span><span class="potw-stat-lbl">WIN%</span></span>
-                        </div>
-                    </div>
-                    <button id="btn-clear-potw" class="btn btn-danger-outline admin-only" style="margin-left: auto; font-size: 0.75rem; padding: 0.3rem 0.6rem;">Remove</button>
-                </div>
-            </div>
-        </div>
 
         <!-- Player of the Month -->
         <div id="potm-section" class="potm-section">
@@ -338,18 +314,6 @@
                     </div>
                 </button>
 
-                <!-- 3. Clan Player of the Week -->
-                <button class="dcard dcard-potw" onclick="document.getElementById('potw-section').scrollIntoView({behavior:'smooth',block:'start'})">
-                    <div class="dcard-glow"></div>
-                    <div class="dcard-inner">
-                        <div class="dcard-icon">⭐</div>
-                        <div class="dcard-text">
-                            <span class="dcard-title">Clan Player of the Week</span>
-                            <span class="dcard-desc">Meilleure performance de la semaine</span>
-                        </div>
-                        <div class="dcard-arrow">→</div>
-                    </div>
-                </button>
 
                 <!-- 3b. Player of the Month -->
                 <button class="dcard dcard-potm" onclick="document.getElementById('potm-section').scrollIntoView({behavior:'smooth',block:'start'})">
@@ -990,31 +954,6 @@
         </div>
     </div>
 
-    <!-- MODAL 8: Set Player of the Week -->
-    <div id="modal-potw" class="modal-overlay hidden" role="dialog" aria-modal="true">
-        <div class="modal-box glass-panel modal-animate" style="max-width: 420px;">
-            <div class="modal-header">
-                <div class="modal-title-group">
-                    <span class="modal-icon">⭐</span>
-                    <h3>Set Player of the Week</h3>
-                </div>
-                <button class="btn-close" id="btn-close-potw" aria-label="Close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form id="form-potw">
-                    <div class="form-group">
-                        <label for="potw-player-select" class="form-label">Select Player</label>
-                        <select id="potw-player-select" class="form-control" required>
-                            <option value="">-- Choose a Player --</option>
-                        </select>
-                    </div>
-                    <div class="form-actions mt-4">
-                        <button type="submit" class="btn btn-primary w-100">⭐ Crown Player of the Week</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <!-- MODAL 9: Set / Override Player of the Month -->
     <div id="modal-potm" class="modal-overlay hidden" role="dialog" aria-modal="true">
