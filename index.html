@@ -165,6 +165,71 @@
     <!-- Main Content Container -->
     <main class="main-container">
 
+        <!-- ── FOD Dashboard Navigation ──────────────────────────────────── -->
+        <section class="dashboard-nav" aria-label="Site Sections">
+            <h2 class="dashboard-nav-title">
+                <span class="dashboard-nav-title-line"></span>
+                FOD Dashboard
+                <span class="dashboard-nav-title-line"></span>
+            </h2>
+            <div class="dashboard-cards">
+
+                <!-- 1. Clan Global Leaderboard -->
+                <button class="dcard dcard-leaderboard" onclick="document.getElementById('leaderboard-anchor').scrollIntoView({behavior:'smooth',block:'start'})">
+                    <div class="dcard-glow"></div>
+                    <div class="dcard-inner">
+                        <div class="dcard-icon">🏅</div>
+                        <div class="dcard-text">
+                            <span class="dcard-title">Clan Global Leaderboard</span>
+                            <span class="dcard-desc">Classement & stats de tous les joueurs FOD</span>
+                        </div>
+                        <div class="dcard-arrow">→</div>
+                    </div>
+                </button>
+
+                <!-- 2. The Clan Official -->
+                <button class="dcard dcard-official" onclick="document.getElementById('clan-official-section').scrollIntoView({behavior:'smooth',block:'start'})">
+                    <div class="dcard-glow"></div>
+                    <div class="dcard-inner">
+                        <div class="dcard-icon">🛡️</div>
+                        <div class="dcard-text">
+                            <span class="dcard-title">The Clan Official</span>
+                            <span class="dcard-desc">Mission, valeurs & histoire du clan F.O.D</span>
+                        </div>
+                        <div class="dcard-arrow">→</div>
+                    </div>
+                </button>
+
+                <!-- 3b. Player of the Month -->
+                <button class="dcard dcard-potm" onclick="document.getElementById('potm-section').scrollIntoView({behavior:'smooth',block:'start'})">
+                    <div class="dcard-glow"></div>
+                    <div class="dcard-inner">
+                        <div class="dcard-icon">👑</div>
+                        <div class="dcard-text">
+                            <span class="dcard-title">Player of the Month</span>
+                            <span class="dcard-desc">Meilleur joueur du mois — calculé auto</span>
+                        </div>
+                        <div class="dcard-arrow">→</div>
+                    </div>
+                </button>
+
+                <!-- 4. Clan Academy — Join Us -->
+                <a class="dcard dcard-academy" href="https://chat.whatsapp.com/F3Rrpk6zQsUDVaDCdXi63Q?s=sw&p=i&ilr=0&amv=0" target="_blank" rel="noopener noreferrer">
+                    <div class="dcard-glow"></div>
+                    <div class="dcard-inner">
+                        <div class="dcard-icon">🎓</div>
+                        <div class="dcard-text">
+                            <span class="dcard-title">Clan Academy</span>
+                            <span class="dcard-desc">Rejoins F.O.D — Clique pour intégrer le clan</span>
+                        </div>
+                        <div class="dcard-badge">REJOINDRE</div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+
         <!-- Player of the Month -->
         <div id="potm-section" class="potm-section">
             <div class="potm-card glass-panel">
@@ -279,70 +344,7 @@
             </div>
         </section>
 
-        <!-- ── FOD Dashboard Navigation ──────────────────────────────────── -->
-        <section class="dashboard-nav" aria-label="Site Sections">
-            <h2 class="dashboard-nav-title">
-                <span class="dashboard-nav-title-line"></span>
-                FOD Dashboard
-                <span class="dashboard-nav-title-line"></span>
-            </h2>
-            <div class="dashboard-cards">
 
-                <!-- 1. Clan Global Leaderboard -->
-                <button class="dcard dcard-leaderboard" onclick="document.getElementById('leaderboard-anchor').scrollIntoView({behavior:'smooth',block:'start'})">
-                    <div class="dcard-glow"></div>
-                    <div class="dcard-inner">
-                        <div class="dcard-icon">🏅</div>
-                        <div class="dcard-text">
-                            <span class="dcard-title">Clan Global Leaderboard</span>
-                            <span class="dcard-desc">Classement & stats de tous les joueurs FOD</span>
-                        </div>
-                        <div class="dcard-arrow">→</div>
-                    </div>
-                </button>
-
-                <!-- 2. The Clan Official -->
-                <button class="dcard dcard-official" onclick="document.getElementById('clan-official-section').scrollIntoView({behavior:'smooth',block:'start'})">
-                    <div class="dcard-glow"></div>
-                    <div class="dcard-inner">
-                        <div class="dcard-icon">🛡️</div>
-                        <div class="dcard-text">
-                            <span class="dcard-title">The Clan Official</span>
-                            <span class="dcard-desc">Mission, valeurs & histoire du clan F.O.D</span>
-                        </div>
-                        <div class="dcard-arrow">→</div>
-                    </div>
-                </button>
-
-
-                <!-- 3b. Player of the Month -->
-                <button class="dcard dcard-potm" onclick="document.getElementById('potm-section').scrollIntoView({behavior:'smooth',block:'start'})">
-                    <div class="dcard-glow"></div>
-                    <div class="dcard-inner">
-                        <div class="dcard-icon">👑</div>
-                        <div class="dcard-text">
-                            <span class="dcard-title">Player of the Month</span>
-                            <span class="dcard-desc">Meilleur joueur du mois — calculé auto</span>
-                        </div>
-                        <div class="dcard-arrow">→</div>
-                    </div>
-                </button>
-
-                <!-- 4. Clan Academy — Join Us -->
-                <a class="dcard dcard-academy" href="https://chat.whatsapp.com/F3Rrpk6zQsUDVaDCdXi63Q?s=sw&p=i&ilr=0&amv=0" target="_blank" rel="noopener noreferrer">
-                    <div class="dcard-glow"></div>
-                    <div class="dcard-inner">
-                        <div class="dcard-icon">🎓</div>
-                        <div class="dcard-text">
-                            <span class="dcard-title">Clan Academy</span>
-                            <span class="dcard-desc">Rejoins F.O.D — Clique pour intégrer le clan</span>
-                        </div>
-                        <div class="dcard-badge">REJOINDRE</div>
-                    </div>
-                </a>
-
-            </div>
-        </section>
 
         <!-- Clan Official Section -->
         <section id="clan-official-section" class="clan-official-section glass-panel">
