@@ -2943,6 +2943,12 @@ html {
         pointer-events: none;
     }
 
+    /* Keep hover highlight synchronized on sticky cells */
+    .stats-table tr:hover td:first-child,
+    .stats-table tr:hover td:nth-child(2) {
+        background: #1C1220 !important; /* blend of obsidian and crimson glow */
+    }
+
     .player-avatar-small { width: 30px; height: 30px; font-size: 0.65rem; }
     .player-name-cell { font-size: 0.78rem; }
     .player-alias { font-size: 0.65rem; }
