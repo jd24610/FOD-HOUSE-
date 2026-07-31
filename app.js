@@ -1943,16 +1943,57 @@ function renderAll() {
 function renderHeroSummary() {
     let totMatches = 0;
     let totWins = 0;
+    let totDraws = 0;
+    let totLosses = 0;
     let totCS = 0;
+    let totGS = 0;
+    let totGC = 0;
 
     state.roster.forEach(player => {
         const s = getPlayerComputedStats(player);
         totMatches += s.gp;
         totWins += s.w;
+        totDraws += s.d;
+        totLosses += s.l;
         totCS += s.cs;
+        totGS += s.gs;
+        totGC += s.gc;
     });
 
     const clanWinRate = totMatches > 0 ? Math.round((totWins / totMatches) * 100) : 0;
+    const csRatio = totMatches > 0 ? Math.round((totCS / totMatches) * 100) : 0;
+    const gd = totGS - totGC;
+    
+    // Tier classification based on win rate
+    let clanTier = "Challenger Tier ⚔️";
+    if (clanWinRate >= 65) clanTier = "Legendary Elite Tier 🏆";
+    else if (clanWinRate >= 50) clanTier = "Pro eSports Tier ⭐";
+
+    // Set records and texts
+    const recordEl = document.getElementById("clan-record-val");
+    if (recordEl) {
+        recordEl.textContent = `${totWins}W - ${totDraws}D - ${totLosses}L`;
+    }
+    
+    const goalsEl = document.getElementById("clan-goals-val");
+    if (goalsEl) {
+        goalsEl.textContent = `${totGS} / ${totGC}`;
+    }
+
+    const gdEl = document.getElementById("clan-gd-val");
+    if (gdEl) {
+        gdEl.textContent = (gd >= 0 ? `+${gd}` : gd) + " GD";
+    }
+
+    const tierEl = document.getElementById("clan-tier-val");
+    if (tierEl) {
+        tierEl.textContent = clanTier;
+    }
+
+    const csRatioEl = document.getElementById("clan-cs-ratio-val");
+    if (csRatioEl) {
+        csRatioEl.textContent = `${csRatio}% Clean Sheet Ratio`;
+    }
 
     animateCounter("total-matches-val", totMatches, "");
     animateCounter("clan-winrate-val", clanWinRate, "%");
