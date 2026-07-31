@@ -2183,17 +2183,6 @@ function setupEventListeners() {
 
 
 
-    // Hero CTA Smooth Scroll
-    const heroCtaBtn = document.querySelector(".hero-cta-btn");
-    if (heroCtaBtn) {
-        heroCtaBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            const target = document.getElementById("leaderboard-anchor");
-            if (target) {
-                target.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-        });
-    }
 
     // C. Log Match Modal Open/Close
     const modalLogger = document.getElementById("modal-logger");
