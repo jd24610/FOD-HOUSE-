@@ -2816,6 +2816,7 @@ initApp = function() {
     initLeagues();
     initAnnouncement();
     initPOTW();
+    initPOTM();
     initCompare();
 };
 document.addEventListener("DOMContentLoaded", initApp);
@@ -2931,6 +2932,170 @@ function renderPOTW(playerId) {
     document.getElementById("potw-wr").textContent = winRate + "%";
 
     document.getElementById("potw-section").classList.remove("hidden");
+}
+
+// ==========================================================================
+// PLAYER OF THE MONTH (POTM)
+// Auto-calculated from current-month match history.
+// Admin can override with a manual pick stored in localStorage.
+// ==========================================================================
+const POTM_KEY  = "fod_potm_v1";   // stores { playerId, month } or null
+const MONTH_NAMES = ["January","February","March","April","May","June",
+                     "July","August","September","October","November","December"];
+
+/** Returns { playerId, w, d, l, gp, pts, winRate, gs, cs } for the best
+ *  player this calendar month, or null if no matches this month.           */
+function computeAutoPoTM() {
+    const now   = new Date();
+    const yr    = now.getFullYear();
+    const mo    = now.getMonth(); // 0-based
+
+    const scores = state.roster.map(player => {
+        const hist = (player.history || []).filter(m => {
+            const d = new Date(m.date);
+            return d.getFullYear() === yr && d.getMonth() === mo;
+        });
+        if (!hist.length) return null;
+        const w  = hist.filter(m => m.result === "W").length;
+        const d  = hist.filter(m => m.result === "D").length;
+        const l  = hist.filter(m => m.result === "L").length;
+        const gp = hist.length;
+        const pts = w * 3 + d;
+        const winRate = Math.round((w / gp) * 100);
+        const gs = hist.reduce((a, m) => a + (m.gs || 0), 0);
+        const cs = hist.filter(m => m.cs === true || m.cs === 1).length;
+        return { playerId: player.id, w, d, l, gp, pts, winRate, gs, cs };
+    }).filter(Boolean);
+
+    if (!scores.length) return null;
+
+    // Rank: most pts → highest win rate → most GP
+    scores.sort((a, b) =>
+        b.pts - a.pts || b.winRate - a.winRate || b.gp - a.gp
+    );
+    return scores[0];
+}
+
+function initPOTM() {
+    // Set month label
+    const now = new Date();
+    const label = `${MONTH_NAMES[now.getMonth()]} ${now.getFullYear()}`;
+    const monthEl = document.getElementById("potm-month-label");
+    if (monthEl) monthEl.textContent = label;
+
+    // Try override first, then auto
+    renderPOTM();
+
+    // ── Admin: Override button ──
+    const btnSet = document.getElementById("btn-set-potm");
+    const modal  = document.getElementById("modal-potm");
+    btnSet?.addEventListener("click", () => {
+        const sel = document.getElementById("potm-player-select");
+        sel.innerHTML = '<option value="">-- Choose a Player --</option>';
+        [...state.roster]
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .forEach(p => {
+                const opt = document.createElement("option");
+                opt.value = p.id;
+                opt.textContent = p.name;
+                sel.appendChild(opt);
+            });
+        const saved = localStorage.getItem(POTM_KEY);
+        if (saved) {
+            try { sel.value = JSON.parse(saved).playerId; } catch(e) {}
+        }
+        modal.classList.remove("hidden");
+    });
+
+    document.getElementById("btn-close-potm")?.addEventListener("click", () => modal.classList.add("hidden"));
+    modal?.addEventListener("click", e => { if (e.target === modal) modal.classList.add("hidden"); });
+
+    document.getElementById("form-potm")?.addEventListener("submit", e => {
+        e.preventDefault();
+        const pid = document.getElementById("potm-player-select").value;
+        if (!pid) return;
+        localStorage.setItem(POTM_KEY, JSON.stringify({ playerId: pid, manual: true }));
+        renderPOTM();
+        modal.classList.add("hidden");
+    });
+
+    // ── Admin: Clear override ──
+    document.getElementById("btn-clear-potm")?.addEventListener("click", () => {
+        localStorage.removeItem(POTM_KEY);
+        renderPOTM();
+    });
+}
+
+function renderPOTM() {
+    let data   = null;
+    let manual = false;
+
+    const saved = localStorage.getItem(POTM_KEY);
+    if (saved) {
+        try {
+            const parsed = JSON.parse(saved);
+            const player = state.roster.find(p => p.id === parsed.playerId);
+            if (player) {
+                // Compute this month's stats for the overridden player
+                const now = new Date();
+                const yr = now.getFullYear();
+                const mo = now.getMonth();
+                const hist = (player.history || []).filter(m => {
+                    const d = new Date(m.date);
+                    return d.getFullYear() === yr && d.getMonth() === mo;
+                });
+                const w  = hist.filter(m => m.result === "W").length;
+                const d  = hist.filter(m => m.result === "D").length;
+                const l  = hist.filter(m => m.result === "L").length;
+                const gp = hist.length;
+                const pts = w * 3 + d;
+                const winRate = gp > 0 ? Math.round((w / gp) * 100) : 0;
+                const gs = hist.reduce((a, m) => a + (m.gs || 0), 0);
+                const cs = hist.filter(m => m.cs === true || m.cs === 1).length;
+                data = { playerId: parsed.playerId, w, d, l, gp, pts, winRate, gs, cs };
+                manual = true;
+            }
+        } catch(e) {}
+    }
+
+    if (!data) data = computeAutoPoTM();
+
+    const autoTagEl = document.getElementById("potm-auto-tag");
+
+    if (!data) {
+        // No matches this month
+        document.getElementById("potm-avatar").textContent = "?";
+        document.getElementById("potm-name").textContent = "No data yet";
+        if (autoTagEl) { autoTagEl.textContent = "NO MATCHES THIS MONTH"; autoTagEl.style.background = "rgba(100,100,100,0.2)"; }
+        ["potm-w","potm-d","potm-l","potm-pts","potm-gp","potm-wr","potm-gs","potm-cs"]
+            .forEach(id => { const el = document.getElementById(id); if(el) el.textContent = "—"; });
+        return;
+    }
+
+    const player = state.roster.find(p => p.id === data.playerId);
+    if (!player) return;
+
+    document.getElementById("potm-avatar").textContent = player.avatar || "⚽";
+    document.getElementById("potm-name").textContent   = player.name;
+    document.getElementById("potm-w").textContent      = data.w;
+    document.getElementById("potm-d").textContent      = data.d;
+    document.getElementById("potm-l").textContent      = data.l;
+    document.getElementById("potm-pts").textContent    = data.pts;
+    document.getElementById("potm-gp").textContent     = data.gp;
+    document.getElementById("potm-wr").textContent     = data.winRate + "%";
+    document.getElementById("potm-gs").textContent     = data.gs;
+    document.getElementById("potm-cs").textContent     = data.cs;
+
+    if (autoTagEl) {
+        autoTagEl.textContent = manual ? "ADMIN PICK" : "AUTO-CALCULATED";
+        autoTagEl.style.background = manual
+            ? "rgba(244,37,73,0.15)"
+            : "rgba(168,85,247,0.15)";
+        autoTagEl.style.color = manual ? "var(--neon-crimson)" : "#a855f7";
+        autoTagEl.style.borderColor = manual
+            ? "rgba(244,37,73,0.3)"
+            : "rgba(168,85,247,0.3)";
+    }
 }
 
 // ==========================================================================

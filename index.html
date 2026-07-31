@@ -188,7 +188,71 @@
                 </div>
             </div>
         </div>
-        <!-- Hero Summary Cards -->
+
+        <!-- Player of the Month -->
+        <div id="potm-section" class="potm-section">
+            <div class="potm-card glass-panel">
+                <!-- Crown accent -->
+                <div class="potm-crown" aria-hidden="true">👑</div>
+                <div class="potm-badge">🗓️ PLAYER OF THE MONTH</div>
+                <div class="potm-month-label" id="potm-month-label">July 2026</div>
+
+                <div class="potm-body">
+                    <!-- Avatar + name -->
+                    <div class="potm-left">
+                        <div class="potm-avatar-ring">
+                            <div class="potm-avatar" id="potm-avatar">?</div>
+                        </div>
+                        <h2 class="potm-name" id="potm-name">—</h2>
+                        <span class="potm-auto-tag" id="potm-auto-tag">AUTO-CALCULATED</span>
+                    </div>
+
+                    <!-- Stats grid -->
+                    <div class="potm-stats-grid">
+                        <div class="potm-stat-block">
+                            <span class="potm-stat-val text-emerald" id="potm-w">0</span>
+                            <span class="potm-stat-lbl">Wins</span>
+                        </div>
+                        <div class="potm-stat-block">
+                            <span class="potm-stat-val text-gold" id="potm-d">0</span>
+                            <span class="potm-stat-lbl">Draws</span>
+                        </div>
+                        <div class="potm-stat-block">
+                            <span class="potm-stat-val text-crimson" id="potm-l">0</span>
+                            <span class="potm-stat-lbl">Losses</span>
+                        </div>
+                        <div class="potm-stat-block">
+                            <span class="potm-stat-val text-gold" id="potm-pts">0</span>
+                            <span class="potm-stat-lbl">Points</span>
+                        </div>
+                        <div class="potm-stat-block">
+                            <span class="potm-stat-val text-cyan" id="potm-gp">0</span>
+                            <span class="potm-stat-lbl">GP</span>
+                        </div>
+                        <div class="potm-stat-block">
+                            <span class="potm-stat-val" id="potm-wr" style="color: #a855f7;">0%</span>
+                            <span class="potm-stat-lbl">Win Rate</span>
+                        </div>
+                        <div class="potm-stat-block">
+                            <span class="potm-stat-val text-emerald" id="potm-gs">0</span>
+                            <span class="potm-stat-lbl">Goals ⚽</span>
+                        </div>
+                        <div class="potm-stat-block">
+                            <span class="potm-stat-val text-cyan" id="potm-cs">0</span>
+                            <span class="potm-stat-lbl">Clean Sheets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin controls -->
+                <div class="potm-admin-row admin-only">
+                    <button id="btn-set-potm" class="btn btn-secondary" style="font-size: 0.78rem;">✏️ Override Pick</button>
+                    <button id="btn-clear-potm" class="btn btn-danger-outline" style="font-size: 0.78rem;">✕ Clear Override</button>
+                </div>
+            </div>
+        </div>
+
+
         <section class="summary-grid" aria-label="Clan Overview Statistics">
             <!-- Card 1: Match Volume & Record -->
             <div class="stat-card glass-panel">
@@ -282,6 +346,19 @@
                         <div class="dcard-text">
                             <span class="dcard-title">Clan Player of the Week</span>
                             <span class="dcard-desc">Meilleure performance de la semaine</span>
+                        </div>
+                        <div class="dcard-arrow">→</div>
+                    </div>
+                </button>
+
+                <!-- 3b. Player of the Month -->
+                <button class="dcard dcard-potm" onclick="document.getElementById('potm-section').scrollIntoView({behavior:'smooth',block:'start'})">
+                    <div class="dcard-glow"></div>
+                    <div class="dcard-inner">
+                        <div class="dcard-icon">👑</div>
+                        <div class="dcard-text">
+                            <span class="dcard-title">Player of the Month</span>
+                            <span class="dcard-desc">Meilleur joueur du mois — calculé auto</span>
                         </div>
                         <div class="dcard-arrow">→</div>
                     </div>
@@ -933,6 +1010,33 @@
                     </div>
                     <div class="form-actions mt-4">
                         <button type="submit" class="btn btn-primary w-100">⭐ Crown Player of the Week</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 9: Set / Override Player of the Month -->
+    <div id="modal-potm" class="modal-overlay hidden" role="dialog" aria-modal="true">
+        <div class="modal-box glass-panel modal-animate" style="max-width: 460px;">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-icon">👑</span>
+                    <h3>Override Player of the Month</h3>
+                </div>
+                <button class="btn-close" id="btn-close-potm" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:1.2rem;">By default, POTM is auto-calculated from this month's match history (most points, then win rate). Use this form to manually override the pick.</p>
+                <form id="form-potm">
+                    <div class="form-group">
+                        <label for="potm-player-select" class="form-label">Override Player</label>
+                        <select id="potm-player-select" class="form-control" required>
+                            <option value="">-- Choose a Player --</option>
+                        </select>
+                    </div>
+                    <div class="form-actions mt-4">
+                        <button type="submit" class="btn btn-primary w-100">👑 Crown Player of the Month</button>
                     </div>
                 </form>
             </div>
