@@ -4432,3 +4432,58 @@ input[type="number"]::-webkit-outer-spin-button { opacity: 0.4; }
     }
 }
 
+/* Desktop/Tablet Nav Menu Styles */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 2.5rem;
+    flex: 1;
+}
+
+.nav-link {
+    font-family: var(--font-head);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    position: relative;
+    padding: 0.35rem 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--neon-crimson);
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateX(-50%);
+    box-shadow: 0 0 8px rgba(244, 37, 73, 0.6);
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--neon-crimson);
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none !important;
+    }
+}
+
+

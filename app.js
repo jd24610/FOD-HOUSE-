@@ -2784,17 +2784,28 @@ function setupEventListeners() {
         alert(`✅ ${name} has been added to the FOD clan roster with ID: ${gameId}`);
     });
 
-    // Mobile Bottom Navigation scroll/click handler
-    const navItems = document.querySelectorAll(".mobile-nav-item");
+    // Navigation scroll/click handler (Desktop & Mobile)
+    const mobileItems = document.querySelectorAll(".mobile-nav-item");
+    const desktopLinks = document.querySelectorAll(".nav-link");
     const sections = [
-        { id: "hero", navIdx: 0 },
-        { id: "table-anchor", navIdx: 1 },
-        { id: "potm-anchor", navIdx: 2 },
-        { id: "clan-official-anchor", navIdx: 3 }
+        { id: "hero" },
+        { id: "table-anchor" },
+        { id: "potm-anchor" },
+        { id: "clan-official-anchor" }
     ];
 
+    function updateActiveNav(activeIdx) {
+        mobileItems.forEach((item, idx) => {
+            if (idx === activeIdx) item.classList.add("active");
+            else item.classList.remove("active");
+        });
+        desktopLinks.forEach((link, idx) => {
+            if (idx === activeIdx) link.classList.add("active");
+            else link.classList.remove("active");
+        });
+    }
+
     window.addEventListener("scroll", () => {
-        if (window.innerWidth > 768) return;
         let activeIdx = 0;
         let minDiff = Infinity;
         
@@ -2809,25 +2820,21 @@ function setupEventListeners() {
                 }
             }
         });
-
-        navItems.forEach((item, idx) => {
-            if (idx === activeIdx) {
-                item.classList.add("active");
-            } else {
-                item.classList.remove("active");
-            }
-        });
+        updateActiveNav(activeIdx);
     });
 
-    navItems.forEach((item) => {
+    const allNavs = document.querySelectorAll(".mobile-nav-item, .nav-link");
+    allNavs.forEach((item) => {
         item.addEventListener("click", (e) => {
             e.preventDefault();
             const targetId = item.getAttribute("href").substring(1);
             const targetEl = document.getElementById(targetId);
             if (targetEl) {
                 targetEl.scrollIntoView({ behavior: "smooth" });
-                navItems.forEach(n => n.classList.remove("active"));
-                item.classList.add("active");
+                const targetIdx = sections.findIndex(s => s.id === targetId);
+                if (targetIdx !== -1) {
+                    updateActiveNav(targetIdx);
+                }
             }
         });
     });
