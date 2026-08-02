@@ -2789,9 +2789,9 @@ function setupEventListeners() {
     const desktopLinks = document.querySelectorAll(".nav-link");
     const sections = [
         { id: "hero" },
-        { id: "table-anchor" },
-        { id: "potm-anchor" },
-        { id: "clan-official-anchor" }
+        { id: "leaderboard-anchor" },
+        { id: "potm-section" },
+        { id: "clan-official-section" }
     ];
 
     function updateActiveNav(activeIdx) {
