@@ -2183,6 +2183,15 @@ const state = {
 const STORAGE_KEY = "fod_efootball_stats_v18_final_24matches";
 
 function initApp() {
+    // Remove loading spinner
+    const spinner = document.getElementById("intro-spinner");
+    if (spinner) {
+        spinner.classList.add("fade-out");
+        setTimeout(() => {
+            try { spinner.remove(); } catch (e) {}
+        }, 300);
+    }
+
     // Intro Screen Logic
     const introScreen = document.getElementById("intro-screen");
     if (introScreen) {
@@ -2190,9 +2199,9 @@ function initApp() {
             introScreen.classList.add("slide-up");
             // After animation completes, remove it from DOM entirely
             setTimeout(() => {
-                introScreen.remove();
+                try { introScreen.remove(); } catch (e) {}
             }, 700); // matches the 0.7s transition
-        }, 400); // Hold for 0.4 seconds
+        }, 600); // Hold for 0.6 seconds to let spinner fade out
     }
 
     initAdminState();
@@ -2520,6 +2529,15 @@ function populateLoggerPlayerSelect() {
 
 // --- 7. MODAL EVENT HANDLING & LOGIC ---
 function setupEventListeners() {
+    // Admin Toolbar Toggle
+    const btnToggleAdmin = document.getElementById("btn-toggle-admin-toolbar");
+    const adminToolbar = document.getElementById("admin-toolbar");
+    if (btnToggleAdmin && adminToolbar) {
+        btnToggleAdmin.addEventListener("click", () => {
+            adminToolbar.classList.toggle("collapsed");
+        });
+    }
+
     // A. Table Header Sorting
     document.querySelectorAll(".stats-table th.sortable").forEach(th => {
         th.addEventListener("click", () => {
@@ -2675,6 +2693,8 @@ function setupEventListeners() {
                 sessionStorage.removeItem("fod_isAdmin");
                 document.body.classList.remove("admin-mode");
                 document.getElementById("admin-login-text").textContent = "Admin Login";
+                const toolbar = document.getElementById("admin-toolbar");
+                if (toolbar) toolbar.classList.add("collapsed");
                 alert("Logged out of Admin mode.");
             } else {
                 document.getElementById("admin-error-msg").classList.add("hidden");
@@ -2773,6 +2793,54 @@ function setupEventListeners() {
 
         modalAddMember.classList.add("hidden");
         alert(`✅ ${name} has been added to the FOD clan roster with ID: ${gameId}`);
+    });
+
+    // Mobile Bottom Navigation scroll/click handler
+    const navItems = document.querySelectorAll(".mobile-nav-item");
+    const sections = [
+        { id: "hero", navIdx: 0 },
+        { id: "table-anchor", navIdx: 1 },
+        { id: "potm-anchor", navIdx: 2 },
+        { id: "clan-official-anchor", navIdx: 3 }
+    ];
+
+    window.addEventListener("scroll", () => {
+        if (window.innerWidth > 768) return;
+        let activeIdx = 0;
+        let minDiff = Infinity;
+        
+        sections.forEach((sec, idx) => {
+            const el = document.getElementById(sec.id);
+            if (el) {
+                const rect = el.getBoundingClientRect();
+                const diff = Math.abs(rect.top);
+                if (diff < minDiff) {
+                    minDiff = diff;
+                    activeIdx = idx;
+                }
+            }
+        });
+
+        navItems.forEach((item, idx) => {
+            if (idx === activeIdx) {
+                item.classList.add("active");
+            } else {
+                item.classList.remove("active");
+            }
+        });
+    });
+
+    navItems.forEach((item) => {
+        item.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = item.getAttribute("href").substring(1);
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+                targetEl.scrollIntoView({ behavior: "smooth" });
+                navItems.forEach(n => n.classList.remove("active"));
+                item.classList.add("active");
+            }
+        });
     });
 }
 
