@@ -2822,8 +2822,25 @@ html {
     .brand-logo { width: 28px; height: 28px; }
     .brand-text h1 { font-size: 0.85rem; }
     .brand-text h1 .badge-tag { display: none; }
-    .nav-actions .btn { padding: 0.35rem 0.55rem; font-size: 0.7rem; }
-    #btn-admin-login svg { display: none !important; }
+    .nav-actions { display: flex; gap: 0.35rem; }
+    .nav-actions .btn { 
+        padding: 0 !important; 
+        width: 34px; 
+        height: 34px; 
+        display: inline-flex !important; 
+        align-items: center; 
+        justify-content: center; 
+        border-radius: 8px;
+    }
+    #btn-admin-login svg,
+    #btn-toggle-admin-toolbar svg { 
+        display: block !important; 
+        margin: 0 !important; 
+    }
+    #btn-admin-login span,
+    #btn-toggle-admin-toolbar span { 
+        display: none !important; 
+    }
     #btn-open-logger { font-size: 0; padding: 0.5rem; }
     #btn-open-logger svg { display: block !important; margin: 0; }
 }
