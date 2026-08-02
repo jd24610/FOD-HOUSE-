@@ -2183,25 +2183,20 @@ const state = {
 const STORAGE_KEY = "fod_efootball_stats_v18_final_24matches";
 
 function initApp() {
-    // Remove loading spinner
+    // Remove loading spinner immediately
     const spinner = document.getElementById("intro-spinner");
     if (spinner) {
-        spinner.classList.add("fade-out");
-        setTimeout(() => {
-            try { spinner.remove(); } catch (e) {}
-        }, 300);
+        try { spinner.remove(); } catch (e) {}
     }
 
     // Intro Screen Logic
     const introScreen = document.getElementById("intro-screen");
     if (introScreen) {
+        introScreen.classList.add("slide-up");
+        // After animation completes, remove it from DOM entirely
         setTimeout(() => {
-            introScreen.classList.add("slide-up");
-            // After animation completes, remove it from DOM entirely
-            setTimeout(() => {
-                try { introScreen.remove(); } catch (e) {}
-            }, 700); // matches the 0.7s transition
-        }, 600); // Hold for 0.6 seconds to let spinner fade out
+            try { introScreen.remove(); } catch (e) {}
+        }, 400); // matches the fast 0.35s transition
     }
 
     initAdminState();

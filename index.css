@@ -1356,7 +1356,7 @@ body.admin-mode button.admin-only {
     display: flex;
     align-items: center;
     overflow: hidden;
-    transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .intro-door-left {
