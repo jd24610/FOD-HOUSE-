@@ -2262,7 +2262,6 @@ function renderAll() {
     renderHeroSummary();
     renderRosterTable();
     populateLoggerPlayerSelect();
-    renderRecentMatchesFeed();
     renderMiniAwards();
 }
 
@@ -3400,53 +3399,6 @@ function renderPOTM() {
     }
 }
 
-// ==========================================================================
-// RECENT CLAN MATCHES FEED
-// ==========================================================================
-function renderRecentMatchesFeed() {
-    const allMatches = [];
-    state.roster.forEach(player => {
-        const history = player.history || [];
-        history.forEach(m => {
-            allMatches.push({
-                playerName: player.name,
-                playerAvatar: player.avatar,
-                opponent: m.opponent,
-                result: m.result,
-                gs: m.gs,
-                gc: m.gc,
-                date: m.date,
-                id: m.id
-            });
-        });
-    });
-
-    // Sort by match ID descending (newest first)
-    allMatches.sort((a, b) => b.id - a.id);
-
-    const feedEl = document.getElementById("recent-matches-feed");
-    if (!feedEl) return;
-    feedEl.innerHTML = "";
-
-    const latest = allMatches.slice(0, 10);
-    if (latest.length === 0) {
-        feedEl.innerHTML = `<span class="text-muted" style="font-size: 0.9rem; padding: 0.5rem 0;">No matches logged yet.</span>`;
-        return;
-    }
-
-    latest.forEach(m => {
-        const pill = document.createElement("div");
-        const resClass = m.result === "W" ? "pill-win" : (m.result === "D" ? "pill-draw" : "pill-loss");
-        pill.className = `match-pill ${resClass}`;
-        pill.innerHTML = `
-            <span class="pill-result-dot"></span>
-            <span class="pill-player">${m.playerName}</span>
-            <span class="pill-score">${m.gs !== undefined ? m.gs + '-' + m.gc : 'Played'}</span>
-            <span class="pill-opp">${m.opponent}</span>
-        `;
-        feedEl.appendChild(pill);
-    });
-}
 
 function recalculatePlayerStats(player) {
     const history = player.history || [];
