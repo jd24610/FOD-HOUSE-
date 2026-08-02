@@ -4436,16 +4436,16 @@ input[type="number"]::-webkit-outer-spin-button { opacity: 0.4; }
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-left: 2.5rem;
+    gap: 3rem;
+    justify-content: center;
     flex: 1;
 }
 
 .nav-link {
     font-family: var(--font-head);
-    font-size: 0.72rem;
+    font-size: 0.76rem;
     font-weight: 800;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--text-secondary);
     text-decoration: none;
