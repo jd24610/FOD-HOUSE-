@@ -17,93 +17,132 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "4-2-1-3",
         "avatar": "AD",
         "allTimeStats": {
-            "gp": 7,
-            "w": 4,
-            "d": 2,
+            "gp": 11,
+            "w": 7,
+            "d": 3,
             "l": 1,
-            "gs": 14,
-            "gc": 7,
+            "gs": 18,
+            "gc": 12,
             "cs": 3
         },
         "weeklyStats": {
-            "gp": 7,
-            "w": 4,
-            "d": 2,
+            "gp": 11,
+            "w": 7,
+            "d": 3,
             "l": 1,
-            "gs": 14,
-            "gc": 7,
+            "gs": 18,
+            "gc": 12,
             "cs": 3
         },
         "form": [
             "L",
             "W",
             "W",
-            "D",
-            "D"
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
         ],
         "history": [
             {
-                "id": 98,
-                "date": "2026-07-30",
-                "opponent": "vs. LUFFY",
+                "id": 424567,
+                "date": "2026-07-08",
+                "opponent": "vs. PREDATORS",
                 "gs": 1,
                 "gc": 2,
                 "cs": false,
                 "result": "L"
             },
             {
-                "id": 95,
-                "date": "2026-07-30",
-                "opponent": "vs. JERRY",
-                "gs": 3,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 79,
-                "date": "2026-07-30",
-                "opponent": "vs. RADUAN",
-                "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 37,
-                "date": "2026-07-30",
-                "opponent": "vs. KENO",
+                "id": 894783,
+                "date": "2026-07-07",
+                "opponent": "vs. Legendary",
                 "gs": 2,
-                "gc": 2,
+                "gc": 1,
                 "cs": false,
-                "result": "D"
+                "result": "W"
             },
             {
-                "id": 26,
-                "date": "2026-07-30",
-                "opponent": "vs. REMY",
+                "id": 347991,
+                "date": "2026-07-06",
+                "opponent": "vs. HW",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 958921,
+                "date": "2026-07-05",
+                "opponent": "vs. HPF",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 294064,
+                "date": "2026-07-04",
+                "opponent": "vs. Hbl",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 366624,
+                "date": "2026-07-03",
+                "opponent": "vs. GOAT FC",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 27472,
+                "date": "2026-07-02",
+                "opponent": "vs. BL",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 353206,
+                "date": "2026-07-01",
+                "opponent": "vs. BHO",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 360192,
+                "date": "2026-07-01",
+                "opponent": "vs. BHO",
                 "gs": 1,
                 "gc": 1,
                 "cs": false,
                 "result": "D"
             },
             {
-                "id": 19,
-                "date": "2026-07-30",
-                "opponent": "vs. LIL G",
-                "gs": 2,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
+                "id": 244309,
+                "date": "2026-07-01",
+                "opponent": "vs. BHO",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             },
             {
-                "id": 12,
-                "date": "2026-07-30",
-                "opponent": "vs. NOËL (SW)",
-                "gs": 4,
-                "gc": 2,
+                "id": 194739,
+                "date": "2026-07-01",
+                "opponent": "vs. BHO",
+                "gs": 1,
+                "gc": 1,
                 "cs": false,
-                "result": "W"
+                "result": "D"
             }
         ],
         "gameId": "ASAA-026-981-191"
@@ -116,209 +155,221 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "4-3-3",
         "avatar": "IC",
         "allTimeStats": {
-            "gp": 20,
+            "gp": 21,
             "w": 13,
-            "d": 3,
+            "d": 4,
             "l": 4,
-            "gs": 38,
-            "gc": 19,
-            "cs": 9
+            "gs": 34,
+            "gc": 25,
+            "cs": 7
         },
         "weeklyStats": {
-            "gp": 20,
+            "gp": 21,
             "w": 13,
-            "d": 3,
+            "d": 4,
             "l": 4,
-            "gs": 38,
-            "gc": 19,
-            "cs": 9
+            "gs": 34,
+            "gc": 25,
+            "cs": 7
         },
         "form": [
+            "L",
+            "L",
+            "L",
+            "L",
             "W",
             "W",
             "W",
-            "W",
-            "L"
+            "W"
         ],
         "history": [
             {
-                "id": 124,
-                "date": "2026-07-30",
-                "opponent": "vs. Manual Entry (Win)",
+                "id": 481919,
+                "date": "2026-07-17",
+                "opponent": "vs. Legendary",
                 "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                "id": 123,
-                "date": "2026-07-30",
-                "opponent": "vs. Manual Entry (Win)",
+                "id": 293757,
+                "date": "2026-07-16",
+                "opponent": "vs. HW",
                 "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                "id": 122,
-                "date": "2026-07-30",
-                "opponent": "vs. Manual Entry (Win)",
+                "id": 251695,
+                "date": "2026-07-15",
+                "opponent": "vs. TLE",
                 "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             },
             {
-                "id": 116,
-                "date": "2026-07-30",
-                "opponent": "vs. NATURAL BOY",
+                "id": 496156,
+                "date": "2026-07-14",
+                "opponent": "vs. TGU",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 879486,
+                "date": "2026-07-13",
+                "opponent": "vs. TET KAFOU",
                 "gs": 2,
                 "gc": 1,
                 "cs": false,
                 "result": "W"
             },
             {
-                "id": 108,
-                "date": "2026-07-30",
-                "opponent": "vs. K12",
-                "gs": 1,
-                "gc": 2,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 101,
-                "date": "2026-07-30",
-                "opponent": "vs. FABIANO",
-                "gs": 5,
-                "gc": 0,
+                "id": 96157,
+                "date": "2026-07-12",
+                "opponent": "vs. TBL",
+                "gs": 2,
+                "gc": 1,
                 "cs": true,
                 "result": "W"
             },
             {
-                "id": 93,
-                "date": "2026-07-30",
-                "opponent": "vs. GUSTAVE",
-                "gs": 3,
-                "gc": 0,
+                "id": 255920,
+                "date": "2026-07-11",
+                "opponent": "vs. SWE",
+                "gs": 2,
+                "gc": 1,
                 "cs": true,
                 "result": "W"
             },
             {
-                "id": 86,
-                "date": "2026-07-30",
-                "opponent": "vs. FRESCO",
-                "gs": 1,
-                "gc": 2,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 83,
-                "date": "2026-07-30",
-                "opponent": "vs. JAMESLY",
-                "gs": 0,
-                "gc": 0,
-                "cs": true,
-                "result": "D"
-            },
-            {
-                "id": 78,
-                "date": "2026-07-30",
-                "opponent": "vs. KENO",
+                "id": 280839,
+                "date": "2026-07-10",
+                "opponent": "vs. Storma",
                 "gs": 2,
                 "gc": 1,
                 "cs": false,
                 "result": "W"
             },
             {
-                "id": 66,
-                "date": "2026-07-30",
-                "opponent": "vs. KYRO",
-                "gs": 2,
-                "gc": 2,
-                "cs": false,
-                "result": "D"
-            },
-            {
-                "id": 60,
-                "date": "2026-07-30",
-                "opponent": "vs. MASTER CeD",
-                "gs": 1,
-                "gc": 3,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 54,
-                "date": "2026-07-30",
-                "opponent": "vs. PLUGLOULOU",
-                "gs": 1,
-                "gc": 3,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 48,
-                "date": "2026-07-30",
-                "opponent": "vs. CARLOS",
-                "gs": 4,
-                "gc": 2,
-                "cs": false,
-                "result": "W"
-            },
-            {
-                "id": 42,
-                "date": "2026-07-30",
-                "opponent": "vs. JXY",
+                "id": 697980,
+                "date": "2026-07-09",
+                "opponent": "vs. Silent Killer",
                 "gs": 2,
                 "gc": 1,
                 "cs": false,
                 "result": "W"
             },
             {
-                "id": 33,
-                "date": "2026-07-30",
-                "opponent": "vs. GREGZ",
-                "gs": 4,
-                "gc": 0,
+                "id": 377377,
+                "date": "2026-07-08",
+                "opponent": "vs. PREDATORS",
+                "gs": 2,
+                "gc": 1,
                 "cs": true,
                 "result": "W"
             },
             {
-                "id": 23,
-                "date": "2026-07-30",
-                "opponent": "vs. MILENSLY",
+                "id": 929024,
+                "date": "2026-07-07",
+                "opponent": "vs. Legendary",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 614529,
+                "date": "2026-07-06",
+                "opponent": "vs. HW",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 546246,
+                "date": "2026-07-05",
+                "opponent": "vs. HPF",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 524846,
+                "date": "2026-07-04",
+                "opponent": "vs. Hbl",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 939556,
+                "date": "2026-07-03",
+                "opponent": "vs. GOAT FC",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 30854,
+                "date": "2026-07-03",
+                "opponent": "vs. GOAT FC",
                 "gs": 1,
                 "gc": 1,
                 "cs": false,
                 "result": "D"
             },
             {
-                "id": 18,
-                "date": "2026-07-30",
-                "opponent": "vs. NALDO",
+                "id": 95617,
+                "date": "2026-07-02",
+                "opponent": "vs. BL",
                 "gs": 2,
-                "gc": 0,
+                "gc": 1,
                 "cs": true,
                 "result": "W"
             },
             {
-                "id": 9,
-                "date": "2026-07-30",
-                "opponent": "vs. WINSTON (SW)",
+                "id": 700794,
+                "date": "2026-07-02",
+                "opponent": "vs. BL",
                 "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 1,
-                "date": "2026-07-30",
-                "opponent": "vs. FLEX",
-                "gs": 3,
                 "gc": 1,
                 "cs": false,
+                "result": "D"
+            },
+            {
+                "id": 932245,
+                "date": "2026-07-02",
+                "opponent": "vs. BL",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
+            },
+            {
+                "id": 427839,
+                "date": "2026-07-02",
+                "opponent": "vs. BL",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
+            },
+            {
+                "id": 694304,
+                "date": "2026-07-01",
+                "opponent": "vs. BHO",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
                 "result": "W"
             }
         ],
@@ -332,119 +383,113 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "4-2-2-2",
         "avatar": "CR",
         "allTimeStats": {
-            "gp": 10,
+            "gp": 9,
             "w": 7,
-            "d": 1,
+            "d": 0,
             "l": 2,
-            "gs": 17,
-            "gc": 9,
-            "cs": 5
+            "gs": 16,
+            "gc": 11,
+            "cs": 4
         },
         "weeklyStats": {
-            "gp": 10,
+            "gp": 9,
             "w": 7,
-            "d": 1,
+            "d": 0,
             "l": 2,
-            "gs": 17,
-            "gc": 9,
-            "cs": 5
+            "gs": 16,
+            "gc": 11,
+            "cs": 4
         },
         "form": [
-            "W",
             "L",
+            "L",
+            "W",
+            "W",
+            "W",
             "W",
             "W",
             "W"
         ],
         "history": [
             {
-                "id": 113,
-                "date": "2026-07-30",
-                "opponent": "vs. FABIANO",
-                "gs": 2,
-                "gc": 1,
-                "cs": false,
-                "result": "W"
-            },
-            {
-                "id": 109,
-                "date": "2026-07-30",
-                "opponent": "vs. KAKASHI",
-                "gs": 2,
-                "gc": 3,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 99,
-                "date": "2026-07-30",
-                "opponent": "vs. ALY",
-                "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 94,
-                "date": "2026-07-30",
-                "opponent": "vs. EL PISTOLERO",
-                "gs": 2,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 80,
-                "date": "2026-07-30",
-                "opponent": "vs. GDOPE",
-                "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 70,
-                "date": "2026-07-30",
-                "opponent": "vs. TISMEY",
-                "gs": 2,
-                "gc": 2,
-                "cs": false,
-                "result": "D"
-            },
-            {
-                "id": 68,
-                "date": "2026-07-30",
-                "opponent": "vs. PLAYBOY",
-                "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 31,
-                "date": "2026-07-30",
-                "opponent": "vs. VALENTINO",
-                "gs": 2,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 13,
-                "date": "2026-07-30",
-                "opponent": "vs. LED THE KING (SW)",
+                "id": 465028,
+                "date": "2026-07-10",
+                "opponent": "vs. Storma",
                 "gs": 1,
                 "gc": 2,
                 "cs": false,
                 "result": "L"
             },
             {
-                "id": 6,
-                "date": "2026-07-30",
-                "opponent": "vs. PLEK",
-                "gs": 3,
+                "id": 328637,
+                "date": "2026-07-09",
+                "opponent": "vs. Silent Killer",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 614409,
+                "date": "2026-07-07",
+                "opponent": "vs. Legendary",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 675988,
+                "date": "2026-07-06",
+                "opponent": "vs. HW",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 188896,
+                "date": "2026-07-05",
+                "opponent": "vs. HPF",
+                "gs": 2,
                 "gc": 1,
                 "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 932720,
+                "date": "2026-07-04",
+                "opponent": "vs. Hbl",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 599213,
+                "date": "2026-07-03",
+                "opponent": "vs. GOAT FC",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 733821,
+                "date": "2026-07-02",
+                "opponent": "vs. BL",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 325065,
+                "date": "2026-07-01",
+                "opponent": "vs. BHO",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
                 "result": "W"
             }
         ],
@@ -458,92 +503,122 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "5-3-2",
         "avatar": "ME",
         "allTimeStats": {
-            "gp": 7,
-            "w": 4,
+            "gp": 10,
+            "w": 6,
             "d": 2,
-            "l": 1,
-            "gs": 13,
-            "gc": 6,
-            "cs": 2
+            "l": 2,
+            "gs": 16,
+            "gc": 12,
+            "cs": 3
         },
         "weeklyStats": {
-            "gp": 7,
-            "w": 4,
+            "gp": 10,
+            "w": 6,
             "d": 2,
-            "l": 1,
-            "gs": 13,
-            "gc": 6,
-            "cs": 2
+            "l": 2,
+            "gs": 16,
+            "gc": 12,
+            "cs": 3
         },
         "form": [
-            "D",
+            "L",
+            "L",
             "D",
             "W",
             "W",
-            "L"
+            "W",
+            "W",
+            "D"
         ],
         "history": [
             {
-                "id": 102,
-                "date": "2026-07-30",
-                "opponent": "vs. KHEVIN",
+                "id": 742486,
+                "date": "2026-07-12",
+                "opponent": "vs. TBL",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 607272,
+                "date": "2026-07-11",
+                "opponent": "vs. SWE",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 337339,
+                "date": "2026-07-07",
+                "opponent": "vs. Legendary",
                 "gs": 1,
                 "gc": 1,
                 "cs": false,
                 "result": "D"
             },
             {
-                "id": 77,
-                "date": "2026-07-30",
-                "opponent": "vs. RICKY",
+                "id": 990367,
+                "date": "2026-07-06",
+                "opponent": "vs. HW",
                 "gs": 2,
-                "gc": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 655806,
+                "date": "2026-07-05",
+                "opponent": "vs. HPF",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 594824,
+                "date": "2026-07-04",
+                "opponent": "vs. Hbl",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 613778,
+                "date": "2026-07-03",
+                "opponent": "vs. GOAT FC",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 372507,
+                "date": "2026-07-03",
+                "opponent": "vs. GOAT FC",
+                "gs": 1,
+                "gc": 1,
                 "cs": false,
                 "result": "D"
             },
             {
-                "id": 56,
-                "date": "2026-07-30",
-                "opponent": "vs. DUMGAS",
-                "gs": 3,
-                "gc": 1,
-                "cs": false,
-                "result": "W"
-            },
-            {
-                "id": 43,
-                "date": "2026-07-30",
-                "opponent": "vs. CHARMER",
+                "id": 583666,
+                "date": "2026-07-02",
+                "opponent": "vs. BL",
                 "gs": 2,
-                "gc": 0,
+                "gc": 1,
                 "cs": true,
                 "result": "W"
             },
             {
-                "id": 25,
-                "date": "2026-07-30",
-                "opponent": "vs. TEDGY",
-                "gs": 0,
-                "gc": 1,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 16,
-                "date": "2026-07-30",
-                "opponent": "vs. MACK_BOY",
+                "id": 5219,
+                "date": "2026-07-01",
+                "opponent": "vs. BHO",
                 "gs": 2,
                 "gc": 1,
                 "cs": false,
-                "result": "W"
-            },
-            {
-                "id": 4,
-                "date": "2026-07-30",
-                "opponent": "vs. LEGEND",
-                "gs": 3,
-                "gc": 0,
-                "cs": true,
                 "result": "W"
             }
         ],
@@ -557,93 +632,141 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "4-1-2-3",
         "avatar": "RE",
         "allTimeStats": {
-            "gp": 7,
-            "w": 4,
+            "gp": 12,
+            "w": 9,
             "d": 1,
             "l": 2,
-            "gs": 10,
-            "gc": 10,
-            "cs": 2
+            "gs": 21,
+            "gc": 14,
+            "cs": 1
         },
         "weeklyStats": {
-            "gp": 7,
-            "w": 4,
+            "gp": 12,
+            "w": 9,
             "d": 1,
             "l": 2,
-            "gs": 10,
-            "gc": 10,
-            "cs": 2
+            "gs": 21,
+            "gc": 14,
+            "cs": 1
         },
         "form": [
-            "D",
             "W",
             "W",
-            "L",
-            "L"
+            "W",
+            "W",
+            "W",
+            "W",
+            "W",
+            "W"
         ],
         "history": [
             {
-                "id": 110,
-                "date": "2026-07-30",
-                "opponent": "vs. KHEVIN",
+                "id": 459376,
+                "date": "2026-07-15",
+                "opponent": "vs. TLE",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 955866,
+                "date": "2026-07-14",
+                "opponent": "vs. TGU",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 643428,
+                "date": "2026-07-13",
+                "opponent": "vs. TET KAFOU",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 88000,
+                "date": "2026-07-12",
+                "opponent": "vs. TBL",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 560146,
+                "date": "2026-07-11",
+                "opponent": "vs. SWE",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 769493,
+                "date": "2026-07-10",
+                "opponent": "vs. Storma",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 777078,
+                "date": "2026-07-09",
+                "opponent": "vs. Silent Killer",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 668376,
+                "date": "2026-07-08",
+                "opponent": "vs. PREDATORS",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 367632,
+                "date": "2026-07-07",
+                "opponent": "vs. Legendary",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 328458,
+                "date": "2026-07-03",
+                "opponent": "vs. GOAT FC",
                 "gs": 1,
                 "gc": 1,
                 "cs": false,
                 "result": "D"
             },
             {
-                "id": 49,
-                "date": "2026-07-30",
-                "opponent": "vs. TITINHO",
-                "gs": 3,
+                "id": 188862,
+                "date": "2026-07-02",
+                "opponent": "vs. BL",
+                "gs": 1,
                 "gc": 2,
                 "cs": false,
-                "result": "W"
-            },
-            {
-                "id": 35,
-                "date": "2026-07-30",
-                "opponent": "vs. DIEGO A",
-                "gs": 2,
-                "gc": 1,
-                "cs": false,
-                "result": "W"
-            },
-            {
-                "id": 32,
-                "date": "2026-07-30",
-                "opponent": "vs. SPARTACUS",
-                "gs": 0,
-                "gc": 3,
-                "cs": false,
                 "result": "L"
             },
             {
-                "id": 20,
-                "date": "2026-07-30",
-                "opponent": "vs. REYOBERD",
-                "gs": 0,
-                "gc": 3,
+                "id": 525473,
+                "date": "2026-07-01",
+                "opponent": "vs. BHO",
+                "gs": 1,
+                "gc": 2,
                 "cs": false,
                 "result": "L"
-            },
-            {
-                "id": 15,
-                "date": "2026-07-30",
-                "opponent": "vs. CALM",
-                "gs": 2,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 10,
-                "date": "2026-07-30",
-                "opponent": "vs. JIC (SW)",
-                "gs": 2,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
             }
         ],
         "gameId": "024-860-259"
@@ -656,75 +779,105 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "3-5-2",
         "avatar": "DO",
         "allTimeStats": {
-            "gp": 5,
-            "w": 3,
+            "gp": 8,
+            "w": 5,
             "d": 0,
-            "l": 2,
+            "l": 3,
             "gs": 13,
-            "gc": 10,
-            "cs": 1
+            "gc": 11,
+            "cs": 2
         },
         "weeklyStats": {
-            "gp": 5,
-            "w": 3,
+            "gp": 8,
+            "w": 5,
             "d": 0,
-            "l": 2,
+            "l": 3,
             "gs": 13,
-            "gc": 10,
-            "cs": 1
+            "gc": 11,
+            "cs": 2
         },
         "form": [
-            "L",
             "W",
             "W",
+            "W",
+            "W",
+            "W",
             "L",
-            "W"
+            "L",
+            "L"
         ],
         "history": [
             {
-                "id": 115,
-                "date": "2026-07-30",
-                "opponent": "vs. BORUTO",
-                "gs": 0,
-                "gc": 2,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 67,
-                "date": "2026-07-30",
-                "opponent": "vs. 909 MTF",
-                "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 57,
-                "date": "2026-07-30",
-                "opponent": "vs. SHIVOU",
-                "gs": 5,
+                "id": 974146,
+                "date": "2026-07-11",
+                "opponent": "vs. SWE",
+                "gs": 2,
                 "gc": 1,
                 "cs": false,
                 "result": "W"
             },
             {
-                "id": 51,
-                "date": "2026-07-30",
-                "opponent": "vs. MARVENS",
+                "id": 556921,
+                "date": "2026-07-10",
+                "opponent": "vs. Storma",
                 "gs": 2,
-                "gc": 5,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 530114,
+                "date": "2026-07-09",
+                "opponent": "vs. Silent Killer",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 357563,
+                "date": "2026-07-08",
+                "opponent": "vs. PREDATORS",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 600069,
+                "date": "2026-07-07",
+                "opponent": "vs. Legendary",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 713895,
+                "date": "2026-07-05",
+                "opponent": "vs. HPF",
+                "gs": 1,
+                "gc": 2,
                 "cs": false,
                 "result": "L"
             },
             {
-                "id": 44,
-                "date": "2026-07-30",
-                "opponent": "vs. CAPOIS",
-                "gs": 5,
+                "id": 763409,
+                "date": "2026-07-04",
+                "opponent": "vs. Hbl",
+                "gs": 1,
                 "gc": 2,
                 "cs": false,
-                "result": "W"
+                "result": "L"
+            },
+            {
+                "id": 562623,
+                "date": "2026-07-03",
+                "opponent": "vs. GOAT FC",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             }
         ],
         "gameId": "741-416-305"
@@ -737,75 +890,132 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "4-4-2",
         "avatar": "JH",
         "allTimeStats": {
-            "gp": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gs": 7,
-            "gc": 6,
-            "cs": 2
+            "gp": 11,
+            "w": 6,
+            "d": 1,
+            "l": 4,
+            "gs": 17,
+            "gc": 15,
+            "cs": 3
         },
         "weeklyStats": {
-            "gp": 5,
-            "w": 3,
-            "d": 0,
-            "l": 2,
-            "gs": 7,
-            "gc": 6,
-            "cs": 2
+            "gp": 11,
+            "w": 6,
+            "d": 1,
+            "l": 4,
+            "gs": 17,
+            "gc": 15,
+            "cs": 3
         },
         "form": [
+            "L",
+            "L",
             "W",
-            "L",
-            "L",
+            "W",
+            "W",
+            "W",
             "W",
             "W"
         ],
         "history": [
             {
-                "id": 104,
-                "date": "2026-07-30",
-                "opponent": "vs. BORUTO",
+                "id": 178822,
+                "date": "2026-07-17",
+                "opponent": "vs. Legendary",
                 "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 53,
-                "date": "2026-07-30",
-                "opponent": "vs. CARL10",
-                "gs": 0,
-                "gc": 3,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 39,
-                "date": "2026-07-30",
-                "opponent": "vs. ALEXANDRE",
-                "gs": 0,
                 "gc": 2,
                 "cs": false,
                 "result": "L"
             },
             {
-                "id": 28,
-                "date": "2026-07-30",
-                "opponent": "vs. MOHA",
-                "gs": 3,
+                "id": 130654,
+                "date": "2026-07-16",
+                "opponent": "vs. HW",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 2354,
+                "date": "2026-07-13",
+                "opponent": "vs. TET KAFOU",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 311350,
+                "date": "2026-07-12",
+                "opponent": "vs. TBL",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 125740,
+                "date": "2026-07-11",
+                "opponent": "vs. SWE",
+                "gs": 2,
                 "gc": 1,
                 "cs": false,
                 "result": "W"
             },
             {
-                "id": 27,
-                "date": "2026-07-30",
-                "opponent": "vs. SAVAGE",
-                "gs": 3,
-                "gc": 0,
+                "id": 308313,
+                "date": "2026-07-10",
+                "opponent": "vs. Storma",
+                "gs": 2,
+                "gc": 1,
                 "cs": true,
                 "result": "W"
+            },
+            {
+                "id": 140823,
+                "date": "2026-07-09",
+                "opponent": "vs. Silent Killer",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 944484,
+                "date": "2026-07-08",
+                "opponent": "vs. PREDATORS",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 503842,
+                "date": "2026-07-07",
+                "opponent": "vs. Legendary",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 3659,
+                "date": "2026-07-06",
+                "opponent": "vs. HW",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 477407,
+                "date": "2026-07-04",
+                "opponent": "vs. Hbl",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             }
         ],
         "gameId": "573-256-551"
@@ -822,50 +1032,50 @@ const DEFAULT_FOD_ROSTER = [
             "w": 2,
             "d": 0,
             "l": 1,
-            "gs": 2,
-            "gc": 1,
-            "cs": 2
+            "gs": 5,
+            "gc": 4,
+            "cs": 1
         },
         "weeklyStats": {
             "gp": 3,
             "w": 2,
             "d": 0,
             "l": 1,
-            "gs": 2,
-            "gc": 1,
-            "cs": 2
+            "gs": 5,
+            "gc": 4,
+            "cs": 1
         },
         "form": [
-            "W",
             "L",
+            "W",
             "W"
         ],
         "history": [
             {
-                "id": 81,
-                "date": "2026-07-30",
-                "opponent": "vs. LUKAS PIT",
+                "id": 927964,
+                "date": "2026-07-13",
+                "opponent": "vs. TET KAFOU",
                 "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 74,
-                "date": "2026-07-30",
-                "opponent": "vs. MATADOR",
-                "gs": 0,
-                "gc": 1,
+                "gc": 2,
                 "cs": false,
                 "result": "L"
             },
             {
-                "id": 64,
-                "date": "2026-07-30",
-                "opponent": "vs. T.POLTES",
-                "gs": 1,
-                "gc": 0,
+                "id": 596218,
+                "date": "2026-07-09",
+                "opponent": "vs. Silent Killer",
+                "gs": 2,
+                "gc": 1,
                 "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 504858,
+                "date": "2026-07-08",
+                "opponent": "vs. PREDATORS",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
                 "result": "W"
             }
         ],
@@ -879,82 +1089,121 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "4-2-3-1",
         "avatar": "TE",
         "allTimeStats": {
-            "gp": 6,
-            "w": 4,
+            "gp": 10,
+            "w": 7,
             "d": 0,
-            "l": 2,
-            "gs": 9,
-            "gc": 6,
-            "cs": 3
+            "l": 3,
+            "gs": 17,
+            "gc": 13,
+            "cs": 4
         },
         "weeklyStats": {
-            "gp": 6,
-            "w": 4,
+            "gp": 10,
+            "w": 7,
             "d": 0,
-            "l": 2,
-            "gs": 9,
-            "gc": 6,
-            "cs": 3
+            "l": 3,
+            "gs": 17,
+            "gc": 13,
+            "cs": 4
         },
         "form": [
-            "W",
-            "W",
+            "L",
+            "L",
             "L",
             "W",
-            "L"
+            "W",
+            "W",
+            "W",
+            "W"
         ],
         "history": [
             {
-                "id": 107,
-                "date": "2026-07-30",
-                "opponent": "vs. NATURAL",
+                "id": 977590,
+                "date": "2026-07-18",
+                "opponent": "vs. PREDATORS",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 552397,
+                "date": "2026-07-17",
+                "opponent": "vs. Legendary",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 144225,
+                "date": "2026-07-16",
+                "opponent": "vs. HW",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 264332,
+                "date": "2026-07-14",
+                "opponent": "vs. TGU",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 604609,
+                "date": "2026-07-13",
+                "opponent": "vs. TET KAFOU",
                 "gs": 2,
                 "gc": 1,
                 "cs": false,
                 "result": "W"
             },
             {
-                "id": 73,
-                "date": "2026-07-30",
-                "opponent": "vs. MADARA",
+                "id": 678360,
+                "date": "2026-07-12",
+                "opponent": "vs. TBL",
                 "gs": 2,
-                "gc": 0,
+                "gc": 1,
                 "cs": true,
                 "result": "W"
             },
             {
-                "id": 62,
-                "date": "2026-07-30",
-                "opponent": "vs. THE KING",
-                "gs": 0,
-                "gc": 2,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 47,
-                "date": "2026-07-30",
-                "opponent": "vs. SGM",
-                "gs": 1,
-                "gc": 0,
+                "id": 74746,
+                "date": "2026-07-11",
+                "opponent": "vs. SWE",
+                "gs": 2,
+                "gc": 1,
                 "cs": true,
                 "result": "W"
             },
             {
-                "id": 41,
-                "date": "2026-07-30",
-                "opponent": "vs. TISMEY",
+                "id": 407863,
+                "date": "2026-07-10",
+                "opponent": "vs. Storma",
                 "gs": 2,
-                "gc": 3,
+                "gc": 1,
                 "cs": false,
-                "result": "L"
+                "result": "W"
             },
             {
-                "id": 14,
-                "date": "2026-07-30",
-                "opponent": "vs. POGBA (SW)",
+                "id": 551196,
+                "date": "2026-07-09",
+                "opponent": "vs. Silent Killer",
                 "gs": 2,
-                "gc": 0,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 985330,
+                "date": "2026-07-08",
+                "opponent": "vs. PREDATORS",
+                "gs": 2,
+                "gc": 1,
                 "cs": true,
                 "result": "W"
             }
@@ -974,8 +1223,8 @@ const DEFAULT_FOD_ROSTER = [
             "d": 1,
             "l": 4,
             "gs": 9,
-            "gc": 14,
-            "cs": 2
+            "gc": 11,
+            "cs": 0
         },
         "weeklyStats": {
             "gp": 7,
@@ -983,79 +1232,81 @@ const DEFAULT_FOD_ROSTER = [
             "d": 1,
             "l": 4,
             "gs": 9,
-            "gc": 14,
-            "cs": 2
+            "gc": 11,
+            "cs": 0
         },
         "form": [
-            "D",
+            "L",
+            "L",
             "L",
             "L",
             "W",
-            "L"
+            "W",
+            "D"
         ],
         "history": [
             {
-                "id": 111,
-                "date": "2026-07-30",
-                "opponent": "vs. BIGY",
-                "gs": 1,
-                "gc": 1,
-                "cs": false,
-                "result": "D"
-            },
-            {
-                "id": 97,
-                "date": "2026-07-30",
-                "opponent": "vs. POPBENS",
-                "gs": 2,
-                "gc": 3,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 87,
-                "date": "2026-07-30",
-                "opponent": "vs. FLEX",
-                "gs": 0,
-                "gc": 5,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 55,
-                "date": "2026-07-30",
-                "opponent": "vs. ASTA",
-                "gs": 2,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 30,
-                "date": "2026-07-30",
-                "opponent": "vs. SPARTACUS",
-                "gs": 2,
-                "gc": 3,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 22,
-                "date": "2026-07-30",
-                "opponent": "vs. ANTOINE",
-                "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 2,
-                "date": "2026-07-30",
-                "opponent": "vs. NICK",
+                "id": 77594,
+                "date": "2026-07-19",
+                "opponent": "vs. Silent Killer",
                 "gs": 1,
                 "gc": 2,
                 "cs": false,
                 "result": "L"
+            },
+            {
+                "id": 549653,
+                "date": "2026-07-18",
+                "opponent": "vs. PREDATORS",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 223819,
+                "date": "2026-07-17",
+                "opponent": "vs. Legendary",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 834412,
+                "date": "2026-07-16",
+                "opponent": "vs. HW",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 689972,
+                "date": "2026-07-09",
+                "opponent": "vs. Silent Killer",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 846852,
+                "date": "2026-07-08",
+                "opponent": "vs. PREDATORS",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 842055,
+                "date": "2026-07-04",
+                "opponent": "vs. Hbl",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             }
         ],
         "gameId": "Unknown"
@@ -1068,156 +1319,204 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "4-2-1-3",
         "avatar": "PG",
         "allTimeStats": {
-            "gp": 14,
-            "w": 4,
-            "d": 4,
+            "gp": 19,
+            "w": 8,
+            "d": 5,
             "l": 6,
-            "gs": 21,
-            "gc": 22,
+            "gs": 27,
+            "gc": 25,
             "cs": 3
         },
         "weeklyStats": {
-            "gp": 14,
-            "w": 4,
-            "d": 4,
+            "gp": 19,
+            "w": 8,
+            "d": 5,
             "l": 6,
-            "gs": 21,
-            "gc": 22,
+            "gs": 27,
+            "gc": 25,
             "cs": 3
         },
         "form": [
             "L",
-            "W",
             "L",
-            "D",
-            "L"
+            "L",
+            "L",
+            "L",
+            "L",
+            "W",
+            "W"
         ],
         "history": [
             {
-                "id": 114,
-                "date": "2026-07-30",
-                "opponent": "vs. GUICHARD",
-                "gs": 1,
-                "gc": 3,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 106,
-                "date": "2026-07-30",
-                "opponent": "vs. BIGY",
-                "gs": 3,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 96,
-                "date": "2026-07-30",
-                "opponent": "vs. KAYOUM",
-                "gs": 2,
-                "gc": 3,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 91,
-                "date": "2026-07-30",
-                "opponent": "vs. JEPHTE",
-                "gs": 2,
-                "gc": 2,
-                "cs": false,
-                "result": "D"
-            },
-            {
-                "id": 72,
-                "date": "2026-07-30",
-                "opponent": "vs. TERROR",
-                "gs": 0,
-                "gc": 4,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 65,
-                "date": "2026-07-30",
-                "opponent": "vs. SNAKE",
-                "gs": 4,
-                "gc": 1,
-                "cs": false,
-                "result": "W"
-            },
-            {
-                "id": 58,
-                "date": "2026-07-30",
-                "opponent": "vs. PAPA.G",
-                "gs": 0,
-                "gc": 0,
-                "cs": true,
-                "result": "D"
-            },
-            {
-                "id": 52,
-                "date": "2026-07-30",
-                "opponent": "vs. ELIS",
+                "id": 375896,
+                "date": "2026-07-23",
+                "opponent": "vs. TET KAFOU",
                 "gs": 1,
                 "gc": 2,
                 "cs": false,
                 "result": "L"
             },
             {
-                "id": 45,
-                "date": "2026-07-30",
-                "opponent": "vs. TÈT SAUCE",
-                "gs": 0,
-                "gc": 0,
-                "cs": true,
-                "result": "D"
-            },
-            {
-                "id": 38,
-                "date": "2026-07-30",
-                "opponent": "vs. BAMA",
-                "gs": 2,
-                "gc": 2,
-                "cs": false,
-                "result": "D"
-            },
-            {
-                "id": 34,
-                "date": "2026-07-30",
-                "opponent": "vs. SPARTACUS",
-                "gs": 0,
-                "gc": 1,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 17,
-                "date": "2026-07-30",
-                "opponent": "vs. JIC",
-                "gs": 2,
-                "gc": 1,
-                "cs": false,
-                "result": "W"
-            },
-            {
-                "id": 8,
-                "date": "2026-07-30",
-                "opponent": "vs. BOSS KEKE (SW)",
+                "id": 366898,
+                "date": "2026-07-22",
+                "opponent": "vs. TBL",
                 "gs": 1,
                 "gc": 2,
                 "cs": false,
                 "result": "L"
             },
             {
-                "id": 3,
-                "date": "2026-07-30",
-                "opponent": "vs. KINGPLUG",
-                "gs": 3,
+                "id": 623963,
+                "date": "2026-07-21",
+                "opponent": "vs. SWE",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 81253,
+                "date": "2026-07-20",
+                "opponent": "vs. Storma",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 808228,
+                "date": "2026-07-19",
+                "opponent": "vs. Silent Killer",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 338701,
+                "date": "2026-07-18",
+                "opponent": "vs. PREDATORS",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 611211,
+                "date": "2026-07-17",
+                "opponent": "vs. Legendary",
+                "gs": 2,
                 "gc": 1,
                 "cs": false,
                 "result": "W"
+            },
+            {
+                "id": 888205,
+                "date": "2026-07-16",
+                "opponent": "vs. HW",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 11657,
+                "date": "2026-07-15",
+                "opponent": "vs. TLE",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 814630,
+                "date": "2026-07-14",
+                "opponent": "vs. TGU",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 17689,
+                "date": "2026-07-13",
+                "opponent": "vs. TET KAFOU",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 506218,
+                "date": "2026-07-12",
+                "opponent": "vs. TBL",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 2170,
+                "date": "2026-07-11",
+                "opponent": "vs. SWE",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 35955,
+                "date": "2026-07-10",
+                "opponent": "vs. Storma",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 211642,
+                "date": "2026-07-07",
+                "opponent": "vs. Legendary",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
+            },
+            {
+                "id": 959475,
+                "date": "2026-07-06",
+                "opponent": "vs. HW",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
+            },
+            {
+                "id": 839201,
+                "date": "2026-07-05",
+                "opponent": "vs. HPF",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
+            },
+            {
+                "id": 101508,
+                "date": "2026-07-05",
+                "opponent": "vs. HPF",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
+            },
+            {
+                "id": 241535,
+                "date": "2026-07-04",
+                "opponent": "vs. Hbl",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             }
         ],
         "gameId": "683-623-414"
@@ -1234,98 +1533,101 @@ const DEFAULT_FOD_ROSTER = [
             "w": 3,
             "d": 0,
             "l": 5,
-            "gs": 7,
-            "gc": 15,
-            "cs": 0
+            "gs": 11,
+            "gc": 13,
+            "cs": 2
         },
         "weeklyStats": {
             "gp": 8,
             "w": 3,
             "d": 0,
             "l": 5,
-            "gs": 7,
-            "gc": 15,
-            "cs": 0
+            "gs": 11,
+            "gc": 13,
+            "cs": 2
         },
         "form": [
+            "L",
+            "L",
+            "L",
+            "L",
+            "L",
             "W",
-            "L",
-            "L",
             "W",
             "W"
         ],
         "history": [
             {
-                "id": 117,
-                "date": "2026-07-30",
-                "opponent": "vs. THE KING",
-                "gs": 2,
-                "gc": 1,
-                "cs": false,
-                "result": "W"
-            },
-            {
-                "id": 105,
-                "date": "2026-07-30",
-                "opponent": "vs. KAYOUM",
-                "gs": 0,
-                "gc": 4,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 90,
-                "date": "2026-07-30",
-                "opponent": "vs. RIO",
+                "id": 716125,
+                "date": "2026-07-20",
+                "opponent": "vs. Storma",
                 "gs": 1,
                 "gc": 2,
                 "cs": false,
                 "result": "L"
             },
             {
-                "id": 76,
-                "date": "2026-07-30",
-                "opponent": "vs. ZACHARIE",
-                "gs": 2,
-                "gc": 1,
-                "cs": false,
-                "result": "W"
-            },
-            {
-                "id": 63,
-                "date": "2026-07-30",
-                "opponent": "vs. GUICHARD",
-                "gs": 2,
-                "gc": 1,
-                "cs": false,
-                "result": "W"
-            },
-            {
-                "id": 36,
-                "date": "2026-07-30",
-                "opponent": "vs. KYNO",
-                "gs": 0,
+                "id": 888444,
+                "date": "2026-07-19",
+                "opponent": "vs. Silent Killer",
+                "gs": 1,
                 "gc": 2,
                 "cs": false,
                 "result": "L"
             },
             {
-                "id": 21,
-                "date": "2026-07-30",
-                "opponent": "vs. LUILPOUL",
-                "gs": 0,
-                "gc": 3,
+                "id": 985661,
+                "date": "2026-07-18",
+                "opponent": "vs. PREDATORS",
+                "gs": 1,
+                "gc": 2,
                 "cs": false,
                 "result": "L"
             },
             {
-                "id": 7,
-                "date": "2026-07-30",
-                "opponent": "vs. JAMES",
-                "gs": 0,
-                "gc": 1,
+                "id": 638223,
+                "date": "2026-07-17",
+                "opponent": "vs. Legendary",
+                "gs": 1,
+                "gc": 2,
                 "cs": false,
                 "result": "L"
+            },
+            {
+                "id": 653159,
+                "date": "2026-07-16",
+                "opponent": "vs. HW",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 358115,
+                "date": "2026-07-12",
+                "opponent": "vs. TBL",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 832594,
+                "date": "2026-07-11",
+                "opponent": "vs. SWE",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 883404,
+                "date": "2026-07-10",
+                "opponent": "vs. Storma",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
             }
         ],
         "gameId": "ASBB-980-739-493"
@@ -1342,78 +1644,79 @@ const DEFAULT_FOD_ROSTER = [
             "w": 4,
             "d": 0,
             "l": 2,
-            "gs": 7,
+            "gs": 10,
             "gc": 8,
-            "cs": 4
+            "cs": 3
         },
         "weeklyStats": {
             "gp": 6,
             "w": 4,
             "d": 0,
             "l": 2,
-            "gs": 7,
+            "gs": 10,
             "gc": 8,
-            "cs": 4
+            "cs": 3
         },
         "form": [
             "W",
             "W",
-            "W",
             "L",
-            "L"
+            "L",
+            "W",
+            "W"
         ],
         "history": [
             {
-                "id": 121,
-                "date": "2026-07-30",
-                "opponent": "vs. Manual Entry (Win)",
-                "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 120,
-                "date": "2026-07-30",
-                "opponent": "vs. Manual Entry (Win)",
-                "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 119,
-                "date": "2026-07-30",
-                "opponent": "vs. Manual Entry (Win)",
-                "gs": 1,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 92,
-                "date": "2026-07-30",
-                "opponent": "vs. KENSLEY",
-                "gs": 1,
-                "gc": 4,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 88,
-                "date": "2026-07-30",
-                "opponent": "vs. PLEK",
+                "id": 238312,
+                "date": "2026-07-19",
+                "opponent": "vs. Silent Killer",
                 "gs": 2,
-                "gc": 4,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 603009,
+                "date": "2026-07-18",
+                "opponent": "vs. PREDATORS",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 130940,
+                "date": "2026-07-17",
+                "opponent": "vs. Legendary",
+                "gs": 1,
+                "gc": 2,
                 "cs": false,
                 "result": "L"
             },
             {
-                "id": 75,
-                "date": "2026-07-30",
-                "opponent": "vs. WENDAHEL",
+                "id": 89415,
+                "date": "2026-07-16",
+                "opponent": "vs. HW",
                 "gs": 1,
-                "gc": 0,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 263849,
+                "date": "2026-07-15",
+                "opponent": "vs. TLE",
+                "gs": 2,
+                "gc": 1,
+                "cs": true,
+                "result": "W"
+            },
+            {
+                "id": 287396,
+                "date": "2026-07-12",
+                "opponent": "vs. TBL",
+                "gs": 2,
+                "gc": 1,
                 "cs": true,
                 "result": "W"
             }
@@ -1429,146 +1732,149 @@ const DEFAULT_FOD_ROSTER = [
         "avatar": "JI",
         "allTimeStats": {
             "gp": 13,
-            "w": 3,
-            "d": 2,
-            "l": 8,
-            "gs": 9,
-            "gc": 23,
-            "cs": 3
+            "w": 4,
+            "d": 3,
+            "l": 6,
+            "gs": 17,
+            "gc": 19,
+            "cs": 1
         },
         "weeklyStats": {
             "gp": 13,
-            "w": 3,
-            "d": 2,
-            "l": 8,
-            "gs": 9,
-            "gc": 23,
-            "cs": 3
+            "w": 4,
+            "d": 3,
+            "l": 6,
+            "gs": 17,
+            "gc": 19,
+            "cs": 1
         },
         "form": [
             "L",
+            "W",
+            "W",
+            "W",
             "L",
-            "L",
+            "W",
             "L",
             "L"
         ],
         "history": [
             {
-                "id": 112,
-                "date": "2026-07-30",
-                "opponent": "vs. MIKO",
-                "gs": 0,
+                "id": 889904,
+                "date": "2026-07-24",
+                "opponent": "vs. TGU",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 354150,
+                "date": "2026-07-23",
+                "opponent": "vs. TET KAFOU",
+                "gs": 2,
                 "gc": 1,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 103,
-                "date": "2026-07-30",
-                "opponent": "vs. ELNOBY",
-                "gs": 1,
-                "gc": 2,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 100,
-                "date": "2026-07-30",
-                "opponent": "vs. EL PANTHERA",
-                "gs": 0,
-                "gc": 3,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 85,
-                "date": "2026-07-30",
-                "opponent": "vs. NICK",
-                "gs": 0,
-                "gc": 2,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 84,
-                "date": "2026-07-30",
-                "opponent": "vs. CHRISTIAN",
-                "gs": 1,
-                "gc": 4,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 69,
-                "date": "2026-07-30",
-                "opponent": "vs. JXY",
-                "gs": 0,
-                "gc": 2,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 61,
-                "date": "2026-07-30",
-                "opponent": "vs. EL PANTHERA",
-                "gs": 1,
-                "gc": 0,
                 "cs": true,
                 "result": "W"
             },
             {
-                "id": 50,
-                "date": "2026-07-30",
-                "opponent": "vs. IDEAL",
-                "gs": 0,
-                "gc": 3,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 40,
-                "date": "2026-07-30",
-                "opponent": "vs. LUIZ NUB",
-                "gs": 0,
-                "gc": 4,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 29,
-                "date": "2026-07-30",
-                "opponent": "vs. WENDHY",
-                "gs": 3,
-                "gc": 0,
-                "cs": true,
-                "result": "W"
-            },
-            {
-                "id": 24,
-                "date": "2026-07-30",
-                "opponent": "vs. ODVERLY",
-                "gs": 0,
-                "gc": 0,
-                "cs": true,
-                "result": "D"
-            },
-            {
-                "id": 11,
-                "date": "2026-07-30",
-                "opponent": "vs. MILO (SW)",
-                "gs": 1,
-                "gc": 1,
-                "cs": false,
-                "result": "D"
-            },
-            {
-                "id": 5,
-                "date": "2026-07-30",
-                "opponent": "vs. MACALISTER",
+                "id": 138300,
+                "date": "2026-07-22",
+                "opponent": "vs. TBL",
                 "gs": 2,
                 "gc": 1,
                 "cs": false,
                 "result": "W"
+            },
+            {
+                "id": 532262,
+                "date": "2026-07-21",
+                "opponent": "vs. SWE",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 349808,
+                "date": "2026-07-21",
+                "opponent": "vs. SWE",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 867582,
+                "date": "2026-07-20",
+                "opponent": "vs. Storma",
+                "gs": 2,
+                "gc": 1,
+                "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 202655,
+                "date": "2026-07-20",
+                "opponent": "vs. Storma",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 405473,
+                "date": "2026-07-18",
+                "opponent": "vs. PREDATORS",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 676502,
+                "date": "2026-07-17",
+                "opponent": "vs. Legendary",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 53269,
+                "date": "2026-07-16",
+                "opponent": "vs. HW",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 360433,
+                "date": "2026-07-06",
+                "opponent": "vs. HW",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
+            },
+            {
+                "id": 85631,
+                "date": "2026-07-06",
+                "opponent": "vs. HW",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
+            },
+            {
+                "id": 928607,
+                "date": "2026-07-05",
+                "opponent": "vs. HPF",
+                "gs": 1,
+                "gc": 1,
+                "cs": false,
+                "result": "D"
             }
         ],
         "gameId": "124-136-395"
@@ -1610,43 +1916,33 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "4-3-3",
         "avatar": "AN",
         "allTimeStats": {
-            "gp": 2,
+            "gp": 1,
             "w": 1,
             "d": 0,
-            "l": 1,
-            "gs": 3,
-            "gc": 2,
+            "l": 0,
+            "gs": 2,
+            "gc": 1,
             "cs": 1
         },
         "weeklyStats": {
-            "gp": 2,
+            "gp": 1,
             "w": 1,
             "d": 0,
-            "l": 1,
-            "gs": 3,
-            "gc": 2,
+            "l": 0,
+            "gs": 2,
+            "gc": 1,
             "cs": 1
         },
         "form": [
-            "L",
             "W"
         ],
         "history": [
             {
-                "id": 71,
-                "date": "2026-07-30",
-                "opponent": "vs. KERVENS",
-                "gs": 1,
-                "gc": 2,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 59,
-                "date": "2026-07-30",
-                "opponent": "vs. BIGY",
+                "id": 944992,
+                "date": "2026-07-23",
+                "opponent": "vs. TET KAFOU",
                 "gs": 2,
-                "gc": 0,
+                "gc": 1,
                 "cs": true,
                 "result": "W"
             }
@@ -1661,53 +1957,73 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "4-2-1-3",
         "avatar": "CH",
         "allTimeStats": {
-            "gp": 3,
-            "w": 0,
+            "gp": 5,
+            "w": 1,
             "d": 0,
-            "l": 3,
-            "gs": 2,
-            "gc": 8,
+            "l": 4,
+            "gs": 6,
+            "gc": 9,
             "cs": 0
         },
         "weeklyStats": {
-            "gp": 3,
-            "w": 0,
+            "gp": 5,
+            "w": 1,
             "d": 0,
-            "l": 3,
-            "gs": 2,
-            "gc": 8,
+            "l": 4,
+            "gs": 6,
+            "gc": 9,
             "cs": 0
         },
         "form": [
+            "W",
+            "L",
             "L",
             "L",
             "L"
         ],
         "history": [
             {
-                "id": 89,
-                "date": "2026-07-30",
-                "opponent": "vs. JAMES",
+                "id": 194864,
+                "date": "2026-07-24",
+                "opponent": "vs. TGU",
                 "gs": 2,
-                "gc": 4,
-                "cs": false,
-                "result": "L"
-            },
-            {
-                "id": 82,
-                "date": "2026-07-30",
-                "opponent": "vs. BRACK",
-                "gs": 0,
                 "gc": 1,
                 "cs": false,
+                "result": "W"
+            },
+            {
+                "id": 146669,
+                "date": "2026-07-23",
+                "opponent": "vs. TET KAFOU",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
                 "result": "L"
             },
             {
-                "id": 46,
-                "date": "2026-07-30",
-                "opponent": "vs. LOUIS",
-                "gs": 0,
-                "gc": 3,
+                "id": 633108,
+                "date": "2026-07-22",
+                "opponent": "vs. TBL",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 633767,
+                "date": "2026-07-22",
+                "opponent": "vs. TBL",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
+            },
+            {
+                "id": 57385,
+                "date": "2026-07-21",
+                "opponent": "vs. SWE",
+                "gs": 1,
+                "gc": 2,
                 "cs": false,
                 "result": "L"
             }
@@ -1751,35 +2067,45 @@ const DEFAULT_FOD_ROSTER = [
         "formation": "4-3-3",
         "avatar": "GK",
         "allTimeStats": {
-            "gp": 1,
-            "w": 0,
-            "d": 1,
-            "l": 0,
-            "gs": 1,
-            "gc": 1,
+            "gp": 2,
+            "w": 1,
+            "d": 0,
+            "l": 1,
+            "gs": 3,
+            "gc": 3,
             "cs": 0
         },
         "weeklyStats": {
-            "gp": 1,
-            "w": 0,
-            "d": 1,
-            "l": 0,
-            "gs": 1,
-            "gc": 1,
+            "gp": 2,
+            "w": 1,
+            "d": 0,
+            "l": 1,
+            "gs": 3,
+            "gc": 3,
             "cs": 0
         },
         "form": [
-            "D"
+            "W",
+            "L"
         ],
         "history": [
             {
-                "id": 118,
-                "date": "2026-07-30",
-                "opponent": "vs. CALM (SW)",
-                "gs": 1,
+                "id": 84204,
+                "date": "2026-07-24",
+                "opponent": "vs. TGU",
+                "gs": 2,
                 "gc": 1,
                 "cs": false,
-                "result": "D"
+                "result": "W"
+            },
+            {
+                "id": 617266,
+                "date": "2026-07-24",
+                "opponent": "vs. TGU",
+                "gs": 1,
+                "gc": 2,
+                "cs": false,
+                "result": "L"
             }
         ],
         "gameId": "ASMC-054-355-938"
@@ -1842,7 +2168,7 @@ const DEFAULT_FOD_ROSTER = [
         "form": [],
         "history": []
     }
-];
+];;
 
 // --- 2. APPLICATION STATE ---
 const state = {
@@ -1854,7 +2180,7 @@ const state = {
 };
 
 // --- 3. INITIALIZATION & LOCALSTORAGE SYNC ---
-const STORAGE_KEY = "fod_efootball_stats_v16_newmembers";
+const STORAGE_KEY = "fod_efootball_stats_v18_final_24matches";
 
 function initApp() {
     // Intro Screen Logic
